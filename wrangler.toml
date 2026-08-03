@@ -3,6 +3,6 @@ compatibility_date = "2026-08-02"
 pages_build_output_dir = "dist"
 
 # Create a KV namespace named KALAMBAZ_USERS in Cloudflare, then add its id here.
-# [[kv_namespaces]]
-# binding = "KALAMBAZ_USERS"
-# id = "YOUR_NAMESPACE_ID"
+[[kv_namespaces]]
+binding = "KALAMBAZ_USERS"
+id = "62e7b38429b04dfcb33526c1989073b4"
