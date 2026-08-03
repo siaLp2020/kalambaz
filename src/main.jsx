@@ -10,30 +10,28 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
 const robotStartingProgress = [0.6, 1.8, 1.2]
-const speak = (text, lang = 'fa-IR') => {
-  if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return
+const speak = (text, lang = 'fa-IR', onError) => {
+  // On Android Chrome, voices may load asynchronously. Waiting for
+  // `voiceschanged` loses the tap gesture that is required to start audio,
+  // so queue the utterance synchronously and use a voice only when available.
+  if (typeof window === 'undefined' || !('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+    onError?.()
+    return false
+  }
   const synth = window.speechSynthesis
+  const utterance = new window.SpeechSynthesisUtterance(text)
+  const languagePrefix = lang.split('-')[0].toLowerCase()
+  const voice = synth.getVoices().find(item => item.lang.toLowerCase().startsWith(languagePrefix))
+  if (voice) utterance.voice = voice
+  utterance.lang = lang
+  utterance.rate = lang.startsWith('fa') ? .78 : .86
+  utterance.pitch = 1.3
+  utterance.volume = 1
+  utterance.onerror = () => onError?.()
   synth.cancel()
-  let spoken = false
-  const speakOnce = () => {
-    if (spoken) return
-    spoken = true
-    const u = new window.SpeechSynthesisUtterance(text)
-    const languagePrefix = lang.split('-')[0].toLowerCase()
-    const voice = synth.getVoices().find(item => item.lang.toLowerCase().startsWith(languagePrefix))
-    if (voice) u.voice = voice
-    u.lang = lang
-    u.rate = lang.startsWith('fa') ? .78 : .86
-    u.pitch = 1.3
-    u.volume = 1
-    synth.speak(u)
-    synth.resume()
-  }
-  if (synth.getVoices().length) speakOnce()
-  else {
-    synth.addEventListener('voiceschanged', speakOnce, { once: true })
-    window.setTimeout(speakOnce, 500)
-  }
+  synth.resume()
+  synth.speak(utterance)
+  return true
 }
 const normalize = s => String(s).toLowerCase().replace(/[\s‌-]/g,'').replace(/ي/g,'ی').replace(/ك/g,'ک')
 
@@ -49,6 +47,7 @@ function App() {
   const [listening, setListening] = useState(false)
   const [notice, setNotice] = useState('')
   const [showFallback, setShowFallback] = useState(false)
+  const [audioNotice, setAudioNotice] = useState('')
   const [finished, setFinished] = useState(false)
   const [timeLeft, setTimeLeft] = useState(60)
   const [robotProgress, setRobotProgress] = useState(robotStartingProgress)
@@ -94,11 +93,17 @@ function App() {
 
   async function login(e) {
     e.preventDefault(); const wanted = name.trim(); if (!wanted) return
+    if ('speechSynthesis' in window) window.speechSynthesis.resume()
     let assigned = wanted
     try { const r = await fetch('/api/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ username:wanted }) }); const d = await r.json(); if (d.username) assigned = d.username } catch { const used = JSON.parse(localStorage.getItem('kalambaz-users') || '[]'); assigned = used.includes(wanted) ? `${wanted}${Math.floor(100 + Math.random()*900)}` : wanted; localStorage.setItem('kalambaz-users', JSON.stringify([...used, assigned])) }
     setUser(assigned); setJoining(true)
   }
-  function openItem(item) { setSelected(item); setNotice(''); setShowFallback(false); speak(item[3]) }
+  function playDescription(text) {
+    setAudioNotice('')
+    const available = speak(text, 'fa-IR', () => setAudioNotice('صدای فارسی در این مرورگر فعال نیست؛ روی «گوش کن» بزن یا صدای متن‌به‌گفتار گوشی را فعال کن.'))
+    if (!available) setAudioNotice('صدای این مرورگر در دسترس نیست؛ متن‌به‌گفتار گوشی را فعال کن.')
+  }
+  function openItem(item) { setSelected(item); setNotice(''); setShowFallback(false); playDescription(item[3]) }
   function useMic(item) {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
@@ -125,6 +130,6 @@ function App() {
   }
   if (!user) return <main className="login"><div className="cloud c1">☁️</div><div className="cloud c2">☁️</div><div className="logo">کلم<span>باز</span><small>بازی با کلمه‌ها</small></div><div className="mascot">🦊</div><form onSubmit={login}><h1>سلام دوست کوچولو!</h1><p>اسمت چیه؟ با هم بازی کنیم.</p><input value={name} onChange={e=>setName(e.target.value)} placeholder="نام بازیکن" autoFocus /><button>شروع بازی 🚀</button></form></main>
   if (joining) return <main className="lobby"><div className="spinner">✨</div><h1>داریم دوست‌ها را پیدا می‌کنیم</h1><p>تا شروع بازی <b>{count}</b> ثانیه مانده</p><div className="playerchips"><i>{user} 🧒</i>{robots.map((x,i)=><i className="waiting" key={x}>{count < 3*(i+1) ? x+' 🤖' : 'در انتظار…'}</i>)}</div><small>اگر دوستی نیاید، ربات‌ها با ما بازی می‌کنند!</small></main>
-  return <main className="game"><header><div className="brand">کلم<span>باز</span></div><div className="stage">مرحله {stageNo} از ۱۰ <b>{stage.icon} {stage.name}</b></div><div className={`time ${timeLeft <= 10 ? 'urgent' : ''}`}>⏱ {timeLeft}</div><div className="score">⭐ {score}</div></header><section className="race">{players.map((p,i)=><div key={p}><span>{i ? '🤖':'🧒'}</span><em>{p}</em><div className="track"><i style={{width:`${i ? Math.min(100, (robotProgress[i - 1] / 6) * 100) : (passed.length / 6) * 100}%`}} /></div></div>)}</section><div className="instruction">روی یک تصویر بزن، گوش کن و سپس اسمش را با میکروفون بگو! 🎤</div><section className="cards">{stage.items.map((it,i)=><button className={`card ${passed.includes(it[1])?'done':''}`} onClick={()=>openItem(it)} key={it[1]}><span>{it[0]}</span><b>{passed.includes(it[1])?'آفرین! ✓':'تصویر '+(i+1)}</b></button>)}</section>{selected && <div className="modal"><div className="popup"><button className="close" onClick={()=>setSelected(null)}>×</button><div className="bigemoji">{selected[0]}</div><p>{selected[3]}</p><button className="speak-description" onClick={()=>speak(selected[3])}>🔊 گوش کن</button><button className={`mic ${listening?'pulse':''}`} onClick={()=>useMic(selected)}>🎤<small>{listening?'گوش می‌دهم…':'بگو!'}</small></button>{showFallback && <div className="answer"><button aria-label="پاسخ فارسی" onClick={()=>checkAnswer(selected[1],selected)}>🇮🇷 <small>+۱۰</small></button><button aria-label="پاسخ انگلیسی" onClick={()=>checkAnswer(selected[2],selected)}>🇬🇧 <small>+۲۰</small></button></div>}{notice && <strong className="notice">{notice}</strong>}</div></div>}{finished && <div className="modal victory"><div className="popup"><div className="confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>آفرین {user}!</h1><p>تو اول شدی و مرحله {stageNo} را تمام کردی!</p><b className="stars">⭐⭐⭐</b><button onClick={nextStage}>{stageNo === 10 ? 'بازی را دوباره شروع کن 🔄' : 'برو به مرحله بعد 🚀'}</button></div></div>}{stageWinner === 'robot' && <div className="modal victory timeout"><div className="popup"><div className="confetti">⏰ 🤖 ✨</div><h1>زمان تمام شد!</h1><p>{robots[robotWinner]} برندهٔ این مرحله شد.</p><p>اشکالی ندارد؛ دوباره تلاش کن یا به مرحلهٔ بعد برو.</p><div className="result-actions"><button onClick={resetStage}>تلاش دوباره 🔁</button><button onClick={nextStage}>مرحلهٔ بعد 🚀</button></div></div></div>}</main>
+  return <main className="game"><header><div className="brand">کلم<span>باز</span></div><div className="stage">مرحله {stageNo} از ۱۰ <b>{stage.icon} {stage.name}</b></div><div className={`time ${timeLeft <= 10 ? 'urgent' : ''}`}>⏱ {timeLeft}</div><div className="score">⭐ {score}</div></header><section className="race">{players.map((p,i)=><div key={p}><span>{i ? '🤖':'🧒'}</span><em>{p}</em><div className="track"><i style={{width:`${i ? Math.min(100, (robotProgress[i - 1] / 6) * 100) : (passed.length / 6) * 100}%`}} /></div></div>)}</section><div className="instruction">روی یک تصویر بزن، گوش کن و سپس اسمش را با میکروفون بگو! 🎤</div><section className="cards">{stage.items.map((it,i)=><button className={`card ${passed.includes(it[1])?'done':''}`} onClick={()=>openItem(it)} key={it[1]}><span>{it[0]}</span><b>{passed.includes(it[1])?'آفرین! ✓':'تصویر '+(i+1)}</b></button>)}</section>{selected && <div className="modal"><div className="popup"><button className="close" onClick={()=>setSelected(null)}>×</button><div className="bigemoji">{selected[0]}</div><p>{selected[3]}</p><div className="score-hint">راهنما: انگلیسی بگو <b>۲۰ امتیاز</b>، فارسی بگو <b>۱۰ امتیاز</b> ⭐</div><button className="speak-description" onClick={()=>playDescription(selected[3])}>🔊 گوش کن</button><button className={`mic ${listening?'pulse':''}`} onClick={()=>useMic(selected)}>🎤<small>{listening?'گوش می‌دهم…':'بگو!'}</small></button>{showFallback && <div className="answer"><button aria-label="پاسخ فارسی" onClick={()=>checkAnswer(selected[1],selected)}>🇮🇷 <small>+۱۰</small></button><button aria-label="پاسخ انگلیسی" onClick={()=>checkAnswer(selected[2],selected)}>🇬🇧 <small>+۲۰</small></button></div>}{audioNotice && <strong className="audio-notice">{audioNotice}</strong>}{notice && <strong className="notice">{notice}</strong>}</div></div>}{finished && <div className="modal victory"><div className="popup"><div className="confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>آفرین {user}!</h1><p>تو اول شدی و مرحله {stageNo} را تمام کردی!</p><b className="stars">⭐⭐⭐</b><button onClick={nextStage}>{stageNo === 10 ? 'بازی را دوباره شروع کن 🔄' : 'برو به مرحله بعد 🚀'}</button></div></div>}{stageWinner === 'robot' && <div className="modal victory timeout"><div className="popup"><div className="confetti">⏰ 🤖 ✨</div><h1>زمان تمام شد!</h1><p>{robots[robotWinner]} برندهٔ این مرحله شد.</p><p>اشکالی ندارد؛ دوباره تلاش کن یا به مرحلهٔ بعد برو.</p><div className="result-actions"><button onClick={resetStage}>تلاش دوباره 🔁</button><button onClick={nextStage}>مرحلهٔ بعد 🚀</button></div></div></div>}</main>
 }
 createRoot(document.getElementById('root')).render(<App />)
