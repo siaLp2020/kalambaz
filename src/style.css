@@ -9,3 +9,4 @@ main.login,main.lobby,main.game{padding-inline:16px}
 .time.urgent{background:#ff6c7d;color:#fff;animation:pulse 1s infinite}
 .result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .result-actions button{border:0;border-radius:14px;background:#5c78f1;color:#fff;padding:11px 16px;font-weight:800;cursor:pointer;box-shadow:0 4px 0 #4056ba}
+.speak-description{display:block;margin:10px auto 16px;border:0;border-radius:13px;background:#fff4c7;color:#4b4f7d;padding:9px 16px;font-weight:800;cursor:pointer;box-shadow:0 3px 0 #e4cf78}
