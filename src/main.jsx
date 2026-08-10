@@ -25,11 +25,12 @@ const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   let ended = false
   const finish = () => { if (!ended) { ended = true; onEnd?.() } }
   const languagePrefix = lang.split('-')[0].toLowerCase()
-  const voice = synth.getVoices().find(item => item.lang.toLowerCase().startsWith(languagePrefix))
+  const matchingVoices = synth.getVoices().filter(item => item.lang.toLowerCase().startsWith(languagePrefix))
+  const voice = matchingVoices.find(item => /child|kid|young|کودک/i.test(item.name)) || matchingVoices[0]
   if (voice) utterance.voice = voice
   utterance.lang = lang
-  utterance.rate = lang.startsWith('fa') ? .68 : .82
-  utterance.pitch = 1.2
+  utterance.rate = lang.startsWith('fa') ? .64 : .8
+  utterance.pitch = lang.startsWith('fa') ? 1.55 : 1.3
   utterance.volume = 1
   utterance.onerror = () => { onError?.(); finish() }
   utterance.onend = finish
