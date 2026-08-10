@@ -25,8 +25,8 @@ const speak = (text, lang = 'fa-IR', onError) => {
   const voice = synth.getVoices().find(item => item.lang.toLowerCase().startsWith(languagePrefix))
   if (voice) utterance.voice = voice
   utterance.lang = lang
-  utterance.rate = lang.startsWith('fa') ? .78 : .86
-  utterance.pitch = 1.3
+  utterance.rate = lang.startsWith('fa') ? .68 : .82
+  utterance.pitch = 1.2
   utterance.volume = 1
   utterance.onerror = () => onError?.()
   synth.cancel()
@@ -61,6 +61,8 @@ function App() {
   const recognition = useRef(null)
   const audioPlayer = useRef(null)
   const robotProgressRef = useRef([...robotStartingProgress])
+  const retryTimer = useRef(null)
+  const answerDeadline = useRef(0)
   const stage = allStages[stageNo - 1]
   const players = useMemo(() => [user, ...robots], [user])
 
@@ -138,13 +140,35 @@ function App() {
     }
     if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback, continueListening)) fallback()
   }
-  function openItem(item) { setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); playDescription(item[3], item, () => useMic(item, recognitionLang)) }
+  function queueRetry(item) {
+    window.clearTimeout(retryTimer.current)
+    const delay = Math.max(0, answerDeadline.current - Date.now())
+    retryTimer.current = window.setTimeout(() => {
+      setListening(false)
+      setShowFallback(true)
+      setRetryVisible(true)
+      setNotice('صدایت را نشنیدم. تلاش مجدد کن!')
+    }, delay)
+  }
+  function openItem(item) {
+    window.clearTimeout(retryTimer.current)
+    answerDeadline.current = 0
+    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false)
+    playDescription(item[3], item, () => {
+      answerDeadline.current = Date.now() + 10000
+      useMic(item, recognitionLang)
+    })
+  }
   function replayWelcome() {}
   function useMic(item, language = recognitionLang) {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
+    if (!answerDeadline.current || answerDeadline.current < Date.now()) answerDeadline.current = Date.now() + 10000
     const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; setListening(true); setRetryVisible(false)
+    let heard = false
+    let transitionHandled = false
     r.onresult = e => {
+      heard = true
       const transcript = e.results[0][0].transcript
       const normalized = normalize(transcript)
       const expectedFa = normalize(item[1])
@@ -154,13 +178,31 @@ function App() {
       }
       checkAnswer(transcript, item)
     }
-    r.onerror = () => { setListening(false); setShowFallback(true); setRetryVisible(true); setNotice('صدایت را نشنیدم. تلاش مجدد کن!') }; r.onend = () => setListening(false); r.start()
+    const continueListeningOrRetry = () => {
+      if (transitionHandled) return
+      transitionHandled = true
+      setListening(false)
+      if (heard) return
+      const remaining = answerDeadline.current - Date.now()
+      if (remaining > 0) {
+        window.setTimeout(() => {
+          if (Date.now() < answerDeadline.current) useMic(item, language)
+          else queueRetry(item)
+        }, Math.min(350, remaining))
+      } else queueRetry(item)
+    }
+    r.onerror = continueListeningOrRetry
+    r.onend = continueListeningOrRetry
+    r.start()
   }
   function checkAnswer(answer, item) {
     if (stageWinner || finished) return
     const said = normalize(answer), fa = normalize(item[1]), en = normalize(item[2]); const points = said === en ? 20 : said === fa ? 10 : 0
     if (!points) { setRetryVisible(true); setShowFallback(true); setNotice('تلاش مجدد! دوباره اسم تصویر را بگو.'); speak('تلاش مجدد! دوباره اسم تصویر را بگو.'); return }
     if (!passed.includes(item[1])) { setPassed(p => [...p, item[1]]); setScore(s => s + points) }
+    window.clearTimeout(retryTimer.current)
+    answerDeadline.current = 0
+    recognition.current?.stop?.()
     setRetryVisible(false); setShowFallback(false)
     const feedback = points === 20 ? 'آفرین! درست گفتی و بیست امتیاز گرفتی.' : 'آفرین! درست گفتی و ده امتیاز گرفتی.'
     setNotice(feedback); speak(feedback, 'fa-IR')
