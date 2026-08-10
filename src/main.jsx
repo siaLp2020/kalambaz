@@ -29,8 +29,8 @@ const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   const voice = matchingVoices.find(item => /child|kid|young|کودک/i.test(item.name)) || matchingVoices[0]
   if (voice) utterance.voice = voice
   utterance.lang = lang
-  utterance.rate = lang.startsWith('fa') ? 1 : .95
-  utterance.pitch = lang.startsWith('fa') ? 1.55 : 1.3
+  utterance.rate = lang.startsWith('fa') ? .95 : .95
+  utterance.pitch = lang.startsWith('fa') ? 1.35 : 1.25
   utterance.volume = 1
   utterance.onerror = () => { onError?.(); finish() }
   utterance.onend = finish
@@ -140,7 +140,7 @@ function App() {
   function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
-    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-3`)
+    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-4`)
     let failed = false
     const fail = () => { if (!failed) { failed = true; onError?.() } }
     audio.preload = 'auto'
