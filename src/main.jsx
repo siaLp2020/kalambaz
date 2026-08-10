@@ -40,7 +40,7 @@ function App() {
   const [user, setUser] = useState('')
   const [name, setName] = useState('')
   const [joining, setJoining] = useState(false)
-  const [count, setCount] = useState(30)
+  const [count, setCount] = useState(0)
   const [stageNo, setStageNo] = useState(1)
   const [selected, setSelected] = useState(null)
   const [passed, setPassed] = useState([])
@@ -49,8 +49,10 @@ function App() {
   const [notice, setNotice] = useState('')
   const [showFallback, setShowFallback] = useState(false)
   const [audioNotice, setAudioNotice] = useState('')
-  const [welcomeOpen, setWelcomeOpen] = useState(false)
-  const [welcomeNotice, setWelcomeNotice] = useState('')
+  const [recognitionLang, setRecognitionLang] = useState('fa-IR')
+  const [retryVisible, setRetryVisible] = useState(false)
+  const welcomeOpen = false
+  const welcomeNotice = ''
   const [finished, setFinished] = useState(false)
   const [timeLeft, setTimeLeft] = useState(60)
   const [robotProgress, setRobotProgress] = useState(robotStartingProgress)
@@ -59,19 +61,11 @@ function App() {
   const recognition = useRef(null)
   const audioPlayer = useRef(null)
   const robotProgressRef = useRef([...robotStartingProgress])
-  const welcomePlayed = useRef(false)
   const stage = allStages[stageNo - 1]
   const players = useMemo(() => [user, ...robots], [user])
 
   useEffect(() => { if (!joining || count === 0) return; const t = setTimeout(() => setCount(c => c - 1), 1000); return () => clearTimeout(t) }, [joining, count])
   useEffect(() => { if (joining && count === 0) { const t = setTimeout(() => setJoining(false), 900); return () => clearTimeout(t) } }, [joining, count])
-  useEffect(() => {
-    if (joining || !user || stageNo !== 1 || welcomePlayed.current) return
-    welcomePlayed.current = true
-    setWelcomeNotice('')
-    setWelcomeOpen(true)
-    replayWelcome()
-  }, [joining, user, stageNo])
   useEffect(() => {
     if (passed.length === 6 && !stageWinner) {
       setFinished(true)
@@ -108,9 +102,10 @@ function App() {
     if ('speechSynthesis' in window) window.speechSynthesis.resume()
     let assigned = wanted
     try { const r = await fetch('/api/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ username:wanted }) }); const d = await r.json(); if (d.username) assigned = d.username } catch { const used = JSON.parse(localStorage.getItem('kalambaz-users') || '[]'); assigned = used.includes(wanted) ? `${wanted}${Math.floor(100 + Math.random()*900)}` : wanted; localStorage.setItem('kalambaz-users', JSON.stringify([...used, assigned])) }
+    setCount(Math.floor(Math.random() * 21))
     setUser(assigned); setJoining(true)
   }
-  function playLocalAudio(fileName, onError) {
+  function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
     const audio = new window.Audio(`${audioBase}${fileName}`)
@@ -119,6 +114,7 @@ function App() {
     audio.preload = 'auto'
     audio.volume = 1
     audio.onerror = fail
+    audio.onended = () => onEnded?.()
     audioPlayer.current = audio
     try {
       const result = audio.play()
@@ -128,37 +124,47 @@ function App() {
     }
     return true
   }
-  function playDescription(text, item) {
+  function playDescription(text, item, onEnded) {
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
     const fallback = () => {
-      const available = speak(text, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'))
+      const available = speak(`${text} حالا اسمش را بگو!`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'))
       if (!available) setAudioNotice('Audio is unavailable in this browser. Enable text-to-speech on the phone.')
+      window.setTimeout(() => onEnded?.(), 1800)
     }
-    if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback)) fallback()
-  }
-  function replayWelcome() {
-    setWelcomeNotice('')
-    const fallback = () => {
-      const available = speak('Welcome to the game! Let’s go!', 'en-US', () => setWelcomeNotice('Audio is unavailable. Enable text-to-speech on the phone, then tap Play voice again.'))
-      if (!available) setWelcomeNotice('Audio is unavailable. Enable text-to-speech on the phone, then tap Play voice again.')
+    const continueListening = () => {
+      speak('حالا اسمش را بگو!', 'fa-IR')
+      window.setTimeout(() => onEnded?.(), 700)
     }
-    if (!playLocalAudio('welcome.wav', fallback)) fallback()
+    if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback, continueListening)) fallback()
   }
-  function openItem(item) { setSelected(item); setNotice(''); setShowFallback(false); playDescription(item[3], item) }
-  function useMic(item) {
+  function openItem(item) { setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); playDescription(item[3], item, () => useMic(item, recognitionLang)) }
+  function replayWelcome() {}
+  function useMic(item, language = recognitionLang) {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
-    const r = new SR(); recognition.current = r; r.lang = 'fa-IR'; r.interimResults = false; setListening(true)
-    r.onresult = e => checkAnswer(e.results[0][0].transcript, item)
-    r.onerror = () => { setListening(false); setShowFallback(true); setNotice('صدایت را نشنیدم. دوباره تلاش کن!') }; r.onend = () => setListening(false); r.start()
+    const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; setListening(true); setRetryVisible(false)
+    r.onresult = e => {
+      const transcript = e.results[0][0].transcript
+      const normalized = normalize(transcript)
+      const expectedFa = normalize(item[1])
+      if (language === 'fa-IR' && normalized !== expectedFa) {
+        useMic(item, 'en-US')
+        return
+      }
+      checkAnswer(transcript, item)
+    }
+    r.onerror = () => { setListening(false); setShowFallback(true); setRetryVisible(true); setNotice('صدایت را نشنیدم. تلاش مجدد کن!') }; r.onend = () => setListening(false); r.start()
   }
   function checkAnswer(answer, item) {
     if (stageWinner || finished) return
     const said = normalize(answer), fa = normalize(item[1]), en = normalize(item[2]); const points = said === en ? 20 : said === fa ? 10 : 0
-    if (!points) { setNotice('نزدیک بود! یک‌بار دیگر با صدای بلند بگو.'); speak('نزدیک بود! یک بار دیگر تلاش کن.'); return }
+    if (!points) { setRetryVisible(true); setShowFallback(true); setNotice('تلاش مجدد! دوباره اسم تصویر را بگو.'); speak('تلاش مجدد! دوباره اسم تصویر را بگو.'); return }
     if (!passed.includes(item[1])) { setPassed(p => [...p, item[1]]); setScore(s => s + points) }
-    setNotice(`آفرین! ${points} ستاره گرفتی ⭐`); speak(`${item[2]}. آفرین! برو به تصویر بعدی.`, 'en-US'); setTimeout(() => speak('آفرین! برو به تصویر بعدی.'), 1200)
+    setRetryVisible(false); setShowFallback(false)
+    const feedback = points === 20 ? 'آفرین! درست گفتی و بیست امتیاز گرفتی.' : 'آفرین! درست گفتی و ده امتیاز گرفتی.'
+    setNotice(feedback); speak(feedback, 'fa-IR')
+    setTimeout(() => { setSelected(null); setNotice('') }, 1500)
   }
   function resetStage() {
     const startingProgress = [...robotStartingProgress]
