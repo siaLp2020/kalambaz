@@ -13,6 +13,7 @@ main.login,main.lobby,main.game{padding-inline:16px}
 .score-hint{margin:4px auto 10px;padding:8px 10px;border-radius:12px;background:#eef2ff;color:#59628c;font-size:.82rem;line-height:1.7}
 .score-hint b{color:#ec8b2d}
 .audio-notice{display:block;margin-top:10px;color:#b36a37;font-size:.78rem;line-height:1.6}
+.popup>.bigemoji+p{display:none}
 .welcome-modal .popup{max-width:430px}
 .welcome-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .welcome-actions button{border:0;border-radius:14px;padding:11px 16px;font-weight:800;cursor:pointer}
