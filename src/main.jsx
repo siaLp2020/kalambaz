@@ -11,16 +11,19 @@ const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length]
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
 const robotStartingProgress = [0.6, 1.8, 1.2]
 const audioBase = `${import.meta.env.BASE_URL}audio/`
-const speak = (text, lang = 'fa-IR', onError) => {
+const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   // On Android Chrome, voices may load asynchronously. Waiting for
   // `voiceschanged` loses the tap gesture that is required to start audio,
   // so queue the utterance synchronously and use a voice only when available.
   if (typeof window === 'undefined' || !('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
     onError?.()
+    onEnd?.()
     return false
   }
   const synth = window.speechSynthesis
   const utterance = new window.SpeechSynthesisUtterance(text)
+  let ended = false
+  const finish = () => { if (!ended) { ended = true; onEnd?.() } }
   const languagePrefix = lang.split('-')[0].toLowerCase()
   const voice = synth.getVoices().find(item => item.lang.toLowerCase().startsWith(languagePrefix))
   if (voice) utterance.voice = voice
@@ -28,7 +31,8 @@ const speak = (text, lang = 'fa-IR', onError) => {
   utterance.rate = lang.startsWith('fa') ? .68 : .82
   utterance.pitch = 1.2
   utterance.volume = 1
-  utterance.onerror = () => onError?.()
+  utterance.onerror = () => { onError?.(); finish() }
+  utterance.onend = finish
   synth.cancel()
   synth.resume()
   synth.speak(utterance)
@@ -130,13 +134,11 @@ function App() {
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
     const fallback = () => {
-      const available = speak(`${text} حالا اسمش را بگو!`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'))
+      const available = speak(`${text} حالا اسمش را بگو!`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'), onEnded)
       if (!available) setAudioNotice('Audio is unavailable in this browser. Enable text-to-speech on the phone.')
-      window.setTimeout(() => onEnded?.(), 1800)
     }
     const continueListening = () => {
-      speak('حالا اسمش را بگو!', 'fa-IR')
-      window.setTimeout(() => onEnded?.(), 700)
+      speak('حالا اسمش را بگو!', 'fa-IR', undefined, onEnded)
     }
     if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback, continueListening)) fallback()
   }
