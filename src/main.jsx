@@ -38,7 +38,32 @@ const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   synth.speak(utterance)
   return true
 }
-const normalize = s => String(s).toLowerCase().replace(/[\s‌-]/g,'').replace(/ي/g,'ی').replace(/ك/g,'ک')
+const normalize = s => String(s).toLowerCase().normalize('NFKC').replace(/[\u064b-\u065f\u0670]/g,'').replace(/[^\p{L}\p{N}]/gu,'').replace(/ي/g,'ی').replace(/ك/g,'ک')
+const englishPronunciationAliases = {
+  dog: ['داگ', 'داک', 'داغ'],
+  cat: ['کت'],
+  rabbit: ['ربیت', 'رابیت', 'ربت'],
+  lion: ['لاین', 'لایون', 'لیان'],
+  elephant: ['الفنت', 'الفانت', 'الیفنت'],
+  fish: ['فیش'],
+  apple: ['اپل'],
+  banana: ['بنانا', 'بانانا'],
+  strawberry: ['استرابری', 'استراوبری', 'استرابری'],
+  grape: ['گریپ'],
+  watermelon: ['واترملون', 'واترمالون'],
+  orange: ['اورنج', 'ارنج', 'آرنج'],
+  red: ['رد'],
+  blue: ['بلو'],
+  yellow: ['یلو'],
+  green: ['گرین'],
+  purple: ['پرپل'],
+}
+const answerPoints = (answer, item) => {
+  const said = normalize(answer)
+  const englishAnswers = [item[2], ...(englishPronunciationAliases[item[2]] || [])].map(normalize)
+  if (englishAnswers.includes(said)) return 20
+  return said === normalize(item[1]) ? 10 : 0
+}
 
 function App() {
   const [user, setUser] = useState('')
@@ -167,18 +192,13 @@ function App() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
     if (!answerDeadline.current || answerDeadline.current < Date.now()) answerDeadline.current = Date.now() + 10000
-    const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; setListening(true); setRetryVisible(false)
+    const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; r.maxAlternatives = 5; setListening(true); setRetryVisible(false)
     let heard = false
     let transitionHandled = false
     r.onresult = e => {
       heard = true
-      const transcript = e.results[0][0].transcript
-      const normalized = normalize(transcript)
-      const expectedFa = normalize(item[1])
-      if (language === 'fa-IR' && normalized !== expectedFa) {
-        useMic(item, 'en-US')
-        return
-      }
+      const alternatives = Array.from(e.results[0]).map(result => result.transcript)
+      const transcript = alternatives.find(candidate => answerPoints(candidate, item) > 0) || alternatives[0]
       checkAnswer(transcript, item)
     }
     const continueListeningOrRetry = () => {
@@ -200,7 +220,7 @@ function App() {
   }
   function checkAnswer(answer, item) {
     if (stageWinner || finished) return
-    const said = normalize(answer), fa = normalize(item[1]), en = normalize(item[2]); const points = said === en ? 20 : said === fa ? 10 : 0
+    const points = answerPoints(answer, item)
     if (!points) { setRetryVisible(true); setShowFallback(true); setNotice('تلاش مجدد! دوباره اسم تصویر را بگو.'); speak('تلاش مجدد! دوباره اسم تصویر را بگو.'); return }
     if (!passed.includes(item[1])) { setPassed(p => [...p, item[1]]); setScore(s => s + points) }
     window.clearTimeout(retryTimer.current)
