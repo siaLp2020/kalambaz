@@ -133,12 +133,13 @@ function App() {
   function playDescription(text, item, onEnded) {
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
+    const prompt = category === 1 ? 'حالا اسم این حیوان را بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
     const fallback = () => {
-      const available = speak(`${text} حالا اسمش را بگو!`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'), onEnded)
+      const available = speak(`${text} ${prompt}`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'), onEnded)
       if (!available) setAudioNotice('Audio is unavailable in this browser. Enable text-to-speech on the phone.')
     }
     const continueListening = () => {
-      speak('حالا اسمش را بگو!', 'fa-IR', undefined, onEnded)
+      onEnded?.()
     }
     if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback, continueListening)) fallback()
   }
