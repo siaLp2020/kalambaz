@@ -140,7 +140,7 @@ function App() {
   function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
-    const audio = new window.Audio(`${audioBase}${fileName}`)
+    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-1`)
     let failed = false
     const fail = () => { if (!failed) { failed = true; onError?.() } }
     audio.preload = 'auto'
