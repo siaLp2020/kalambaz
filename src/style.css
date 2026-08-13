@@ -26,3 +26,4 @@ main.login,main.lobby,main.game{padding-inline:16px}
 .card.done{pointer-events:none;cursor:default}
 html[data-description-playing="true"] .mic{pointer-events:none;cursor:not-allowed;opacity:.55;filter:grayscale(.25)}
 html[data-mic-busy="true"] .mic{pointer-events:none;cursor:not-allowed;opacity:.55;filter:grayscale(.25)}
+.speak-description:disabled,.mic:disabled{cursor:not-allowed;opacity:.55;filter:grayscale(.25)}
