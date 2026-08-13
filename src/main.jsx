@@ -271,6 +271,10 @@ function App() {
   }
   function playDescription(text, item, onEnded) {
     if (descriptionPlaying) return
+    if (!onEnded && item) {
+      beginDescription(item)
+      return
+    }
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
     const prompt = category === 1 ? 'حالا اسم این حیوان رو بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
@@ -295,16 +299,34 @@ function App() {
       setNotice('صدایت را نشنیدم. تلاش مجدد کن!')
     }, delay)
   }
-  function openItem(item) {
-    if (passed.includes(item[1])) return
+  function beginDescription(item) {
+    if (!item || descriptionPlaying) return
     window.clearTimeout(retryTimer.current)
     answerDeadline.current = 0
-    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); setMicBusy(false); setDescriptionPlaying(true)
+    const activeRecognition = recognition.current
+    recognition.current = null
+    if (activeRecognition) {
+      activeRecognition.onresult = null
+      activeRecognition.onerror = null
+      activeRecognition.onend = null
+      try { activeRecognition.stop() } catch {}
+    }
+    setListening(false)
+    setMicBusy(false)
+    setShowFallback(false)
+    setRetryVisible(false)
+    setNotice('')
+    setDescriptionPlaying(true)
     playDescription(item[3], item, () => {
       setDescriptionPlaying(false)
       answerDeadline.current = Date.now() + 10000
       useMic(item, recognitionLang)
     })
+  }
+  function openItem(item) {
+    if (passed.includes(item[1])) return
+    setSelected(item)
+    beginDescription(item)
   }
   function replayWelcome() {}
   function useMic(item, language = recognitionLang) {
