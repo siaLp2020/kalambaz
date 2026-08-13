@@ -10,6 +10,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
 const robotStartingProgress = [0.6, 1.8, 1.2]
+const robotProgressRates = robotStartingProgress.map(progress => (5.4 - progress) / 90)
 const STAGE_DURATION = 120
 const audioBase = `${import.meta.env.BASE_URL}audio/`
 const speak = (text, lang = 'fa-IR', onError, onEnd) => {
@@ -97,6 +98,9 @@ function App() {
   const audioSources = useRef(new Map())
   const audioSourcePromises = useRef(new Map())
   const robotProgressRef = useRef([...robotStartingProgress])
+  const robotWinnerTimer = useRef(null)
+  const passedRef = useRef(passed)
+  const stageWinnerRef = useRef(stageWinner)
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
   const stage = allStages[stageNo - 1]
@@ -137,6 +141,10 @@ function App() {
     return () => { cancelled = true }
   }, [stageNo])
   useEffect(() => {
+    passedRef.current = passed
+    stageWinnerRef.current = stageWinner
+  }, [passed, stageWinner])
+  useEffect(() => {
     if (passed.length === 6 && !stageWinner) {
       setFinished(true)
       setStageWinner('user')
@@ -144,12 +152,37 @@ function App() {
   }, [passed, stageWinner])
 
   useEffect(() => {
+    window.clearTimeout(robotWinnerTimer.current)
+    if (joining || !user || finished || stageWinner || passedRef.current.length === stage.items.length) return undefined
+    const winnerIndex = Math.floor(Math.random() * robots.length)
+    const winnerDelay = 90000 + Math.floor(Math.random() * 29001)
+    robotWinnerTimer.current = window.setTimeout(() => {
+      if (passedRef.current.length === stage.items.length || stageWinnerRef.current) return
+      const progress = [...robotProgressRef.current]
+      progress[winnerIndex] = 6
+      robotProgressRef.current = progress
+      setRobotProgress(progress)
+      setRobotWinner(winnerIndex)
+      setStageWinner('robot')
+      setFinished(false)
+      setSelected(null)
+      setNotice('')
+      setTimeLeft(Math.max(1, STAGE_DURATION - Math.ceil(winnerDelay / 1000)))
+    }, winnerDelay)
+    return () => window.clearTimeout(robotWinnerTimer.current)
+  }, [joining, user, finished, stageWinner, stageNo, stage.items.length])
+
+  useEffect(() => {
     if (joining || !user || finished || stageWinner || passed.length === 6) return
     const timer = setInterval(() => {
       setTimeLeft(previous => {
         if (previous <= 1) {
-          const highestProgress = Math.max(...robotProgressRef.current)
-          setRobotWinner(robotProgressRef.current.indexOf(highestProgress))
+          const winnerIndex = Math.floor(Math.random() * robots.length)
+          const progress = [...robotProgressRef.current]
+          progress[winnerIndex] = 6
+          robotProgressRef.current = progress
+          setRobotProgress(progress)
+          setRobotWinner(winnerIndex)
           setStageWinner('robot')
           setFinished(false)
           setSelected(null)
@@ -159,7 +192,7 @@ function App() {
         return previous - 1
       })
       setRobotProgress(previous => {
-        const next = previous.map((items, index) => Math.min(6, items + (index === 0 ? 0.08 : index === 1 ? 0.05 : 0.02)))
+        const next = previous.map((items, index) => Math.min(5.4, items + robotProgressRates[index]))
         robotProgressRef.current = next
         return next
       })
