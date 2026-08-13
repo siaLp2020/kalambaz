@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './style.css'
 
 const stages = [
-  { name: 'دوستان حیوانی', icon: '🐾', items: [['🐶','سگ','dog','حیوانی وفادار است.'],['🐱','گربه','cat','پنجه‌های نرمی دارد.'],['🐰','خرگوش','rabbit','گوش‌های بلندی دارد.'],['🦁','شیر','lion','پادشاه جنگل است.'],['🐘','فیل','elephant','خرطوم بلندی دارد.'],['🐟','ماهی','fish','در آب شنا می‌کند.']] },
+  { name: 'دوستان حیوانی', icon: '🐾', items: [['🐶','سگ','dog','حیوانی وفادار است که واق‌واق می‌کند.'],['🐱','گربه','cat','این حیوان میو‌میو می‌کند.'],['🐰','خرگوش','rabbit','گوش‌های بلندی دارد.'],['🦁','شیر','lion','پادشاه جنگل است.'],['🐘','فیل','elephant','جثه‌ای بزرگ دارد و خرطوم بلندی دارد.'],['🐟','ماهی','fish','در آب شنا می‌کند.']] },
   { name: 'میوه‌های خوشمزه', icon: '🍎', items: [['🍎','سیب','apple','میوه‌ای قرمز و شیرین است.'],['🍌','موز','banana','زرد و شیرین است.'],['🍓','توت‌فرنگی','strawberry','قرمز و خوش‌عطر است.'],['🍇','انگور','grape','دانه‌های کوچک دارد.'],['🍉','هندوانه','watermelon','پوستی سبز و مغزی آبدار دارد.'],['🍊','پرتقال','orange','ویتامین سی دارد.']] },
   { name: 'رنگ‌های جادویی', icon: '🌈', items: [['🔴','قرمز','red','رنگی شبیه سیب است.'],['🔵','آبی','blue','رنگ آسمان در روز است.'],['🟡','زرد','yellow','رنگ خورشید است.'],['🟢','سبز','green','رنگ چمن است.'],['🟣','بنفش','purple','رنگی زیبا بین قرمز و آبی است.'],['🟠','نارنجی','orange','رنگ غروب آفتاب است.']] },
 ]
@@ -148,7 +148,7 @@ function App() {
   function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
-    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-4`)
+    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-5`)
     let failed = false
     const fail = () => { if (!failed) { failed = true; onError?.() } }
     audio.preload = 'auto'
