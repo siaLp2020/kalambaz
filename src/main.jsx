@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './style.css'
 
 const stages = [
-  { name: 'دوستان حیوانی', icon: '🐾', items: [['🐶','سگ','dog','حیوانی وفادار است که واق‌واق می‌کند.'],['🐱','گربه','cat','حیوانی خانگی است که سیبیل دارد و پنجه‌های تیزی دارد.'],['🐰','خرگوش','rabbit','گوش‌های بلندی دارد.'],['🦁','شیر','lion','پادشاه جنگل است.'],['🐘','فیل','elephant','جثه‌ای بزرگ دارد و خرطوم بلندی دارد.'],['🐟','ماهی','fish','در آب شنا می‌کند.']] },
+  { name: 'دوستان حیوانی', icon: '🐾', items: [['🐶','سگ','dog','حیوانی وفادار است که باق‌باق می‌کند.'],['🐱','گربه','cat','سیبیل دارد و پنجه‌های تیزی دارد.'],['🐰','خرگوش','rabbit','گوش‌های بلندی دارد.'],['🦁','شیر','lion','پادشاه جنگل است.'],['🐘','فیل','elephant','جثه‌ای بزرگ دارد و خرطوم بلندی دارد.'],['🐟','ماهی','fish','در آب شنا می‌کند.']] },
   { name: 'میوه‌های خوشمزه', icon: '🍎', items: [['🍎','سیب','apple','میوه‌ای قرمز و شیرین است.'],['🍌','موز','banana','زرد و شیرین است.'],['🍓','توت‌فرنگی','strawberry','قرمز و خوش‌عطر است.'],['🍇','انگور','grape','دانه‌های کوچک دارد.'],['🍉','هندوانه','watermelon','پوستی سبز و مغزی آبدار دارد.'],['🍊','پرتقال','orange','ویتامین سی دارد.']] },
   { name: 'رنگ‌های جادویی', icon: '🌈', items: [['🔴','قرمز','red','رنگی شبیه سیب است.'],['🔵','آبی','blue','رنگ آسمان در روز است.'],['🟡','زرد','yellow','رنگ خورشید است.'],['🟢','سبز','green','رنگ چمن است.'],['🟣','بنفش','purple','رنگی زیبا بین قرمز و آبی است.'],['🟠','نارنجی','orange','رنگ غروب آفتاب است.']] },
 ]
@@ -164,7 +164,7 @@ function App() {
   function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
-    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-7`)
+    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-8`)
     let failed = false
     const fail = () => { if (!failed) { failed = true; onError?.() } }
     audio.preload = 'auto'
@@ -183,7 +183,7 @@ function App() {
   function playDescription(text, item, onEnded) {
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
-    const prompt = category === 1 ? 'حالا اسم این حیوان را بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
+    const prompt = category === 1 ? 'حالا اسم این حیوان رو بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
     const fallback = () => {
       const available = speak(`${text} ${prompt}`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'), onEnded)
       if (!available) setAudioNotice('Audio is unavailable in this browser. Enable text-to-speech on the phone.')
