@@ -8,21 +8,11 @@ const stages = [
   { name: 'رنگ‌های جادویی', icon: '🌈', items: [['🔴','قرمز','red','رنگی شبیه سیب است.'],['🔵','آبی','blue','رنگ آسمان در روز است.'],['🟡','زرد','yellow','رنگ خورشید است.'],['🟢','سبز','green','رنگ چمن است.'],['🟣','بنفش','purple','رنگی زیبا بین قرمز و آبی است.'],['🟠','نارنجی','orange','رنگ غروب آفتاب است.']] },
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
-const persianSmallNumbers = ['', 'یک', 'دو', 'سه', 'چهار', 'پنج', 'شش', 'هفت', 'هشت', 'نه', 'ده', 'یازده', 'دوازده', 'سیزده', 'چهارده', 'پانزده', 'شانزده', 'هفده', 'هجده', 'نوزده']
-const persianTens = ['', '', 'بیست', 'سی', 'چهل', 'پنجاه', 'شصت', 'هفتاد', 'هشتاد', 'نود']
-const persianHundreds = ['', 'صد', 'دویست', 'سیصد', 'چهارصد', 'پانصد', 'ششصد', 'هفتصد', 'هشتصد', 'نهصد']
-function numberToPersianWords(number) {
-  if (number < 20) return persianSmallNumbers[number]
-  if (number < 100) return [persianTens[Math.floor(number / 10)], persianSmallNumbers[number % 10]].filter(Boolean).join(' و ')
-  if (number < 1000) return [persianHundreds[Math.floor(number / 100)], numberToPersianWords(number % 100)].filter(Boolean).join(' و ')
-  const thousands = Math.floor(number / 1000)
-  const remainder = number % 1000
-  const thousandLabel = thousands === 1 ? 'هزار' : `${numberToPersianWords(thousands)} هزار`
-  return [thousandLabel, numberToPersianWords(remainder)].filter(Boolean).join(' و ')
-}
+const persianDigits = '۰۱۲۳۴۵۶۷۸۹'
+const toPersianDigits = number => String(number).replace(/\d/g, digit => persianDigits[digit])
 function createRobotNames() {
   const names = new Set()
-  while (names.size < 3) names.add(`ربات ${numberToPersianWords(Math.floor(Math.random() * 9999) + 1)}`)
+  while (names.size < 3) names.add(`ربات ${toPersianDigits(Math.floor(Math.random() * 9999) + 1)}`)
   return [...names]
 }
 const robotStartingProgress = [0.3, 0.12, 0.6]
