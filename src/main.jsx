@@ -8,7 +8,23 @@ const stages = [
   { name: 'رنگ‌های جادویی', icon: '🌈', items: [['🔴','قرمز','red','رنگی شبیه سیب است.'],['🔵','آبی','blue','رنگ آسمان در روز است.'],['🟡','زرد','yellow','رنگ خورشید است.'],['🟢','سبز','green','رنگ چمن است.'],['🟣','بنفش','purple','رنگی زیبا بین قرمز و آبی است.'],['🟠','نارنجی','orange','رنگ غروب آفتاب است.']] },
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
-const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
+const persianSmallNumbers = ['', 'یک', 'دو', 'سه', 'چهار', 'پنج', 'شش', 'هفت', 'هشت', 'نه', 'ده', 'یازده', 'دوازده', 'سیزده', 'چهارده', 'پانزده', 'شانزده', 'هفده', 'هجده', 'نوزده']
+const persianTens = ['', '', 'بیست', 'سی', 'چهل', 'پنجاه', 'شصت', 'هفتاد', 'هشتاد', 'نود']
+const persianHundreds = ['', 'صد', 'دویست', 'سیصد', 'چهارصد', 'پانصد', 'ششصد', 'هفتصد', 'هشتصد', 'نهصد']
+function numberToPersianWords(number) {
+  if (number < 20) return persianSmallNumbers[number]
+  if (number < 100) return [persianTens[Math.floor(number / 10)], persianSmallNumbers[number % 10]].filter(Boolean).join(' و ')
+  if (number < 1000) return [persianHundreds[Math.floor(number / 100)], numberToPersianWords(number % 100)].filter(Boolean).join(' و ')
+  const thousands = Math.floor(number / 1000)
+  const remainder = number % 1000
+  const thousandLabel = thousands === 1 ? 'هزار' : `${numberToPersianWords(thousands)} هزار`
+  return [thousandLabel, numberToPersianWords(remainder)].filter(Boolean).join(' و ')
+}
+function createRobotNames() {
+  const names = new Set()
+  while (names.size < 3) names.add(`ربات ${numberToPersianWords(Math.floor(Math.random() * 9999) + 1)}`)
+  return [...names]
+}
 const robotStartingProgress = [0.3, 0.12, 0.6]
 const robotProgressTargets = [5.4, 3.6, 4.2]
 const robotProgressRates = robotStartingProgress.map((progress, index) => (robotProgressTargets[index] - progress) / 90)
@@ -79,6 +95,7 @@ function App() {
   const [selected, setSelected] = useState(null)
   const [passed, setPassed] = useState([])
   const [score, setScore] = useState(0)
+  const [robots, setRobots] = useState(() => createRobotNames())
   const [listening, setListening] = useState(false)
   const [micBusy, setMicBusy] = useState(false)
   const [descriptionPlaying, setDescriptionPlaying] = useState(false)
@@ -107,7 +124,7 @@ function App() {
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
   const stage = allStages[stageNo - 1]
-  const players = useMemo(() => [user, ...robots], [user])
+  const players = useMemo(() => [user, ...robots], [user, robots])
 
   useEffect(() => {
     if (typeof document === 'undefined') return undefined
@@ -208,6 +225,7 @@ function App() {
     if ('speechSynthesis' in window) window.speechSynthesis.resume()
     let assigned = wanted
     try { const r = await fetch('/api/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ username:wanted }) }); const d = await r.json(); if (d.username) assigned = d.username } catch { const used = JSON.parse(localStorage.getItem('kalambaz-users') || '[]'); assigned = used.includes(wanted) ? `${wanted}${Math.floor(100 + Math.random()*900)}` : wanted; localStorage.setItem('kalambaz-users', JSON.stringify([...used, assigned])) }
+    setRobots(createRobotNames())
     setCount(Math.floor(Math.random() * 21))
     setUser(assigned); setJoining(true)
   }
@@ -446,7 +464,20 @@ function App() {
     if (resetCurrentScore) setScore(stageStartScoreRef.current)
     setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice(''); setDescriptionPlaying(false); setMicBusy(false)
   }
+  function restartGame() {
+    window.clearTimeout(robotWinnerTimer.current)
+    window.clearTimeout(retryTimer.current)
+    recognition.current?.stop?.()
+    audioPlayer.current?.pause?.()
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel()
+    answerDeadline.current = 0
+    robotProgressRef.current = [...robotStartingProgress]
+    stageStartScoreRef.current = 0
+    setName(''); setUser(''); setRobots(createRobotNames()); setJoining(false); setCount(0)
+    setStageNo(1); setPassed([]); setScore(0); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress([...robotStartingProgress]); setListening(false); setMicBusy(false); setDescriptionPlaying(false); setNotice(''); setAudioNotice(''); setShowFallback(false); setRetryVisible(false)
+  }
   function nextStage() {
+    if (stageWinner === 'robot') { restartGame(); return }
     if (passed.length !== stage.items.length) return
     stageStartScoreRef.current = stageNo >= 10 ? 0 : score
     setStageNo(n => n >= 10 ? 1 : n + 1)

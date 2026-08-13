@@ -13,6 +13,8 @@ main.login,main.lobby,main.game{padding-inline:16px}
 .timeout .popup p:last-of-type{font-size:0}
 .timeout .popup p:last-of-type::after{content:'برای ادامه، همین مرحله را دوباره تلاش کن.';font-size:.95rem}
 .timeout .result-actions{margin-top:28px}
+.timeout .result-actions button:not(:first-child){display:block;font-size:0;background:#ff687f;box-shadow:0 4px 0 #d44d68}
+.timeout .result-actions button:not(:first-child)::after{content:'شروع مجدد بازی 🔄';font-size:.95rem}
 .speak-description{display:block;margin:10px auto 16px;border:0;border-radius:13px;background:#fff4c7;color:#4b4f7d;padding:9px 16px;font-weight:800;cursor:pointer;box-shadow:0 3px 0 #e4cf78}
 .score-hint{margin:4px auto 10px;padding:8px 10px;border-radius:12px;background:#eef2ff;color:#59628c;font-size:.82rem;line-height:1.7}
 .score-hint b{color:#ec8b2d}
