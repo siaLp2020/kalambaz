@@ -9,7 +9,7 @@ const stages = [
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const persianDigits = '۰۱۲۳۴۵۶۷۸۹'
-const toPersianDigits = number => String(number).replace(/\d/g, digit => persianDigits[digit])
+const toPersianDigits = value => String(value).replace(/[0-9]/g, digit => persianDigits[Number(digit)])
 function createRobotNames() {
   const names = new Set()
   while (names.size < 3) names.add(`ربات ${toPersianDigits(Math.floor(Math.random() * 9999) + 1)}`)
