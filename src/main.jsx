@@ -9,8 +9,9 @@ const stages = [
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
-const robotStartingProgress = [0.6, 1.8, 1.2]
-const robotProgressRates = robotStartingProgress.map(progress => (5.4 - progress) / 90)
+const robotStartingProgress = [1.2, 0.6, 1.8]
+const robotProgressTargets = [5.4, 3.6, 4.2]
+const robotProgressRates = robotStartingProgress.map((progress, index) => (robotProgressTargets[index] - progress) / 90)
 const STAGE_DURATION = 120
 const audioBase = `${import.meta.env.BASE_URL}audio/`
 const speak = (text, lang = 'fa-IR', onError, onEnd) => {
@@ -192,7 +193,7 @@ function App() {
         return previous - 1
       })
       setRobotProgress(previous => {
-        const next = previous.map((items, index) => Math.min(5.4, items + robotProgressRates[index]))
+        const next = previous.map((items, index) => Math.min(robotProgressTargets[index], items + robotProgressRates[index]))
         robotProgressRef.current = next
         return next
       })
