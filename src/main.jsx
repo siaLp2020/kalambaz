@@ -77,6 +77,7 @@ function App() {
   const [passed, setPassed] = useState([])
   const [score, setScore] = useState(0)
   const [listening, setListening] = useState(false)
+  const [micBusy, setMicBusy] = useState(false)
   const [descriptionPlaying, setDescriptionPlaying] = useState(false)
   const [notice, setNotice] = useState('')
   const [showFallback, setShowFallback] = useState(false)
@@ -100,12 +101,27 @@ function App() {
 
   useEffect(() => {
     if (typeof document === 'undefined') return undefined
-    document.documentElement.toggleAttribute('data-description-playing', descriptionPlaying)
-    return () => document.documentElement.removeAttribute('data-description-playing')
-  }, [descriptionPlaying])
+    const root = document.documentElement
+    root.toggleAttribute('data-description-playing', descriptionPlaying)
+    root.toggleAttribute('data-mic-busy', descriptionPlaying || micBusy)
+    return () => {
+      root.removeAttribute('data-description-playing')
+      root.removeAttribute('data-mic-busy')
+    }
+  }, [descriptionPlaying, micBusy])
 
   useEffect(() => { if (!joining || count === 0) return; const t = setTimeout(() => setCount(c => c - 1), 1000); return () => clearTimeout(t) }, [joining, count])
   useEffect(() => { if (joining && count === 0) { const t = setTimeout(() => setJoining(false), 900); return () => clearTimeout(t) } }, [joining, count])
+  useEffect(() => {
+    if (selected) return
+    window.clearTimeout(retryTimer.current)
+    recognition.current?.stop?.()
+    audioPlayer.current?.pause?.()
+    answerDeadline.current = 0
+    setListening(false)
+    setMicBusy(false)
+    setDescriptionPlaying(false)
+  }, [selected])
   useEffect(() => {
     if (passed.length === 6 && !stageWinner) {
       setFinished(true)
@@ -182,6 +198,7 @@ function App() {
     const delay = Math.max(0, answerDeadline.current - Date.now())
     retryTimer.current = window.setTimeout(() => {
       setListening(false)
+      setMicBusy(false)
       setShowFallback(true)
       setRetryVisible(true)
       setNotice('صدایت را نشنیدم. تلاش مجدد کن!')
@@ -191,7 +208,7 @@ function App() {
     if (passed.includes(item[1])) return
     window.clearTimeout(retryTimer.current)
     answerDeadline.current = 0
-    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); setDescriptionPlaying(true)
+    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); setMicBusy(false); setDescriptionPlaying(true)
     playDescription(item[3], item, () => {
       setDescriptionPlaying(false)
       answerDeadline.current = Date.now() + 10000
@@ -200,14 +217,17 @@ function App() {
   }
   function replayWelcome() {}
   function useMic(item, language = recognitionLang) {
-    if (descriptionPlaying) return
+    if (descriptionPlaying || micBusy) return
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
-    if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
+    if (!SR) { setMicBusy(false); setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
     if (!answerDeadline.current || answerDeadline.current < Date.now()) answerDeadline.current = Date.now() + 10000
-    const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; r.maxAlternatives = 5; setListening(true); setRetryVisible(false)
+    const r = new SR(); recognition.current = r; r.lang = language; r.interimResults = false; r.maxAlternatives = 5; setMicBusy(true); setListening(true); setRetryVisible(false)
     let heard = false
     let transitionHandled = false
+    let resultHandled = false
     r.onresult = e => {
+      if (resultHandled) return
+      resultHandled = true
       heard = true
       const alternatives = Array.from(e.results[0]).map(result => result.transcript)
       const transcript = alternatives.find(candidate => answerPoints(candidate, item) > 0) || alternatives[0]
@@ -221,32 +241,61 @@ function App() {
       const remaining = answerDeadline.current - Date.now()
       if (remaining > 0) {
         window.setTimeout(() => {
+          setMicBusy(false)
           if (Date.now() < answerDeadline.current) useMic(item, language)
           else queueRetry(item)
         }, Math.min(350, remaining))
-      } else queueRetry(item)
+      } else {
+        setMicBusy(false)
+        queueRetry(item)
+      }
     }
-    r.onerror = continueListeningOrRetry
+    r.onerror = event => {
+      if (['not-allowed', 'service-not-allowed', 'audio-capture'].includes(event.error)) {
+        transitionHandled = true
+        setListening(false)
+        setMicBusy(false)
+        answerDeadline.current = Date.now()
+        queueRetry(item)
+        return
+      }
+      continueListeningOrRetry()
+    }
     r.onend = continueListeningOrRetry
-    r.start()
+    try {
+      r.start()
+    } catch {
+      setListening(false)
+      setMicBusy(false)
+      queueRetry(item)
+    }
   }
   function checkAnswer(answer, item) {
-    if (stageWinner || finished) return
+    if (stageWinner || finished) { setListening(false); setMicBusy(false); return }
     const points = answerPoints(answer, item)
-    if (!points) { setRetryVisible(true); setShowFallback(true); setNotice('تلاش مجدد! دوباره اسم تصویر را بگو.'); speak('تلاش مجدد! دوباره اسم تصویر را بگو.'); return }
+    setListening(false)
+    recognition.current?.stop?.()
+    if (!points) {
+      window.clearTimeout(retryTimer.current)
+      answerDeadline.current = Date.now() + 10000
+      setMicBusy(true)
+      setRetryVisible(true); setShowFallback(true); setNotice('تلاش مجدد! دوباره اسم تصویر را بگو.')
+      speak('تلاش مجدد! دوباره اسم تصویر را بگو.', 'fa-IR', undefined, () => setMicBusy(false))
+      return
+    }
     if (!passed.includes(item[1])) { setPassed(p => [...p, item[1]]); setScore(s => s + points) }
     window.clearTimeout(retryTimer.current)
     answerDeadline.current = 0
     recognition.current?.stop?.()
-    setRetryVisible(false); setShowFallback(false); setDescriptionPlaying(false)
+    setRetryVisible(false); setShowFallback(false); setDescriptionPlaying(false); setMicBusy(true)
     const feedback = points === 20 ? 'آفرین! درست گفتی و بیست امتیاز گرفتی.' : 'آفرین! درست گفتی و ده امتیاز گرفتی.'
     setNotice(feedback); speak(feedback, 'fa-IR')
-    setTimeout(() => { setSelected(null); setNotice('') }, 1500)
+    setTimeout(() => { setSelected(null); setNotice(''); setMicBusy(false) }, 1500)
   }
   function resetStage() {
     const startingProgress = [...robotStartingProgress]
     robotProgressRef.current = startingProgress
-    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice(''); setDescriptionPlaying(false)
+    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice(''); setDescriptionPlaying(false); setMicBusy(false)
   }
   function nextStage() {
     if (passed.length !== stage.items.length) return
