@@ -357,14 +357,19 @@ function App() {
     setAudioNotice('')
     const prompt = `حالا اسم این ${stage.prompt} رو بگو.`
     const audioUnavailable = () => setAudioNotice('صدای توضیح آماده نشد؛ دوباره روی «گوش کن» بزن.')
+    let fallbackStarted = false
     const fallback = () => {
+      if (fallbackStarted) return
+      fallbackStarted = true
       const available = speak(`${text} ${prompt}`, 'fa-IR', audioUnavailable, onEnded)
       if (!available) audioUnavailable()
     }
     const continueListening = () => {
       onEnded?.()
     }
-    if (!playLocalAudio(audioFileName(item), fallback, continueListening)) fallback()
+    const localFile = audioFileName(item)
+    if (localFile) playLocalAudio(localFile, fallback, continueListening)
+    else fallback()
   }
   function queueRetry(item) {
     window.clearTimeout(retryTimer.current)
