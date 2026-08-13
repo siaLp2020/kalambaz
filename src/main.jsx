@@ -93,6 +93,7 @@ function App() {
   const [robotWinner, setRobotWinner] = useState(0)
   const recognition = useRef(null)
   const audioPlayer = useRef(null)
+  const audioCache = useRef(new Map())
   const robotProgressRef = useRef([...robotStartingProgress])
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
@@ -122,6 +123,9 @@ function App() {
     setMicBusy(false)
     setDescriptionPlaying(false)
   }, [selected])
+  useEffect(() => {
+    stage.items.forEach(item => getCachedAudio(audioFileName(item))?.load?.())
+  }, [stageNo])
   useEffect(() => {
     if (passed.length === 6 && !stageWinner) {
       setFinished(true)
@@ -161,37 +165,83 @@ function App() {
     setCount(Math.floor(Math.random() * 21))
     setUser(assigned); setJoining(true)
   }
+  function audioFileName(item) {
+    const category = ((stageNo - 1) % stages.length) + 1
+    return item ? `${category}-${item[2]}.wav` : ''
+  }
+  function getCachedAudio(fileName) {
+    if (!fileName || typeof window === 'undefined' || typeof window.Audio === 'undefined') return null
+    const url = `${audioBase}${fileName}?v=child-voice-8`
+    let audio = audioCache.current.get(fileName)
+    if (!audio) {
+      audio = new window.Audio(url)
+      audio.preload = 'auto'
+      audioCache.current.set(fileName, audio)
+    }
+    return audio
+  }
   function playLocalAudio(fileName, onError, onEnded) {
     if (typeof window === 'undefined' || typeof window.Audio === 'undefined' || !fileName) { onError?.(); return false }
     audioPlayer.current?.pause()
-    const audio = new window.Audio(`${audioBase}${fileName}?v=child-voice-8`)
-    let failed = false
-    const fail = () => { if (!failed) { failed = true; onError?.() } }
-    audio.preload = 'auto'
-    audio.volume = 1
-    audio.onerror = fail
-    audio.onended = () => onEnded?.()
-    audioPlayer.current = audio
-    try {
-      const result = audio.play()
-      result?.catch(fail)
-    } catch {
-      fail()
+    let attempts = 0
+    let settled = false
+    let audio = getCachedAudio(fileName)
+    const finish = callback => {
+      if (settled) return
+      settled = true
+      if (audio) {
+        audio.onerror = null
+        audio.onended = null
+      }
+      callback?.()
     }
+    const retryOrFail = error => {
+      if (settled) return
+      if (error?.name === 'NotAllowedError' || error?.name === 'NotSupportedError') {
+        finish(onError)
+        return
+      }
+      if (attempts < 3) {
+        audio?.pause?.()
+        if (audioCache.current.get(fileName) === audio) audioCache.current.delete(fileName)
+        window.setTimeout(startAttempt, attempts * 250)
+        return
+      }
+      finish(onError)
+    }
+    const startAttempt = () => {
+      if (settled) return
+      attempts += 1
+      audio = getCachedAudio(fileName)
+      if (!audio) { finish(onError); return }
+      try { audio.currentTime = 0 } catch {}
+      audio.volume = 1
+      audio.onerror = () => retryOrFail()
+      audio.onended = () => finish(onEnded)
+      audioPlayer.current = audio
+      try {
+        const result = audio.play()
+        result?.catch(retryOrFail)
+      } catch (error) {
+        retryOrFail(error)
+      }
+    }
+    startAttempt()
     return true
   }
   function playDescription(text, item, onEnded) {
     setAudioNotice('')
     const category = ((stageNo - 1) % stages.length) + 1
     const prompt = category === 1 ? 'حالا اسم این حیوان رو بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
+    const audioUnavailable = () => setAudioNotice('صدای توضیح آماده نشد؛ دوباره روی «گوش کن» بزن.')
     const fallback = () => {
-      const available = speak(`${text} ${prompt}`, 'fa-IR', () => setAudioNotice('Persian audio is unavailable. Enable text-to-speech on the phone.'), onEnded)
-      if (!available) setAudioNotice('Audio is unavailable in this browser. Enable text-to-speech on the phone.')
+      const available = speak(`${text} ${prompt}`, 'fa-IR', audioUnavailable, onEnded)
+      if (!available) audioUnavailable()
     }
     const continueListening = () => {
       onEnded?.()
     }
-    if (!playLocalAudio(item ? `${category}-${item[2]}.wav` : '', fallback, continueListening)) fallback()
+    if (!playLocalAudio(audioFileName(item), fallback, continueListening)) fallback()
   }
   function queueRetry(item) {
     window.clearTimeout(retryTimer.current)
