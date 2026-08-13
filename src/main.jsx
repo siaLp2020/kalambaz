@@ -94,6 +94,8 @@ function App() {
   const recognition = useRef(null)
   const audioPlayer = useRef(null)
   const audioCache = useRef(new Map())
+  const audioSources = useRef(new Map())
+  const audioSourcePromises = useRef(new Map())
   const robotProgressRef = useRef([...robotStartingProgress])
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
@@ -124,7 +126,15 @@ function App() {
     setDescriptionPlaying(false)
   }, [selected])
   useEffect(() => {
-    stage.items.forEach(item => getCachedAudio(audioFileName(item))?.load?.())
+    let cancelled = false
+    const loadStageAudio = async () => {
+      for (const item of stage.items) {
+        if (cancelled) return
+        await preloadAudio(audioFileName(item))
+      }
+    }
+    loadStageAudio()
+    return () => { cancelled = true }
   }, [stageNo])
   useEffect(() => {
     if (passed.length === 6 && !stageWinner) {
@@ -169,13 +179,43 @@ function App() {
     const category = ((stageNo - 1) % stages.length) + 1
     return item ? `${category}-${item[2]}.wav` : ''
   }
+  function preloadAudio(fileName) {
+    if (!fileName || typeof window === 'undefined' || typeof window.fetch !== 'function') return Promise.resolve()
+    if (audioSourcePromises.current.has(fileName)) return audioSourcePromises.current.get(fileName)
+    const directUrl = `${audioBase}${fileName}?v=child-voice-8`
+    const request = window.fetch(directUrl, { cache: 'force-cache' })
+      .then(response => {
+        if (!response.ok) throw new Error(`Audio request failed: ${response.status}`)
+        return response.blob()
+      })
+      .then(blob => {
+        const objectUrl = window.URL.createObjectURL(blob)
+        audioSources.current.set(fileName, objectUrl)
+        const cached = audioCache.current.get(fileName)
+        if (cached && cached._kalambazSource !== objectUrl) {
+          cached.pause()
+          cached.src = objectUrl
+          cached._kalambazSource = objectUrl
+          cached.load()
+        }
+        return objectUrl
+      })
+      .catch(() => {
+        audioSources.current.set(fileName, directUrl)
+        return directUrl
+      })
+    audioSourcePromises.current.set(fileName, request)
+    return request
+  }
   function getCachedAudio(fileName) {
     if (!fileName || typeof window === 'undefined' || typeof window.Audio === 'undefined') return null
-    const url = `${audioBase}${fileName}?v=child-voice-8`
+    const url = audioSources.current.get(fileName) || `${audioBase}${fileName}?v=child-voice-8`
     let audio = audioCache.current.get(fileName)
-    if (!audio) {
+    if (!audio || audio._kalambazSource !== url) {
+      audio?.pause?.()
       audio = new window.Audio(url)
       audio.preload = 'auto'
+      audio._kalambazSource = url
       audioCache.current.set(fileName, audio)
     }
     return audio
