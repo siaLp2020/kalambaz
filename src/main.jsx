@@ -9,7 +9,7 @@ const stages = [
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
-const robotStartingProgress = [1.2, 0.6, 1.8]
+const robotStartingProgress = [0.3, 0.12, 0.6]
 const robotProgressTargets = [5.4, 3.6, 4.2]
 const robotProgressRates = robotStartingProgress.map((progress, index) => (robotProgressTargets[index] - progress) / 90)
 const STAGE_DURATION = 120
