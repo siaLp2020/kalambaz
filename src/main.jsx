@@ -8,6 +8,38 @@ const stages = [
   { name: 'رنگ‌های جادویی', icon: '🌈', items: [['🔴','قرمز','red','رنگی شبیه سیب است.'],['🔵','آبی','blue','رنگ آسمان در روز است.'],['🟡','زرد','yellow','رنگ خورشید است.'],['🟢','سبز','green','رنگ چمن است.'],['🟣','بنفش','purple','رنگی زیبا بین قرمز و آبی است.'],['🟠','نارنجی','orange','رنگ غروب آفتاب است.']] },
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
+const ITEMS_PER_STAGE = 6
+const makeCategory = (name, icon, prompt, source, clues) => ({
+  name,
+  icon,
+  prompt,
+  items: source.split(';').filter(Boolean).map((value, index) => {
+    const [emoji, faName, enName, customDescription, audioName] = value.split('|')
+    return [emoji, faName, enName, customDescription || clues[index % clues.length], audioName || '']
+  }),
+})
+const categories = [
+  makeCategory('دوستان حیوانی', '🐾', 'حیوان', '🐶|سگ|dog|حیوانی وفادار است که باق‌باق می‌کند.|1-dog.wav;🐱|گربه|cat|سیبیل دارد و پنجه‌های تیزی دارد.|1-cat.wav;🐰|خرگوش|rabbit|گوش‌های بلندی دارد.|1-rabbit.wav;🦁|شیر|lion|پادشاه جنگل است.|1-lion.wav;🐘|فیل|elephant|جثه‌ای بزرگ دارد و خرطوم بلندی دارد.|1-elephant.wav;🐟|ماهی|fish|در آب شنا می‌کند.|1-fish.wav;🐻|خرس|bear;🐴|اسب|horse;🐮|گاو|cow;🐑|گوسفند|sheep;🐐|بز|goat;🐔|مرغ|chicken;🐓|خروس|rooster;🦆|اردک|duck;🪿|غاز|goose;🦃|بوقلمون|turkey;🐷|خوک|pig;🐭|موش|mouse;🐹|همستر|hamster;🐿️|سنجاب|squirrel;🦊|روباه|fox;🐺|گرگ|wolf;🐯|ببر|tiger;🐆|پلنگ|leopard;🐆|یوزپلنگ|cheetah;🦒|زرافه|giraffe;🦓|گورخر|zebra;🐒|میمون|monkey;🦍|گوریل|gorilla;🐼|پاندا|panda;🐨|کوالا|koala;🦘|کانگورو|kangaroo;🦌|گوزن|deer;🐪|شتر|camel;🫏|الاغ|donkey;🦛|اسب آبی|hippo;🦏|کرگدن|rhino;🐊|کروکودیل|crocodile;🐍|مار|snake;🐢|لاک‌پشت|turtle;🐸|قورباغه|frog;🐧|پنگوئن|penguin;🦉|جغد|owl;🦅|عقاب|eagle;🦜|طوطی|parrot;🦚|طاووس|peacock;🦩|فلامینگو|flamingo;🐬|دلفین|dolphin;🐋|نهنگ|whale;🐙|اختاپوس|octopus', ['حیوانی دوست‌داشتنی است.', 'در طبیعت زندگی می‌کند.', 'صدای جالبی دارد.', 'بدن متفاوتی دارد.', 'حرکت بامزه‌ای انجام می‌دهد.', 'در محیط‌های مختلف دیده می‌شود.']),
+  makeCategory('میوه‌های خوشمزه', '🍎', 'میوه', '🍎|سیب|apple|میوه‌ای قرمز و شیرین است.|2-apple.wav;🍌|موز|banana|زرد و شیرین است.|2-banana.wav;🍓|توت‌فرنگی|strawberry|قرمز و خوش‌عطر است.|2-strawberry.wav;🍇|انگور|grape|دانه‌های کوچک دارد.|2-grape.wav;🍉|هندوانه|watermelon|پوستی سبز و مغزی آبدار دارد.|2-watermelon.wav;🍊|پرتقال|orange|ویتامین سی دارد.|2-orange.wav;🍐|گلابی|pear;🍑|هلو|peach;🍑|آلو|plum;🍒|گیلاس|cherry;🥭|انبه|mango;🍍|آناناس|pineapple;🥝|کیوی|kiwi;🍋|لیمو|lemon;🍋|لیموترش|lime;❤️|انار|pomegranate;🫓|انجیر|fig;🌴|خرما|date;🥥|نارگیل|coconut;🥑|آووکادو|avocado;🥭|پاپایا|papaya;🍈|گواوا|guava;🍑|زردآلو|apricot;🫐|تمشک|raspberry;🫐|بلوبری|blueberry;🫐|شاه‌توت|blackberry;🔴|کرنبری|cranberry;🍈|خربزه|melon;🍈|گرمک|cantaloupe;🍊|گریپ‌فروت|grapefruit;🍊|نارنگی|tangerine;🍊|نارنج|mandarin;🟠|خرمالو|persimmon;🐉|میوه اژدها|dragonfruit;🥭|میوه گل ساعتی|passionfruit;🍈|لیچی|lychee;🍒|رامبوتان|rambutan;⭐|میوه ستاره‌ای|starfruit;🍈|جک‌فروت|jackfruit;🟤|دوریان|durian;🫒|زیتون|olive;🍐|به|quince;🍑|شلیل|nectarine;🫐|توت|mulberry;🟢|انگور فرنگی|gooseberry;🟣|تمشک قرمز|currant;🫐|الدربری|elderberry;🟤|عناب|jujube;🟤|کنار|medlar;🟡|ازگیل|loquat', ['خوراکی شیرین و خوش‌طعم است.', 'رنگ زیبایی دارد.', 'آبدار و تازه است.', 'برای میان‌وعده مناسب است.', 'بوی خوبی دارد.', 'ویتامین‌های مفیدی دارد.']),
+  makeCategory('رنگ‌های جادویی', '🌈', 'رنگ', '🔴|قرمز|red|رنگی شبیه سیب است.|3-red.wav;🔵|آبی|blue|رنگ آسمان در روز است.|3-blue.wav;🟡|زرد|yellow|رنگ خورشید است.|3-yellow.wav;🟢|سبز|green|رنگ چمن است.|3-green.wav;🟣|بنفش|purple|رنگی زیبا بین قرمز و آبی است.|3-purple.wav;🟠|نارنجی|orange|رنگ غروب آفتاب است.|3-orange.wav;🩷|صورتی|pink;⚫|سیاه|black;⚪|سفید|white;🟤|قهوه‌ای|brown;🩶|خاکستری|gray;🔹|فیروزه‌ای|cyan;🔷|سرمه‌ای|navy;🔷|آبی فیروزه‌ای|turquoise;🟨|طلایی|gold;◻️|نقره‌ای|silver;🟫|بژ|beige;🤍|کرم|cream;❤️|زرشکی|maroon;💜|ویوله‌ای|violet;💠|نیلی|indigo;🪻|اسطوخودوسی|lavender;🪸|مرجانی|coral;🟦|سبزآبی|teal;🍃|نعنایی|mint;🫒|زیتونی|olive;🟩|لیمویی|lime;🍑|هلویی|peach;🌤️|آبی آسمانی|skyblue;💙|آبی سلطنتی|royalblue;🌲|سبز تیره|darkgreen;🌿|سبز روشن|lightgreen;🟥|قرمز تیره|darkred;💗|قرمز روشن|lightred;💗|سرخابی|magenta;🟥|عنابی|burgundy;🟫|حنایی|tan;🟨|خاکی|khaki;🟡|خردلی|mustard;💚|زمردی|emerald;♦️|یاقوتی|ruby;🔷|لاجوردی|sapphire;🟠|کهربایی|amber;🟤|برنزی|bronze;🟫|مسی|copper;⚫|ذغالی|charcoal;🌈|رنگین‌کمانی|rainbow;🎨|چندرنگ|multicolor;🫧|شفاف|transparent;🖍️|پاستلی|pastel', ['رنگی زیبا و چشم‌نواز است.', 'در نقاشی استفاده می‌شود.', 'با رنگ‌های دیگر ترکیب می‌شود.', 'در طبیعت دیده می‌شود.', 'شاد و روشن است.', 'آرام و دوست‌داشتنی است.']),
+  makeCategory('سبزیجات سالم', '🥕', 'سبزی', '🥕|هویج|carrot;🥔|سیب‌زمینی|potato;🍅|گوجه‌فرنگی|tomato;🥒|خیار|cucumber;🧅|پیاز|onion;🧄|سیر|garlic;🥬|کاهو|lettuce;🥬|اسفناج|spinach;🥦|بروکلی|broccoli;🥦|گل‌کلم|cauliflower;🥬|کلم|cabbage;🍆|بادمجان|eggplant;🫑|فلفل دلمه‌ای|pepper;🌽|ذرت|corn;🫛|نخودفرنگی|pea;🫘|لوبیا|bean;🫘|عدس|lentil;🫘|نخود|chickpea;🎃|کدوحلوایی|pumpkin;🥒|کدو سبز|zucchini;🔴|تربچه|radish;🟣|چغندر|beet;🟣|شلغم|turnip;🥬|کرفس|celery;🍄|قارچ|mushroom;🌱|مارچوبه|asparagus;🌿|کنگر فرنگی|artichoke;🟢|بامیه|okra;🍠|سیب‌زمینی شیرین|sweetpotato;🥬|تره‌فرنگی|leek;🫚|زنجبیل|ginger;🌶️|فلفل تند|chili;🥑|آووکادو|avocado;🥬|کلم بروکسل|brussels;🥬|کلم‌پیچ|kale;🥬|برگ چغندر|chard;🍠|یام|yam;🎋|جوانه بامبو|bambooshoot;🌊|جلبک|seaweed;🫘|سویا|soybean;🫛|ادامامه|edamame;🌿|رازیانه|fennel;🌿|جعفری|parsley;🌿|گشنیز|cilantro;🌿|نعناع|mint;🌿|ریحان|basil;🌿|شوید|dill;🌿|شاهی|watercress;🌿|روکولا|arugula;🌿|کاسنی|endive', ['خوراکی سالم و مفید است.', 'رنگ زیبایی دارد.', 'در باغچه رشد می‌کند.', 'برای بدن ما خوب است.', 'در آشپزی استفاده می‌شود.', 'تازه و خوش‌بو است.']),
+  makeCategory('وسایل نقلیه', '🚗', 'وسیله نقلیه', '🚗|ماشین|car;🚌|اتوبوس|bus;🚆|قطار|train;✈️|هواپیما|airplane;🚁|هلیکوپتر|helicopter;🚲|دوچرخه|bicycle;🏍️|موتورسیکلت|motorcycle;🛴|اسکوتر|scooter;🚤|قایق|boat;🚢|کشتی|ship;🚢|زیردریایی|submarine;🚀|موشک|rocket;🚜|تراکتور|tractor;🚚|کامیون|truck;🚑|آمبولانس|ambulance;🚒|ماشین آتش‌نشانی|firetruck;🚓|ماشین پلیس|policecar;🚕|تاکسی|taxi;🚐|ون|van;🚌|اتوبوس مدرسه|schoolbus;🚋|تراموا|tram;🚇|مترو|subway;⛵|قایق بادبانی|sailboat;🛶|کانو|canoe;🛶|کایاک|kayak;🛥️|قایق تفریحی|yacht;⛴️|کشتی مسافری|ferry;🎈|بالن|hotairballoon;🛹|اسکیت‌بورد|skateboard;🛼|اسکیت|rollerskates;🛒|چرخ خرید|shoppingcart;🚜|بولدوزر|bulldozer;🚧|بیل مکانیکی|excavator;🏗️|جرثقیل|crane;🚛|کامیون بتن‌ساز|cementmixer;🚚|کمپرسی|dumptruck;🏎️|ماشین مسابقه|racecar;🚙|جیپ|jeep;🚐|مینی‌بوس|minibus;🚠|تله‌کابین|cablecar;🛷|اسنوموبیل|snowmobile;🪖|تانک|tank;🛸|سفینه فضایی|spaceship;🛩️|گلایدر|glider;🛫|جت|jet;🛻|وانت|pickup;🚘|لیموزین|limousine;🛺|ریکشا|rickshaw;🐎|درشکه|horsecart;🛒|کالسکه|stroller', ['برای جابه‌جایی استفاده می‌شود.', 'می‌تواند سریع حرکت کند.', 'چرخ یا بال دارد.', 'آدم‌ها را به مقصد می‌رساند.', 'صدای جالبی دارد.', 'در خیابان یا آسمان دیده می‌شود.']),
+  makeCategory('لباس و پوشیدنی‌ها', '👕', 'لباس', '👕|پیراهن|shirt;👖|شلوار|pants;👗|لباس|dress;👗|دامن|skirt;🧥|پالتو|coat;🧥|کاپشن|jacket;🧶|پلیور|sweater;🧥|هودی|hoodie;👕|تی‌شرت|tshirt;🩳|شلوارک|shorts;👖|شلوار جین|jeans;🧦|جوراب|socks;👟|کفش|shoes;🥾|چکمه|boots;👡|صندل|sandals;🥿|دمپایی|slippers;🎩|کلاه|hat;🧢|کلاه نقاب‌دار|cap;🧣|شال|scarf;🧤|دستکش|gloves;👔|کمربند|belt;👔|کراوات|tie;🎀|پاپیون|bowtie;🛌|لباس خواب|pajamas;🩱|لباس شنا|swimsuit;🌧️|بارانی|raincoat;🥋|لباس فرم|uniform;🎒|کوله‌پشتی|backpack;👜|کیف|bag;👛|کیف دستی|purse;☂️|چتر|umbrella;🕶️|عینک آفتابی|sunglasses;👓|عینک|glasses;⌚|ساعت|watch;👑|تاج|crown;⛑️|کلاه ایمنی|helmet;🧑‍🍳|پیش‌بند|apron;🦺|جلیقه|vest;🥋|ردا|robe;🧕|عمامه|turban;🧣|شال بزرگ|shawl;🎀|تل مو|headband;🎀|گیره مو|hairclip;📿|دستبند|bracelet;📿|گردنبند|necklace;💍|انگشتر|ring;💎|گوشواره|earring;👛|کیف پول|wallet;👟|کتانی|sneakers;🧑‍🌾|لباس کار|overalls', ['برای پوشیدن استفاده می‌شود.', 'رنگ و طرح زیبایی دارد.', 'ما را گرم یا خنک نگه می‌دارد.', 'به اندازه‌های مختلف ساخته می‌شود.', 'در خانه یا بیرون استفاده می‌شود.', 'به ظاهر ما زیبایی می‌دهد.']),
+  makeCategory('اعضای بدن', '🧍', 'عضو بدن', '🙂|سر|head;💇|مو|hair;👁️|چشم|eye;👂|گوش|ear;👃|بینی|nose;👄|دهان|mouth;🦷|دندان|tooth;👅|زبان|tongue;😊|گونه|cheek;🙂|چانه|chin;🧣|گردن|neck;💪|شانه|shoulder;💪|بازو|arm;💪|آرنج|elbow;✋|دست|hand;☝️|انگشت|finger;👍|شست|thumb;🫀|سینه|chest;🔙|پشت|back;🫃|شکم|stomach;🦵|پا|leg;🦵|زانو|knee;🦶|کف پا|foot;🦶|انگشت پا|toe;❤️|قلب|heart;🧠|مغز|brain;🫳|پوست|skin;🦴|استخوان|bone;💪|ماهیچه|muscle;🤨|ابرو|eyebrow;👁️|مژه|eyelash;🙂|پیشانی|forehead;👄|لب|lip;🧔|ریش|beard;🧔|سبیل|mustache;🤚|مچ دست|wrist;✋|کف دست|palm;💅|ناخن|nail;🦶|پاشنه|heel;🦶|قوزک|ankle;🧍|لگن|hip;🫁|ریه|lung;🫀|کبد|liver;🩸|خون|blood;🩸|رگ|vein;🦴|ستون فقرات|spine;⭕|ناف|bellybutton;🗣️|گلو|throat;😀|صورت|face;🧍|بدن|body', ['برای حرکت و زندگی لازم است.', 'بخش مهمی از بدن ماست.', 'باید از آن مراقبت کنیم.', 'با آن چیزهای مختلف را حس می‌کنیم.', 'در بدن همهٔ آدم‌ها وجود دارد.', 'کار مهمی انجام می‌دهد.']),
+  makeCategory('خوراکی‌ها و نوشیدنی‌ها', '🍽️', 'خوراکی', '🍞|نان|bread;🍚|برنج|rice;🍝|ماکارونی|pasta;🍕|پیتزا|pizza;🥪|ساندویچ|sandwich;🍔|همبرگر|burger;🍲|سوپ|soup;🥗|سالاد|salad;🧀|پنیر|cheese;🥚|تخم‌مرغ|egg;🥣|ماست|yogurt;🍦|بستنی|icecream;🍰|کیک|cake;🍪|کلوچه|cookie;🍫|شکلات|chocolate;🍬|آبنبات|candy;🍿|پاپ‌کورن|popcorn;🍟|سیب‌زمینی سرخ‌کرده|fries;🌭|سوسیس|sausage;🍢|کباب|kebab;🍲|خورش|stew;🍳|املت|omelet;🥞|پنکیک|pancake;🧇|وافل|waffle;🥣|غلات صبحانه|cereal;🍯|عسل|honey;🍓|مربا|jam;🧈|کره|butter;🧂|نمک|salt;🍚|شکر|sugar;🍵|چای|tea;🥛|شیر|milk;🧃|آبمیوه|juice;💧|آب|water;🍋|لیموناد|lemonade;🥤|اسموتی|smoothie;☕|کاکائو|cocoa;☕|قهوه|coffee;🍫|شکلات داغ|hotchocolate;🥟|دامپلینگ|dumpling;🍣|سوشی|sushi;🌮|تاکو|taco;🌯|بوریتو|burrito;🍜|نودل|noodles;🍞|نان تست|toast;🍩|دونات|donut;🧁|کاپ‌کیک|cupcake;🥧|پای|pie;🍪|بیسکویت|biscuit;🍟|چیپس|chips', ['خوش‌مزه و دوست‌داشتنی است.', 'برای خوردن آماده می‌شود.', 'بوی خوبی دارد.', 'رنگ و شکل جالبی دارد.', 'در آشپزخانه درست می‌شود.', 'می‌تواند شیرین یا شور باشد.']),
+  makeCategory('طبیعت و آب‌وهوا', '🌤️', 'پدیدهٔ طبیعت', '☀️|خورشید|sun;🌙|ماه|moon;⭐|ستاره|star;☁️|ابر|cloud;🌧️|باران|rain;❄️|برف|snow;💨|باد|wind;🌈|رنگین‌کمان|rainbow;⚡|برق|lightning;🌩️|رعد|thunder;⛈️|طوفان|storm;🌫️|مه|fog;🌌|آسمان|sky;⛰️|کوه|mountain;⛰️|تپه|hill;🏞️|رودخانه|river;🏞️|دریاچه|lake;🌊|دریا|sea;🌊|اقیانوس|ocean;🌊|آبشار|waterfall;🏝️|جزیره|island;🏖️|ساحل|beach;🏜️|بیابان|desert;🌲|جنگل|forest;🌳|درخت|tree;🌸|گل|flower;🌱|چمن|grass;🍃|برگ|leaf;🌱|دانه|seed;🪨|صخره|rock;🪨|سنگ|stone;🌋|آتشفشان|volcano;🕳️|غار|cave;🌱|خاک|soil;🏖️|شن|sand;❄️|دانه برف|snowflake;💧|قطره باران|raindrop;🔥|آتش|fire;🌊|موج|wave;🐚|صدف|shell;🪺|لانه|nest;🌷|باغ|garden;🏞️|پارک|park;🌸|بهار|spring;☀️|تابستان|summer;🍂|پاییز|autumn;❄️|زمستان|winter;🌅|طلوع|sunrise;🌇|غروب|sunset;🪐|سیاره|planet', ['در طبیعت دیده می‌شود.', 'زیبا و شگفت‌انگیز است.', 'گاهی تغییر می‌کند.', 'در آسمان یا زمین دیده می‌شود.', 'به زندگی ما کمک می‌کند.', 'می‌تواند آرام یا پرقدرت باشد.']),
+  makeCategory('خانه، مدرسه و اسباب‌بازی', '🏠', 'وسیله', '🏠|خانه|house;🚪|اتاق|room;🚪|در|door;🪟|پنجره|window;🪑|صندلی|chair;🪑|میز|table;🛏️|تخت|bed;🛋️|مبل|sofa;💡|چراغ|lamp;⏰|ساعت زنگ‌دار|clock;📱|تلفن|phone;💻|رایانه|computer;📖|کتاب|book;✏️|مداد|pencil;🖊️|خودکار|pen;🧽|پاک‌کن|eraser;📏|خط‌کش|ruler;✂️|قیچی|scissors;🧴|چسب|glue;🎒|کیف مدرسه|schoolbag;📓|دفتر|notebook;⚽|توپ|ball;🪆|عروسک|doll;🧸|خرس عروسکی|teddy;🧱|مکعب|blocks;🧩|پازل|puzzle;🪁|بادبادک|kite;🎈|بادکنک|balloon;🥁|طبل|drum;🎸|گیتار|guitar;🎹|پیانو|piano;🤖|ربات اسباب‌بازی|toyrobot;🪥|مسواک|toothbrush;🧼|صابون|soap;🧻|حوله|towel;🥤|لیوان|cup;🍽️|بشقاب|plate;🥄|قاشق|spoon;🍴|چنگال|fork;🍼|بطری|bottle;🔑|کلید|key;🔒|قفل|lock;🧺|سبد|basket;📦|جعبه|box;🪞|آینه|mirror;📺|تلویزیون|television;📷|دوربین|camera;🌀|پنکه|fan;🧊|یخچال|refrigerator;🧹|جارو|broom', ['در خانه یا مدرسه استفاده می‌شود.', 'وسیله‌ای کاربردی است.', 'شکل جالبی دارد.', 'به ما کمک می‌کند.', 'برای بازی یا یادگیری مناسب است.', 'در اتاق‌های مختلف دیده می‌شود.']),
+]
+const shuffle = values => {
+  const result = [...values]
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1))
+    ;[result[index], result[randomIndex]] = [result[randomIndex], result[index]]
+  }
+  return result
+}
+const pickItems = (items, count = ITEMS_PER_STAGE) => shuffle(items).slice(0, count)
+
 const persianDigits = '۰۱۲۳۴۵۶۷۸۹'
 const toPersianDigits = value => String(value).replace(/[0-9]/g, digit => persianDigits[Number(digit)])
 function createRobotNames() {
@@ -82,6 +114,7 @@ function App() {
   const [joining, setJoining] = useState(false)
   const [count, setCount] = useState(0)
   const [stageNo, setStageNo] = useState(1)
+  const [stageItems, setStageItems] = useState(() => pickItems(categories[0].items))
   const [selected, setSelected] = useState(null)
   const [passed, setPassed] = useState([])
   const [score, setScore] = useState(0)
@@ -113,7 +146,8 @@ function App() {
   const stageStartScoreRef = useRef(0)
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
-  const stage = allStages[stageNo - 1]
+  const categoryForStage = categories[stageNo - 1]
+  const stage = useMemo(() => ({ ...categoryForStage, items: stageItems }), [categoryForStage, stageItems])
   const players = useMemo(() => [user, ...robots], [user, robots])
 
   useEffect(() => {
@@ -149,7 +183,7 @@ function App() {
     }
     loadStageAudio()
     return () => { cancelled = true }
-  }, [stageNo])
+  }, [stageNo, stageItems])
   useEffect(() => {
     passedRef.current = passed
     stageWinnerRef.current = stageWinner
@@ -216,12 +250,13 @@ function App() {
     let assigned = wanted
     try { const r = await fetch('/api/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ username:wanted }) }); const d = await r.json(); if (d.username) assigned = d.username } catch { const used = JSON.parse(localStorage.getItem('kalambaz-users') || '[]'); assigned = used.includes(wanted) ? `${wanted}${Math.floor(100 + Math.random()*900)}` : wanted; localStorage.setItem('kalambaz-users', JSON.stringify([...used, assigned])) }
     setRobots(createRobotNames())
+    setStageNo(1)
+    setStageItems(pickItems(categories[0].items))
     setCount(Math.floor(Math.random() * 21))
     setUser(assigned); setJoining(true)
   }
   function audioFileName(item) {
-    const category = ((stageNo - 1) % stages.length) + 1
-    return item ? `${category}-${item[2]}.wav` : ''
+    return item?.[4] || ''
   }
   function preloadAudio(fileName) {
     if (!fileName || typeof window === 'undefined' || typeof window.fetch !== 'function') return Promise.resolve()
@@ -320,8 +355,7 @@ function App() {
       return
     }
     setAudioNotice('')
-    const category = ((stageNo - 1) % stages.length) + 1
-    const prompt = category === 1 ? 'حالا اسم این حیوان رو بگو.' : category === 2 ? 'حالا اسم این میوه را بگو.' : 'حالا اسم این رنگ را بگو.'
+    const prompt = `حالا اسم این ${stage.prompt} رو بگو.`
     const audioUnavailable = () => setAudioNotice('صدای توضیح آماده نشد؛ دوباره روی «گوش کن» بزن.')
     const fallback = () => {
       const available = speak(`${text} ${prompt}`, 'fa-IR', audioUnavailable, onEnded)
@@ -464,14 +498,16 @@ function App() {
     robotProgressRef.current = [...robotStartingProgress]
     stageStartScoreRef.current = 0
     setName(''); setUser(''); setRobots(createRobotNames()); setJoining(false); setCount(0)
-    setStageNo(1); setPassed([]); setScore(0); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress([...robotStartingProgress]); setListening(false); setMicBusy(false); setDescriptionPlaying(false); setNotice(''); setAudioNotice(''); setShowFallback(false); setRetryVisible(false)
+    setStageNo(1); setStageItems(pickItems(categories[0].items)); setPassed([]); setScore(0); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress([...robotStartingProgress]); setListening(false); setMicBusy(false); setDescriptionPlaying(false); setNotice(''); setAudioNotice(''); setShowFallback(false); setRetryVisible(false)
   }
   function nextStage() {
     if (stageWinner === 'robot') { restartGame(); return }
     if (passed.length !== stage.items.length) return
-    stageStartScoreRef.current = stageNo >= 10 ? 0 : score
-    setStageNo(n => n >= 10 ? 1 : n + 1)
-    if (stageNo >= 10) setScore(0)
+    const nextNo = stageNo >= categories.length ? 1 : stageNo + 1
+    stageStartScoreRef.current = stageNo >= categories.length ? 0 : score
+    setStageNo(nextNo)
+    setStageItems(pickItems(categories[nextNo - 1].items))
+    if (stageNo >= categories.length) setScore(0)
     resetStage()
   }
   if (!user) return <main className="login"><div className="cloud c1">☁️</div><div className="cloud c2">☁️</div><div className="logo">کلم<span>باز</span><small>بازی با کلمه‌ها</small></div><div className="mascot">🦊</div><form onSubmit={login}><h1>سلام دوست کوچولو!</h1><p>اسمت چیه؟ با هم بازی کنیم.</p><input value={name} onChange={e=>setName(e.target.value)} placeholder="نام بازیکن" autoFocus /><button>شروع بازی 🚀</button></form></main>
