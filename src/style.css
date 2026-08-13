@@ -22,3 +22,5 @@ main.login,main.lobby,main.game{padding-inline:16px}
 .welcome-actions button{border:0;border-radius:14px;padding:11px 16px;font-weight:800;cursor:pointer}
 .welcome-primary{background:#5c78f1;color:#fff;box-shadow:0 4px 0 #4056ba}
 .welcome-secondary{background:#ff687f;color:#fff;box-shadow:0 4px 0 #d44d68}
+.card.done{pointer-events:none;cursor:default}
+html[data-description-playing="true"] .mic{pointer-events:none;cursor:not-allowed;opacity:.55;filter:grayscale(.25)}

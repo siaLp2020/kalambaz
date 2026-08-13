@@ -77,6 +77,7 @@ function App() {
   const [passed, setPassed] = useState([])
   const [score, setScore] = useState(0)
   const [listening, setListening] = useState(false)
+  const [descriptionPlaying, setDescriptionPlaying] = useState(false)
   const [notice, setNotice] = useState('')
   const [showFallback, setShowFallback] = useState(false)
   const [audioNotice, setAudioNotice] = useState('')
@@ -96,6 +97,12 @@ function App() {
   const answerDeadline = useRef(0)
   const stage = allStages[stageNo - 1]
   const players = useMemo(() => [user, ...robots], [user])
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return undefined
+    document.documentElement.toggleAttribute('data-description-playing', descriptionPlaying)
+    return () => document.documentElement.removeAttribute('data-description-playing')
+  }, [descriptionPlaying])
 
   useEffect(() => { if (!joining || count === 0) return; const t = setTimeout(() => setCount(c => c - 1), 1000); return () => clearTimeout(t) }, [joining, count])
   useEffect(() => { if (joining && count === 0) { const t = setTimeout(() => setJoining(false), 900); return () => clearTimeout(t) } }, [joining, count])
@@ -181,16 +188,19 @@ function App() {
     }, delay)
   }
   function openItem(item) {
+    if (passed.includes(item[1])) return
     window.clearTimeout(retryTimer.current)
     answerDeadline.current = 0
-    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false)
+    setSelected(item); setNotice(''); setShowFallback(false); setRetryVisible(false); setDescriptionPlaying(true)
     playDescription(item[3], item, () => {
+      setDescriptionPlaying(false)
       answerDeadline.current = Date.now() + 10000
       useMic(item, recognitionLang)
     })
   }
   function replayWelcome() {}
   function useMic(item, language = recognitionLang) {
+    if (descriptionPlaying) return
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
     if (!answerDeadline.current || answerDeadline.current < Date.now()) answerDeadline.current = Date.now() + 10000
@@ -228,7 +238,7 @@ function App() {
     window.clearTimeout(retryTimer.current)
     answerDeadline.current = 0
     recognition.current?.stop?.()
-    setRetryVisible(false); setShowFallback(false)
+    setRetryVisible(false); setShowFallback(false); setDescriptionPlaying(false)
     const feedback = points === 20 ? 'آفرین! درست گفتی و بیست امتیاز گرفتی.' : 'آفرین! درست گفتی و ده امتیاز گرفتی.'
     setNotice(feedback); speak(feedback, 'fa-IR')
     setTimeout(() => { setSelected(null); setNotice('') }, 1500)
@@ -236,7 +246,7 @@ function App() {
   function resetStage() {
     const startingProgress = [...robotStartingProgress]
     robotProgressRef.current = startingProgress
-    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice('')
+    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice(''); setDescriptionPlaying(false)
   }
   function nextStage() {
     if (passed.length !== stage.items.length) return
