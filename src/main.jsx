@@ -329,8 +329,8 @@ function App() {
     beginDescription(item)
   }
   function replayWelcome() {}
-  function useMic(item, language = recognitionLang) {
-    if (descriptionPlaying || micBusy) return
+  function useMic(item, language = recognitionLang, force = false) {
+    if (descriptionPlaying || (micBusy && !force)) return
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) { setMicBusy(false); setShowFallback(true); setNotice('مرورگرت میکروفون را پشتیبانی نمی‌کند.'); return }
     if (!answerDeadline.current || answerDeadline.current < Date.now()) answerDeadline.current = Date.now() + 10000
@@ -349,16 +349,15 @@ function App() {
     const continueListeningOrRetry = () => {
       if (transitionHandled) return
       transitionHandled = true
-      setListening(false)
       if (heard) return
       const remaining = answerDeadline.current - Date.now()
       if (remaining > 0) {
         window.setTimeout(() => {
-          setMicBusy(false)
-          if (Date.now() < answerDeadline.current) useMic(item, language)
+          if (Date.now() < answerDeadline.current) useMic(item, language, true)
           else queueRetry(item)
-        }, Math.min(350, remaining))
+        }, Math.min(600, remaining))
       } else {
+        setListening(false)
         setMicBusy(false)
         queueRetry(item)
       }
