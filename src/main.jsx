@@ -9,15 +9,20 @@ const stages = [
 ]
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
-const makeCategory = (name, icon, prompt, source, clues) => ({
-  name,
-  icon,
-  prompt,
-  items: source.split(';').filter(Boolean).map((value, index) => {
-    const [emoji, faName, enName, customDescription, audioName] = value.split('|')
-    return [emoji, faName, enName, customDescription || clues[index % clues.length], audioName || '']
-  }),
-})
+let categoryAudioIndex = 0
+const makeCategory = (name, icon, prompt, source, clues) => {
+  const categoryIndex = ++categoryAudioIndex
+  return {
+    name,
+    icon,
+    prompt,
+    items: source.split(';').filter(Boolean).map((value, index) => {
+      const [emoji, faName, enName, customDescription, audioName] = value.split('|')
+      const clueIndex = (index % clues.length) + 1
+      return [emoji, faName, enName, customDescription || clues[index % clues.length], audioName || `generated/${categoryIndex}-${clueIndex}.mp3`]
+    }),
+  }
+}
 const categories = [
   makeCategory('دوستان حیوانی', '🐾', 'حیوان', '🐶|سگ|dog|حیوانی وفادار است که باق‌باق می‌کند.|1-dog.wav;🐱|گربه|cat|سیبیل دارد و پنجه‌های تیزی دارد.|1-cat.wav;🐰|خرگوش|rabbit|گوش‌های بلندی دارد.|1-rabbit.wav;🦁|شیر|lion|پادشاه جنگل است.|1-lion.wav;🐘|فیل|elephant|جثه‌ای بزرگ دارد و خرطوم بلندی دارد.|1-elephant.wav;🐟|ماهی|fish|در آب شنا می‌کند.|1-fish.wav;🐻|خرس|bear;🐴|اسب|horse;🐮|گاو|cow;🐑|گوسفند|sheep;🐐|بز|goat;🐔|مرغ|chicken;🐓|خروس|rooster;🦆|اردک|duck;🪿|غاز|goose;🦃|بوقلمون|turkey;🐷|خوک|pig;🐭|موش|mouse;🐹|همستر|hamster;🐿️|سنجاب|squirrel;🦊|روباه|fox;🐺|گرگ|wolf;🐯|ببر|tiger;🐆|پلنگ|leopard;🐆|یوزپلنگ|cheetah;🦒|زرافه|giraffe;🦓|گورخر|zebra;🐒|میمون|monkey;🦍|گوریل|gorilla;🐼|پاندا|panda;🐨|کوالا|koala;🦘|کانگورو|kangaroo;🦌|گوزن|deer;🐪|شتر|camel;🫏|الاغ|donkey;🦛|اسب آبی|hippo;🦏|کرگدن|rhino;🐊|کروکودیل|crocodile;🐍|مار|snake;🐢|لاک‌پشت|turtle;🐸|قورباغه|frog;🐧|پنگوئن|penguin;🦉|جغد|owl;🦅|عقاب|eagle;🦜|طوطی|parrot;🦚|طاووس|peacock;🦩|فلامینگو|flamingo;🐬|دلفین|dolphin;🐋|نهنگ|whale;🐙|اختاپوس|octopus', ['حیوانی دوست‌داشتنی است.', 'در طبیعت زندگی می‌کند.', 'صدای جالبی دارد.', 'بدن متفاوتی دارد.', 'حرکت بامزه‌ای انجام می‌دهد.', 'در محیط‌های مختلف دیده می‌شود.']),
   makeCategory('میوه‌های خوشمزه', '🍎', 'میوه', '🍎|سیب|apple|میوه‌ای قرمز و شیرین است.|2-apple.wav;🍌|موز|banana|زرد و شیرین است.|2-banana.wav;🍓|توت‌فرنگی|strawberry|قرمز و خوش‌عطر است.|2-strawberry.wav;🍇|انگور|grape|دانه‌های کوچک دارد.|2-grape.wav;🍉|هندوانه|watermelon|پوستی سبز و مغزی آبدار دارد.|2-watermelon.wav;🍊|پرتقال|orange|ویتامین سی دارد.|2-orange.wav;🍐|گلابی|pear;🍑|هلو|peach;🍑|آلو|plum;🍒|گیلاس|cherry;🥭|انبه|mango;🍍|آناناس|pineapple;🥝|کیوی|kiwi;🍋|لیمو|lemon;🍋|لیموترش|lime;❤️|انار|pomegranate;🫓|انجیر|fig;🌴|خرما|date;🥥|نارگیل|coconut;🥑|آووکادو|avocado;🥭|پاپایا|papaya;🍈|گواوا|guava;🍑|زردآلو|apricot;🫐|تمشک|raspberry;🫐|بلوبری|blueberry;🫐|شاه‌توت|blackberry;🔴|کرنبری|cranberry;🍈|خربزه|melon;🍈|گرمک|cantaloupe;🍊|گریپ‌فروت|grapefruit;🍊|نارنگی|tangerine;🍊|نارنج|mandarin;🟠|خرمالو|persimmon;🐉|میوه اژدها|dragonfruit;🥭|میوه گل ساعتی|passionfruit;🍈|لیچی|lychee;🍒|رامبوتان|rambutan;⭐|میوه ستاره‌ای|starfruit;🍈|جک‌فروت|jackfruit;🟤|دوریان|durian;🫒|زیتون|olive;🍐|به|quince;🍑|شلیل|nectarine;🫐|توت|mulberry;🟢|انگور فرنگی|gooseberry;🟣|تمشک قرمز|currant;🫐|الدربری|elderberry;🟤|عناب|jujube;🟤|کنار|medlar;🟡|ازگیل|loquat', ['خوراکی شیرین و خوش‌طعم است.', 'رنگ زیبایی دارد.', 'آبدار و تازه است.', 'برای میان‌وعده مناسب است.', 'بوی خوبی دارد.', 'ویتامین‌های مفیدی دارد.']),
