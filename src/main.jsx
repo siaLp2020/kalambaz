@@ -10,6 +10,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const robots = ['ربات ۱', 'ربات ۲', 'ربات ۳']
 const robotStartingProgress = [0.6, 1.8, 1.2]
+const STAGE_DURATION = 120
 const audioBase = `${import.meta.env.BASE_URL}audio/`
 const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   // On Android Chrome, voices may load asynchronously. Waiting for
@@ -84,7 +85,7 @@ function App() {
   const welcomeOpen = false
   const welcomeNotice = ''
   const [finished, setFinished] = useState(false)
-  const [timeLeft, setTimeLeft] = useState(60)
+  const [timeLeft, setTimeLeft] = useState(STAGE_DURATION)
   const [robotProgress, setRobotProgress] = useState(robotStartingProgress)
   const [stageWinner, setStageWinner] = useState(null)
   const [robotWinner, setRobotWinner] = useState(0)
@@ -235,9 +236,10 @@ function App() {
   function resetStage() {
     const startingProgress = [...robotStartingProgress]
     robotProgressRef.current = startingProgress
-    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(60); setRobotProgress(startingProgress); setNotice('')
+    setPassed([]); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress(startingProgress); setNotice('')
   }
   function nextStage() {
+    if (passed.length !== stage.items.length) return
     setStageNo(n => n >= 10 ? 1 : n + 1)
     if (stageNo >= 10) setScore(0)
     resetStage()
