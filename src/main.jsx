@@ -626,6 +626,25 @@ function App() {
     startAttempt()
     return true
   }
+  function playEnglishWord(item) {
+    if (!item?.[2]) return
+
+    // Chrome on Android can leave speechSynthesis in a paused/busy state after
+    // the answer feedback. Stop it before starting the local clip so the tap
+    // on a solved card always has one, immediate audio action.
+    try { window.speechSynthesis?.cancel?.() } catch {}
+
+    const fallback = () => speakEnglishWord(item[2])
+    // Animal cards have a bundled pronunciation clip. Calling Audio.play()
+    // directly from this click handler preserves the mobile user gesture,
+    // unlike waiting for speechSynthesis voices to load.
+    if (stageNo === 1) {
+      const fileName = `english/${String(item[2]).toLowerCase()}.mp3`
+      const started = playLocalAudio(fileName, fallback)
+      if (started) return
+    }
+    fallback()
+  }
   function playDescription(text, item, onEnded) {
     if (descriptionPlaying) return
     if (!onEnded && item) {
@@ -688,7 +707,7 @@ function App() {
     if (passed.includes(item[1])) {
       // Once a card has been solved, keep it out of the answer flow. A tap
       // only pronounces the canonical English word so the child can practise.
-      speakEnglishWord(item[2])
+      playEnglishWord(item)
       return
     }
     setSelected(item)
