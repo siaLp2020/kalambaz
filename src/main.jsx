@@ -12,7 +12,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
 const GALLERY_FRAME_COUNT = 4
-const GALLERY_FRAME_INTERVAL = 2800
+const GALLERY_FRAME_INTERVAL = 3600
 // Each card gets four local scene views. The object stays large and easy to
 // recognize, while its setting, props and pose change so children see four
 // different visual clues instead of the same emoji repeated four times.
@@ -390,14 +390,18 @@ function App() {
   const categoryForStage = categories[stageNo - 1]
   const stage = useMemo(() => ({ ...categoryForStage, items: stageItems }), [categoryForStage, stageItems])
   const players = useMemo(() => [user, ...robots], [user, robots])
-  const localGalleryImages = Array.isArray(selected?.[5])
-    ? selected[5].filter(path => typeof path === 'string' && !path.toLowerCase().endsWith('.svg'))
-    : []
-  const selectedGalleryImages = remoteGalleryImages.length === GALLERY_FRAME_COUNT
-    ? remoteGalleryImages
-    : localGalleryImages.length === GALLERY_FRAME_COUNT
-      ? localGalleryImages
-      : null
+  const localGalleryImages = useMemo(() => (
+    Array.isArray(selected?.[5])
+      ? selected[5].filter(path => typeof path === 'string' && !path.toLowerCase().endsWith('.svg'))
+      : []
+  ), [selected])
+  const selectedGalleryImages = useMemo(() => (
+    remoteGalleryImages.length === GALLERY_FRAME_COUNT
+      ? remoteGalleryImages
+      : localGalleryImages.length === GALLERY_FRAME_COUNT
+        ? localGalleryImages
+        : null
+  ), [remoteGalleryImages, localGalleryImages])
   const selectedGalleryImage = selectedGalleryImages?.[carouselIndex]
   const selectedAnimation = selected?.[6] || ''
 
@@ -488,7 +492,7 @@ function App() {
       makeSlide('gallery-slide-card-next', selectedGalleryImages[(carouselIndex + 1) % GALLERY_FRAME_COUNT]),
     )
     frame.replaceChildren(stage)
-  })
+  }, [selected, selectedGalleryImages, carouselIndex])
   useEffect(() => {
     let cancelled = false
     const loadStageAudio = async () => {
