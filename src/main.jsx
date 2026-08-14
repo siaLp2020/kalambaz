@@ -12,6 +12,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
 const GALLERY_FRAME_COUNT = 4
+const GALLERY_FRAME_INTERVAL = 2200
 // Each card gets four local scene views. The object stays large and easy to
 // recognize, while its setting, props and pose change so children see four
 // different visual clues instead of the same emoji repeated four times.
@@ -301,7 +302,7 @@ function App() {
     setCarouselIndex(0)
     const timer = window.setInterval(() => {
       setCarouselIndex(previous => (previous + 1) % GALLERY_FRAME_COUNT)
-    }, 1450)
+    }, GALLERY_FRAME_INTERVAL)
     return () => window.clearInterval(timer)
   }, [selected])
   useEffect(() => {
