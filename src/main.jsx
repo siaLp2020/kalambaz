@@ -12,7 +12,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
 const GALLERY_FRAME_COUNT = 4
-const GALLERY_FRAME_INTERVAL = 2400
+const GALLERY_FRAME_INTERVAL = 2800
 // Each card gets four local scene views. The object stays large and easy to
 // recognize, while its setting, props and pose change so children see four
 // different visual clues instead of the same emoji repeated four times.
@@ -305,6 +305,30 @@ function App() {
     }, GALLERY_FRAME_INTERVAL)
     return () => window.clearInterval(timer)
   }, [selected])
+  useEffect(() => {
+    if (!selected || !selectedGalleryImages) return
+    const frame = document.querySelector('.image-carousel .carousel-frame')
+    if (!frame || frame.querySelector('.gallery-slide-stage')) return
+
+    frame.classList.add('gallery-slide-host')
+    const stage = document.createElement('div')
+    stage.className = 'gallery-slide-stage'
+    const makeSlide = (className, image) => {
+      const slide = document.createElement('div')
+      slide.className = `gallery-slide-card ${className}`
+      const imageElement = document.createElement('img')
+      imageElement.className = 'carousel-image'
+      imageElement.src = image
+      imageElement.alt = ''
+      slide.append(imageElement)
+      return slide
+    }
+    stage.append(
+      makeSlide('gallery-slide-card-current', selectedGalleryImages[carouselIndex]),
+      makeSlide('gallery-slide-card-next', selectedGalleryImages[(carouselIndex + 1) % GALLERY_FRAME_COUNT]),
+    )
+    frame.replaceChildren(stage)
+  })
   useEffect(() => {
     let cancelled = false
     const loadStageAudio = async () => {
