@@ -198,6 +198,54 @@ const speak = (text, lang = 'fa-IR', onError, onEnd) => {
   synth.speak(utterance)
   return true
 }
+const speakEnglishWord = text => {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return false
+  const synth = window.speechSynthesis
+  let attempts = 0
+  let activeAttempt = 0
+  let finished = false
+  const start = () => {
+    if (finished) return
+    attempts += 1
+    const attemptId = ++activeAttempt
+    let started = false
+    try { synth.cancel(); synth.resume() } catch {}
+    const utterance = new window.SpeechSynthesisUtterance(text)
+    const voices = synth.getVoices()
+    const voice = voices.find(item => item.lang.toLowerCase() === 'en-us') || voices.find(item => item.lang.toLowerCase().startsWith('en'))
+    if (voice) {
+      utterance.voice = voice
+      utterance.lang = voice.lang
+    } else {
+      utterance.lang = 'en-US'
+    }
+    utterance.rate = 1
+    utterance.pitch = 1.15
+    utterance.volume = 1
+    utterance.onstart = () => { if (attemptId === activeAttempt) started = true }
+    utterance.onend = () => { if (attemptId === activeAttempt) finished = true }
+    utterance.onerror = () => {
+      if (attemptId !== activeAttempt) return
+      if (attempts < 2) window.setTimeout(start, 120)
+      else finished = true
+    }
+    try { synth.speak(utterance) } catch {
+      if (attempts < 2) window.setTimeout(start, 120)
+      else finished = true
+      return
+    }
+    // Android Chrome can accept the utterance but fail to start it while the
+    // previous utterance is being cancelled. Retry once without requiring a
+    // second tap from the child.
+    if (attempts === 1) {
+      window.setTimeout(() => {
+        if (!started && !finished && attemptId === activeAttempt) start()
+      }, 500)
+    }
+  }
+  start()
+  return true
+}
 const normalize = s => String(s).toLowerCase().normalize('NFKC').replace(/[\u064b-\u065f\u0670]/g,'').replace(/[^\p{L}\p{N}]/gu,'').replace(/ي/g,'ی').replace(/ك/g,'ک')
 const englishPronunciationAliases = {
   dog: ['داگ', 'داک', 'داغ'],
@@ -640,7 +688,7 @@ function App() {
     if (passed.includes(item[1])) {
       // Once a card has been solved, keep it out of the answer flow. A tap
       // only pronounces the canonical English word so the child can practise.
-      speak(item[2], 'en-US')
+      speakEnglishWord(item[2])
       return
     }
     setSelected(item)
