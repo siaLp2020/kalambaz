@@ -170,8 +170,9 @@ function createRobotNames() {
 }
 const robotStartingProgress = [0.3, 0.12, 0.6]
 const robotProgressTargets = [5.4, 3.6, 4.2]
-const robotProgressRates = robotStartingProgress.map((progress, index) => (robotProgressTargets[index] - progress) / 90)
-const STAGE_DURATION = 120
+const STAGE_DURATION = 240
+const ROBOT_WINNER_WINDOW_START = 210
+const robotProgressRates = robotStartingProgress.map((progress, index) => (robotProgressTargets[index] - progress) / ROBOT_WINNER_WINDOW_START)
 const TIME_WARNING_THRESHOLD = 35
 const audioBase = `${import.meta.env.BASE_URL}audio/`
 const speak = (text, lang = 'fa-IR', onError, onEnd) => {
@@ -521,7 +522,7 @@ function App() {
     window.clearTimeout(robotWinnerTimer.current)
     if (joining || !user || finished || stageWinner || passedRef.current.length === stage.items.length) return undefined
     const winnerIndex = Math.floor(Math.random() * robots.length)
-    const winnerDelay = 90000 + Math.floor(Math.random() * 29001)
+    const winnerDelay = (ROBOT_WINNER_WINDOW_START * 1000) + Math.floor(Math.random() * ((STAGE_DURATION - ROBOT_WINNER_WINDOW_START) * 1000 + 1))
     robotWinnerTimer.current = window.setTimeout(() => {
       if (passedRef.current.length === stage.items.length || stageWinnerRef.current) return
       const progress = [...robotProgressRef.current]
