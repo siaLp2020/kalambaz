@@ -343,35 +343,6 @@ const answerPoints = (answer, item) => {
   return said === normalize(item[1]) ? 10 : 0
 }
 
-const PROGRESS_STORAGE_KEY = 'kalambaz-progress-v1'
-const readSavedProgress = names => {
-  if (typeof window === 'undefined') return null
-  try {
-    const saved = JSON.parse(window.localStorage.getItem(PROGRESS_STORAGE_KEY) || '{}')
-    for (const name of names.filter(Boolean)) {
-      if (saved[name]) return saved[name]
-    }
-  } catch {}
-  return null
-}
-const writeSavedProgress = (names, progress) => {
-  if (typeof window === 'undefined') return
-  try {
-    const saved = JSON.parse(window.localStorage.getItem(PROGRESS_STORAGE_KEY) || '{}')
-    for (const name of names.filter(Boolean)) saved[name] = progress
-    window.localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(saved))
-  } catch {}
-}
-const normalizeSavedProgress = progress => {
-  if (!progress) return null
-  const stageValue = Number(progress.lastStage ?? progress.stageNo ?? 1)
-  const scoreValue = Number(progress.lastScore ?? progress.score ?? 0)
-  return {
-    lastStage: Math.min(categories.length, Math.max(1, Number.isFinite(stageValue) ? Math.floor(stageValue) : 1)),
-    lastScore: Math.max(0, Number.isFinite(scoreValue) ? Math.floor(scoreValue) : 0),
-  }
-}
-
 function App() {
   const [user, setUser] = useState('')
   const [name, setName] = useState('')
@@ -400,8 +371,6 @@ function App() {
   const [robotProgress, setRobotProgress] = useState(robotStartingProgress)
   const [stageWinner, setStageWinner] = useState(null)
   const [robotWinner, setRobotWinner] = useState(0)
-  const [resumeSummary, setResumeSummary] = useState(null)
-  const [resumeCountdown, setResumeCountdown] = useState(0)
   const recognition = useRef(null)
   const audioPlayer = useRef(null)
   const audioCache = useRef(new Map())
@@ -414,8 +383,6 @@ function App() {
   const stageStartScoreRef = useRef(0)
   const retryTimer = useRef(null)
   const answerDeadline = useRef(0)
-  const resumeTimer = useRef(null)
-  const profileNameRef = useRef('')
   const categoryForStage = categories[stageNo - 1]
   const stage = useMemo(() => ({ ...categoryForStage, items: stageItems }), [categoryForStage, stageItems])
   const players = useMemo(() => [user, ...robots], [user, robots])
@@ -436,25 +403,6 @@ function App() {
 
   useEffect(() => { if (!joining || count === 0) return; const t = setTimeout(() => setCount(c => c - 1), 1000); return () => clearTimeout(t) }, [joining, count])
   useEffect(() => { if (joining && count === 0) { const t = setTimeout(() => setJoining(false), 900); return () => clearTimeout(t) } }, [joining, count])
-  useEffect(() => {
-    window.clearInterval(resumeTimer.current)
-    if (!resumeSummary) return undefined
-    setResumeCountdown(10)
-    resumeTimer.current = window.setInterval(() => {
-      setResumeCountdown(previous => {
-        if (previous <= 1) {
-          window.clearInterval(resumeTimer.current)
-          resumeTimer.current = null
-          setResumeSummary(null)
-          setCount(Math.floor(Math.random() * 21))
-          setJoining(true)
-          return 0
-        }
-        return previous - 1
-      })
-    }, 1000)
-    return () => window.clearInterval(resumeTimer.current)
-  }, [resumeSummary])
   useEffect(() => {
     if (selected) return
     window.clearTimeout(retryTimer.current)
@@ -527,7 +475,7 @@ function App() {
 
   useEffect(() => {
     window.clearTimeout(robotWinnerTimer.current)
-    if (joining || resumeSummary || !user || finished || stageWinner || passedRef.current.length === stage.items.length) return undefined
+    if (joining || !user || finished || stageWinner || passedRef.current.length === stage.items.length) return undefined
     const winnerIndex = Math.floor(Math.random() * robots.length)
     const winnerDelay = 90000 + Math.floor(Math.random() * 29001)
     robotWinnerTimer.current = window.setTimeout(() => {
@@ -544,10 +492,10 @@ function App() {
       setTimeLeft(Math.max(1, STAGE_DURATION - Math.ceil(winnerDelay / 1000)))
     }, winnerDelay)
     return () => window.clearTimeout(robotWinnerTimer.current)
-  }, [joining, resumeSummary, user, finished, stageWinner, stageNo, stage.items.length])
+  }, [joining, user, finished, stageWinner, stageNo, stage.items.length])
 
   useEffect(() => {
-    if (joining || resumeSummary || !user || finished || stageWinner || passed.length === 6) return
+    if (joining || !user || finished || stageWinner || passed.length === 6) return
     const timer = setInterval(() => {
       setTimeLeft(previous => {
         if (previous <= 1) {
@@ -572,49 +520,18 @@ function App() {
       })
     }, 1000)
     return () => clearInterval(timer)
-  }, [joining, resumeSummary, user, finished, stageWinner, passed.length])
-
-  useEffect(() => {
-    if (!user || joining || resumeSummary || !profileNameRef.current) return
-    writeSavedProgress([profileNameRef.current, user], {
-      username: user,
-      requestedName: profileNameRef.current,
-      lastStage: stageNo,
-      lastScore: score,
-      updatedAt: Date.now(),
-    })
-  }, [user, joining, resumeSummary, stageNo, score])
+  }, [joining, user, finished, stageWinner, passed.length])
 
   async function login(e) {
     e.preventDefault(); const wanted = name.trim(); if (!wanted) return
-    const previous = normalizeSavedProgress(readSavedProgress([wanted]))
     if ('speechSynthesis' in window) window.speechSynthesis.resume()
     let assigned = wanted
     try { const r = await fetch('/api/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ username:wanted }) }); const d = await r.json(); if (d.username) assigned = d.username } catch { const used = JSON.parse(localStorage.getItem('kalambaz-users') || '[]'); assigned = used.includes(wanted) ? `${wanted}${Math.floor(100 + Math.random()*900)}` : wanted; localStorage.setItem('kalambaz-users', JSON.stringify([...used, assigned])) }
-    const resumeStage = previous?.lastStage || 1
-    const resumeScore = previous?.lastScore || 0
-    profileNameRef.current = wanted
     setRobots(createRobotNames())
-    setStageNo(resumeStage)
-    setStageItems(pickItems(categories[resumeStage - 1].items))
-    stageStartScoreRef.current = resumeScore
-    setPassed([])
-    setScore(resumeScore)
-    setFinished(false)
-    setStageWinner(null)
-    setRobotWinner(0)
-    setTimeLeft(STAGE_DURATION)
-    setRobotProgress([...robotStartingProgress])
-    robotProgressRef.current = [...robotStartingProgress]
-    setUser(assigned)
-    if (previous) {
-      setResumeSummary({ username: assigned, requestedName: wanted, lastStage: resumeStage, lastScore: resumeScore })
-      setResumeCountdown(10)
-      setJoining(false)
-    } else {
-      setCount(Math.floor(Math.random() * 21))
-      setJoining(true)
-    }
+    setStageNo(1)
+    setStageItems(pickItems(categories[0].items))
+    setCount(Math.floor(Math.random() * 21))
+    setUser(assigned); setJoining(true)
   }
   function audioFileName(item) {
     return item?.[4] || ''
@@ -901,16 +818,13 @@ function App() {
   function restartGame() {
     window.clearTimeout(robotWinnerTimer.current)
     window.clearTimeout(retryTimer.current)
-    window.clearInterval(resumeTimer.current)
-    resumeTimer.current = null
     recognition.current?.stop?.()
     audioPlayer.current?.pause?.()
     if ('speechSynthesis' in window) window.speechSynthesis.cancel()
     answerDeadline.current = 0
     robotProgressRef.current = [...robotStartingProgress]
     stageStartScoreRef.current = 0
-    profileNameRef.current = ''
-    setName(''); setUser(''); setRobots(createRobotNames()); setJoining(false); setCount(0); setResumeSummary(null); setResumeCountdown(0)
+    setName(''); setUser(''); setRobots(createRobotNames()); setJoining(false); setCount(0)
     setStageNo(1); setStageItems(pickItems(categories[0].items)); setPassed([]); setScore(0); setSelected(null); setFinished(false); setStageWinner(null); setRobotWinner(0); setTimeLeft(STAGE_DURATION); setRobotProgress([...robotStartingProgress]); setListening(false); setMicBusy(false); setDescriptionPlaying(false); setNotice(''); setAudioNotice(''); setShowFallback(false); setRetryVisible(false)
   }
   function nextStage() {
@@ -924,7 +838,6 @@ function App() {
     resetStage()
   }
   if (!user) return <main className="login"><div className="cloud c1">☁️</div><div className="cloud c2">☁️</div><div className="logo">کلم<span>باز</span><small>بازی با کلمه‌ها</small></div><div className="mascot">🦊</div><form onSubmit={login}><h1>سلام دوست کوچولو!</h1><p>اسمت چیه؟ با هم بازی کنیم.</p><input value={name} onChange={e=>setName(e.target.value)} placeholder="نام بازیکن" autoFocus /><button>شروع بازی 🚀</button></form></main>
-  if (resumeSummary) return <main className="resume-page"><div className="resume-dialog"><div className="resume-confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>دوباره خوش آمدی!</h1><p className="resume-player">{resumeSummary.requestedName}، دفعهٔ قبل تا اینجا پیش رفتی:</p><div className="resume-stats"><div><span>مرحله</span><b>{toPersianDigits(resumeSummary.lastStage)} از ۱۰</b></div><div><span>امتیاز</span><b>⭐ {toPersianDigits(resumeSummary.lastScore)}</b></div></div><p className="resume-next">بازی از همین مرحله ادامه پیدا می‌کند.</p><p className="resume-countdown">تا پیدا کردن بازیکن‌ها و ربات‌ها <b>{toPersianDigits(resumeCountdown)}</b> ثانیه مانده</p></div></main>
   if (joining) return <main className="lobby"><div className="spinner">✨</div><h1>داریم دوست‌ها را پیدا می‌کنیم</h1><p>تا شروع بازی <b>{count}</b> ثانیه مانده</p><div className="playerchips"><i>{user} 🧒</i>{robots.map((x,i)=><i className="waiting" key={x}>{count < 3*(i+1) ? x+' 🤖' : 'در انتظار…'}</i>)}</div><small>اگر دوستی نیاید، ربات‌ها با ما بازی می‌کنند!</small></main>
   return <main className="game"><header><div className="brand">کلم<span>باز</span></div><div className="stage">مرحله {stageNo} از ۱۰ <b>{stage.icon} {stage.name}</b></div><div className={`time ${timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? 'urgent' : ''}`} aria-live="polite">{timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? '⚠️ ' : '⏱ '}{timeLeft}</div><div className="score">⭐ {score}</div></header><section className="race">{players.map((p,i)=><div key={p}><span>{i ? '🤖':'🧒'}</span><em>{p}</em><div className="track"><i style={{width:`${i ? Math.min(100, (robotProgress[i - 1] / 6) * 100) : (passed.length / 6) * 100}%`}} /></div></div>)}</section><div className="instruction">روی یک تصویر بزن، گوش کن و سپس اسمش را با میکروفون بگو! 🎤</div><section className="cards">{stage.items.map((it,i)=><button className={`card ${passed.includes(it[1])?'done':''}`} onClick={()=>openItem(it)} key={it[1]}><span>{it[0]}</span><b>{passed.includes(it[1]) ? `${it[2]} ✓` : `تصویر ${i + 1}`}</b></button>)}</section>{selected && <div className="modal"><div className="popup item-popup"><button type="button" className="close" aria-label="بستن تصویر" onClick={()=>setSelected(null)}>×</button><div className="image-carousel" aria-label={selectedAnimation && !animationFailed ? 'انیمیشن حیوان' : 'نمایش تصویر متحرک'}>{selectedAnimation && !animationFailed ? <div className="animal-animation-frame"><img className="animal-animation" src={selectedAnimation} alt="" decoding="async" onError={() => setAnimationFailed(true)} /></div> : <><div className={`carousel-frame carousel-frame-${carouselIndex}`} data-frame={carouselIndex} data-pose={galleryScenesFor(stage.prompt)[carouselIndex].pose} key={`${selected[1]}-${carouselIndex}`}>{selectedGalleryImage ? <img className="carousel-image" src={selectedGalleryImage} alt="" /> : <><span className="carousel-decoration carousel-decoration-left">{galleryScenesFor(stage.prompt)[carouselIndex].props[0]}</span><span className="carousel-emoji">{emojiVariantsFor(selected, stage.prompt)[carouselIndex]}</span><span className="carousel-decoration carousel-decoration-right">{galleryScenesFor(stage.prompt)[carouselIndex].props[1]}</span><span className="carousel-ground">{galleryScenesFor(stage.prompt)[carouselIndex].ground}</span></>}</div><div className="carousel-dots" aria-hidden="true">{Array.from({length:GALLERY_FRAME_COUNT}, (_, index) => <i className={index === carouselIndex ? 'active' : ''} key={index} />)}</div></>}</div><p className="description-text">{selected[3]}</p><div className="score-hint">راهنما: انگلیسی بگو <b>۲۰ امتیاز</b>، فارسی بگو <b>۱۰ امتیاز</b> ⭐</div><button className="speak-description" disabled={descriptionPlaying} aria-disabled={descriptionPlaying} onClick={()=>playDescription(selected[3], selected)}>🔊 {descriptionPlaying ? 'در حال پخش…' : 'گوش کن'}</button><button className={`mic ${listening?'pulse':''}`} disabled={descriptionPlaying || micBusy} aria-disabled={descriptionPlaying || micBusy} onClick={()=>useMic(selected)}>🎤<small>{descriptionPlaying?'منتظر بمان…':listening?'گوش می‌دهم…':'بگو!'}</small></button>{showFallback && <div className="answer"><button aria-label="پاسخ فارسی" onClick={()=>checkAnswer(selected[1],selected)}>🇮🇷 <small>+۱۰</small></button><button aria-label="پاسخ انگلیسی" onClick={()=>checkAnswer(selected[2],selected)}>🇬🇧 <small>+۲۰</small></button></div>}{audioNotice && <strong className="audio-notice">{audioNotice}</strong>}{notice && <strong className="notice">{notice}</strong>}</div></div>}{finished && <div className="modal victory"><div className="popup"><div className="confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>آفرین {user}!</h1><p>تو اول شدی و مرحله {stageNo} را تمام کردی!</p><b className="stars">⭐⭐⭐</b><button onClick={nextStage}>{stageNo === 10 ? 'بازی را دوباره شروع کن 🔄' : 'برو به مرحله بعد 🚀'}</button></div></div>}{stageWinner === 'robot' && <div className="modal victory timeout"><div className="popup"><div className="confetti">⏰ 🤖 ✨</div><h1>زمان تمام شد!</h1><p>{robots[robotWinner]} برندهٔ این مرحله شد.</p><p>اشکالی ندارد؛ دوباره تلاش کن یا به مرحلهٔ بعد برو.</p><div className="result-actions"><button onClick={()=>resetStage(true)}>تلاش دوباره 🔁</button><button onClick={nextStage}>مرحلهٔ بعد 🚀</button></div></div></div>}{welcomeOpen && <div className="modal welcome-modal"><div className="popup"><div className="confetti">🎉 ✨ 🚀</div><h1>به بازی خوش آمدی!</h1><p>بزن بریم؟</p><div className="welcome-actions"><button className="welcome-primary" onClick={replayWelcome}>🔊 پخش صدا</button><button className="welcome-secondary" onClick={()=>setWelcomeOpen(false)}>شروع بازی 🚀</button></div>{welcomeNotice && <strong className="audio-notice">{welcomeNotice}</strong>}</div></div>}</main>
 }
