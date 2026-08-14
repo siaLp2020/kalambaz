@@ -310,38 +310,30 @@ function App() {
     const frame = document.querySelector('.image-carousel .carousel-frame')
     if (!frame) return
 
-    frame.classList.add('gallery-cube-host')
-    let cube = frame.querySelector('.carousel-cube')
-    if (!cube) {
-      cube = document.createElement('div')
-      cube.className = 'carousel-cube'
-      selectedGalleryImages.forEach((image, index) => {
-        const face = document.createElement('div')
-        face.className = `carousel-cube-face carousel-cube-face-${index}`
-        const imageElement = document.createElement('img')
-        imageElement.className = 'carousel-image'
-        imageElement.src = image
-        imageElement.alt = ''
-        const sparkle = document.createElement('span')
-        sparkle.className = 'cube-sparkle'
-        sparkle.setAttribute('aria-hidden', 'true')
-        sparkle.textContent = index % 2 ? '✨' : '⭐'
-        face.append(imageElement, sparkle)
-        cube.append(face)
-      })
-      frame.replaceChildren(cube)
-    }
+    frame.classList.add('gallery-flip-host')
+    if (frame.querySelector('.gallery-flip-stage')) return
 
-    const currentIndex = String(carouselIndex)
-    if (cube.dataset.index !== currentIndex) {
-      const previousRotation = carouselIndex === 0 ? 90 : (carouselIndex - 1) * -90
-      cube.style.setProperty('--cube-from', `${previousRotation}deg`)
-      cube.style.setProperty('--cube-to', `${carouselIndex * -90}deg`)
-      cube.dataset.index = currentIndex
-      cube.classList.remove('cube-spin')
-      void cube.offsetWidth
-      cube.classList.add('cube-spin')
+    const stage = document.createElement('div')
+    stage.className = 'gallery-flip-stage'
+    const makeCard = (className, image, index) => {
+      const card = document.createElement('div')
+      card.className = `gallery-flip-card ${className}`
+      const imageElement = document.createElement('img')
+      imageElement.className = 'carousel-image'
+      imageElement.src = image
+      imageElement.alt = ''
+      const sparkle = document.createElement('span')
+      sparkle.className = 'cube-sparkle'
+      sparkle.setAttribute('aria-hidden', 'true')
+      sparkle.textContent = index % 2 ? '✨' : '⭐'
+      card.append(imageElement, sparkle)
+      return card
     }
+    stage.append(
+      makeCard('gallery-flip-card-current', selectedGalleryImages[carouselIndex], carouselIndex),
+      makeCard('gallery-flip-card-next', selectedGalleryImages[(carouselIndex + 1) % GALLERY_FRAME_COUNT], (carouselIndex + 1) % GALLERY_FRAME_COUNT),
+    )
+    frame.replaceChildren(stage)
   })
   useEffect(() => {
     let cancelled = false
