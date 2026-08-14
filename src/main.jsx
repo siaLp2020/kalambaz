@@ -122,7 +122,9 @@ const makeCategory = (name, icon, prompt, source, clues) => {
     items: source.split(';').filter(Boolean).map((value, index) => {
       const [emoji, faName, enName, customDescription, audioName] = value.split('|')
       const description = descriptionsByCategory[categoryIndex - 1]?.[index] || customDescription || clues[index % clues.length]
-      const animation = categoryIndex === 1 ? `${import.meta.env.BASE_URL}images/animals/${enName}.webp` : ''
+      const animation = categoryIndex === 1
+        ? `${import.meta.env.BASE_URL}images/animals/${enName}.webp`
+        : `${import.meta.env.BASE_URL}images/gallery-animated/${categoryIndex}/${enName}.webp`
       const galleryImages = galleryManifest[String(categoryIndex)]?.[enName]?.images || []
       return [emoji, faName, enName, description, `generated/items/${categoryIndex}-${index + 1}.mp3`, galleryImages, animation]
     }),
