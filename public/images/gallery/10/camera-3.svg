@@ -3,7 +3,10 @@
 <rect width="640" height="480" rx="42" fill="url(#bg)"/>
 <circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
 <text x="94" y="142" text-anchor="middle" font-size="52">🏠</text><text x="546" y="388" text-anchor="middle" font-size="52">💡</text>
-<ellipse cx="320" cy="391" rx="180" ry="28" fill="#344875" fill-opacity=".18"/>
-<g transform="rotate(5 320 246)" filter="url(#shadow)"><text x="320" y="246" text-anchor="middle" dominant-baseline="middle" font-size="210">📷</text></g>
+<path d="M72 360 C176 309 245 315 320 346 C396 377 475 355 568 300" fill="none" stroke="#8a5a38" stroke-width="16" stroke-linecap="round"/>
+<path d="M166 325 C133 286 105 285 77 313 C117 319 142 334 163 354" fill="#64b862" stroke="#3c9149" stroke-width="7"/>
+<path d="M437 349 C471 302 504 292 536 311 C503 327 480 348 460 371" fill="#75c96a" stroke="#3c9149" stroke-width="7"/>
+<g transform="rotate(-14 354 247)" filter="url(#shadow)"><text x="354" y="247" text-anchor="middle" dominant-baseline="middle" font-size="232">📷</text></g>
+<text x="560" y="226" text-anchor="middle" dominant-baseline="middle" font-size="62" opacity=".72">📷</text>
 <path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
 </svg>

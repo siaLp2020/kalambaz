@@ -2,8 +2,11 @@
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4b5"/><stop offset="1" stop-color="#ffd49b"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="8" flood-color="#344875" flood-opacity=".28"/></filter></defs>
 <rect width="640" height="480" rx="42" fill="url(#bg)"/>
 <circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
-<text x="94" y="142" text-anchor="middle" font-size="52">🍃</text><text x="546" y="388" text-anchor="middle" font-size="52">🧺</text>
-<ellipse cx="320" cy="391" rx="180" ry="28" fill="#344875" fill-opacity=".18"/>
-<g transform="rotate(-5 320 254)" filter="url(#shadow)"><text x="320" y="254" text-anchor="middle" dominant-baseline="middle" font-size="210">⭐</text></g>
+<text x="94" y="142" text-anchor="middle" font-size="52">✨</text><text x="546" y="388" text-anchor="middle" font-size="52">🧺</text>
+<g filter="url(#shadow)"><circle cx="270" cy="228" r="119" fill="#ffffff" fill-opacity=".62" stroke="#ffffff" stroke-width="10"/>
+<polygon points="270.0,126.0 294.7,194.0 367.0,196.5 309.9,241.0 330.0,310.5 270.0,270.0 210.0,310.5 230.1,241.0 173.0,196.5 245.3,194.0" fill="#ffe15b" stroke="#e49b24" stroke-width="8"/>
+<polygon points="423.0,246.0 438.3,289.0 483.9,290.2 447.7,318.0 460.6,361.8 423.0,336.0 385.4,361.8 398.3,318.0 362.1,290.2 407.7,289.0" fill="#ffca3a" stroke="#e49b24" stroke-width="7"/>
+<polygon points="174.0,297.0 185.2,329.6 219.7,330.2 192.1,350.9 202.2,383.8 174.0,364.0 145.8,383.8 155.9,350.9 128.3,330.2 162.8,329.6" fill="#ffd95b" stroke="#e49b24" stroke-width="6"/>
+<path d="M213 204 L327 260 M218 264 L318 196" stroke="#fff4b1" stroke-width="9" stroke-linecap="round" opacity=".9"/></g>
 <path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
 </svg>
