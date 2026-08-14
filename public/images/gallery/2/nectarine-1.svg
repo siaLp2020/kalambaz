@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d8f5ff"/><stop offset="1" stop-color="#b6c6ff"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="8" flood-color="#344875" flood-opacity=".28"/></filter></defs>
-<rect width="640" height="480" rx="42" fill="url(#bg)"/>
-<circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
-<text x="94" y="142" text-anchor="middle" font-size="52">🍃</text><text x="546" y="388" text-anchor="middle" font-size="52">🧺</text>
-
-<g filter="url(#shadow)"><ellipse cx="320" cy="390" rx="175" ry="28" fill="#344875" fill-opacity=".18"/><g transform="rotate(-5 320 253) scale(1.0)"><ellipse cx="320" cy="253" rx="108" ry="88" fill="#f07d43" stroke="#b9362c" stroke-width="8"/><path d="M267 215 Q308 181 354 198" fill="none" stroke="#fff3ab" stroke-width="13" stroke-linecap="round" opacity=".8"/><path d="M320 169 C334 144 356 139 374 153" fill="none" stroke="#55964d" stroke-width="11" stroke-linecap="round"/></g></g>
-<path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
-</svg>

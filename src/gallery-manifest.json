@@ -38,7 +38,28 @@
         "/images/gallery/2/banana-3.jpg",
         "/images/gallery/2/banana-4.jpg"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "File:Cavendish banana from Maracaibo.jpg",
+          "pageid": 22552194,
+          "source": "https://commons.wikimedia.org/?curid=22552194"
+        },
+        {
+          "title": "File:Bananas on black background 02.jpg",
+          "pageid": 113972132,
+          "source": "https://commons.wikimedia.org/?curid=113972132"
+        },
+        {
+          "title": "File:Green raw bananas.jpg",
+          "pageid": 114468680,
+          "source": "https://commons.wikimedia.org/?curid=114468680"
+        },
+        {
+          "title": "File:Banana-Sitia-Crete.jpg",
+          "pageid": 158273990,
+          "source": "https://commons.wikimedia.org/?curid=158273990"
+        }
+      ],
       "query": "banana fruit"
     },
     "orange": {
@@ -172,7 +193,28 @@
         "/images/gallery/2/peach-3.jpg",
         "/images/gallery/2/peach-4.jpg"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "File:Autumn Red peaches.jpg",
+          "pageid": 84578,
+          "source": "https://commons.wikimedia.org/?curid=84578"
+        },
+        {
+          "title": "File:Pesca con muffa.jpg",
+          "pageid": 624029,
+          "source": "https://commons.wikimedia.org/?curid=624029"
+        },
+        {
+          "title": "File:Nectarine Fruit Development.jpg",
+          "pageid": 3766525,
+          "source": "https://commons.wikimedia.org/?curid=3766525"
+        },
+        {
+          "title": "File:Peach fruit 3.jpg",
+          "pageid": 79495858,
+          "source": "https://commons.wikimedia.org/?curid=79495858"
+        }
+      ],
       "query": "peach fruit"
     },
     "mango": {
@@ -199,9 +241,9 @@
           "source": "https://commons.wikimedia.org/?curid=140044568"
         },
         {
-          "title": "File:Mango and cross sections.jpg",
-          "pageid": 5765381,
-          "source": "https://commons.wikimedia.org/?curid=5765381"
+          "title": "File:Khairdeen, alias Pritam, relishing a mango at the dusk of his life 05.jpg",
+          "pageid": 124073070,
+          "source": "https://commons.wikimedia.org/?curid=124073070"
         }
       ],
       "query": "mango fruit"
@@ -220,11 +262,6 @@
           "source": "https://commons.wikimedia.org/?curid=97307282"
         },
         {
-          "title": "File:Lime-Whole-Split.jpg",
-          "pageid": 16979841,
-          "source": "https://commons.wikimedia.org/?curid=16979841"
-        },
-        {
           "title": "File:Lemon and lime.jpg",
           "pageid": 53815990,
           "source": "https://commons.wikimedia.org/?curid=53815990"
@@ -233,6 +270,11 @@
           "title": "File:Two limes.jpg",
           "pageid": 54215899,
           "source": "https://commons.wikimedia.org/?curid=54215899"
+        },
+        {
+          "title": "File:Lime-Whole-Split.jpg",
+          "pageid": 16979841,
+          "source": "https://commons.wikimedia.org/?curid=16979841"
         }
       ],
       "query": "lime fruit"
@@ -244,19 +286,57 @@
         "/images/gallery/2/melon-3.png",
         "/images/gallery/2/melon-4.jpg"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "title": "File:2023-08-25 - Halved melon - mould encroaching from one end - DSN5354-1.jpg",
+          "pageid": 136531726,
+          "source": "https://commons.wikimedia.org/?curid=136531726"
+        },
+        {
+          "title": "File:Melon and Citullu.jpg",
+          "pageid": 68082517,
+          "source": "https://commons.wikimedia.org/?curid=68082517"
+        },
+        {
+          "title": "File:EB1911 - Melon.png",
+          "pageid": 122546844,
+          "source": "https://commons.wikimedia.org/?curid=122546844"
+        },
+        {
+          "title": "File:Cantaloupe and canary melon.jpg",
+          "pageid": 25336530,
+          "source": "https://commons.wikimedia.org/?curid=25336530"
+        }
+      ],
       "query": "melon fruit"
     },
     "cantaloupe": {
       "images": [
-        "/images/gallery/2/cantaloupe-1.svg",
-        "/images/gallery/2/cantaloupe-2.svg",
-        "/images/gallery/2/cantaloupe-3.svg",
-        "/images/gallery/2/cantaloupe-4.svg"
+        "/images/gallery/2/cantaloupe-1.jpg",
+        "/images/gallery/2/cantaloupe-2.jpg",
+        "/images/gallery/2/cantaloupe-3.jpg",
+        "/images/gallery/2/cantaloupe-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Canteloupe and cross section.jpg",
+          "pageid": 5765373,
+          "source": "https://commons.wikimedia.org/?curid=5765373"
+        },
+        {
+          "title": "File:Cantaloupe skin.jpg",
+          "pageid": 2655962,
+          "source": "https://commons.wikimedia.org/?curid=2655962"
+        },
+        {
+          "title": "File:Harvesting Cantaloupes (20106808).jpg",
+          "pageid": 96282363,
+          "source": "https://commons.wikimedia.org/?curid=96282363"
+        },
+        {
+          "title": "File:عامل من السودان.jpg",
+          "pageid": 77257914,
+          "source": "https://commons.wikimedia.org/?curid=77257914"
         }
       ],
       "query": "cantaloupe fruit"
@@ -294,14 +374,31 @@
     },
     "cherry": {
       "images": [
-        "/images/gallery/2/cherry-1.svg",
-        "/images/gallery/2/cherry-2.svg",
-        "/images/gallery/2/cherry-3.svg",
-        "/images/gallery/2/cherry-4.svg"
+        "/images/gallery/2/cherry-1.jpg",
+        "/images/gallery/2/cherry-2.jpg",
+        "/images/gallery/2/cherry-3.jpg",
+        "/images/gallery/2/cherry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Cherry Stella444.jpg",
+          "pageid": 3177559,
+          "source": "https://commons.wikimedia.org/?curid=3177559"
+        },
+        {
+          "title": "File:Rhagoletis cerasi01.jpg",
+          "pageid": 869680,
+          "source": "https://commons.wikimedia.org/?curid=869680"
+        },
+        {
+          "title": "File:Kirschfruchtfliege Rhagoletis cerasi 2.jpg",
+          "pageid": 101912721,
+          "source": "https://commons.wikimedia.org/?curid=101912721"
+        },
+        {
+          "title": "File:Sweet cherries in basket 2018 G1.jpg",
+          "pageid": 69827347,
+          "source": "https://commons.wikimedia.org/?curid=69827347"
         }
       ],
       "query": "cherry fruit"
@@ -370,98 +467,217 @@
     },
     "kiwi": {
       "images": [
-        "/images/gallery/2/kiwi-1.svg",
-        "/images/gallery/2/kiwi-2.svg",
-        "/images/gallery/2/kiwi-3.svg",
-        "/images/gallery/2/kiwi-4.svg"
+        "/images/gallery/2/kiwi-1.jpg",
+        "/images/gallery/2/kiwi-2.jpg",
+        "/images/gallery/2/kiwi-3.jpg",
+        "/images/gallery/2/kiwi-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Kiwi (Actinidia chinensis) 1 Luc Viatour.jpg",
+          "pageid": 3563567,
+          "source": "https://commons.wikimedia.org/?curid=3563567"
+        },
+        {
+          "title": "File:Kiwi aka.jpg",
+          "pageid": 65257,
+          "source": "https://commons.wikimedia.org/?curid=65257"
+        },
+        {
+          "title": "File:Kiwifruit 'Red Passion' cross section - Italy.jpg",
+          "pageid": 126827882,
+          "source": "https://commons.wikimedia.org/?curid=126827882"
+        },
+        {
+          "title": "File:Kiwi fruit and jeeraga mittai.jpg",
+          "pageid": 140871758,
+          "source": "https://commons.wikimedia.org/?curid=140871758"
         }
       ],
       "query": "kiwi fruit"
     },
     "fig": {
       "images": [
-        "/images/gallery/2/fig-1.svg",
-        "/images/gallery/2/fig-2.svg",
-        "/images/gallery/2/fig-3.svg",
-        "/images/gallery/2/fig-4.svg"
+        "/images/gallery/2/fig-1.jpg",
+        "/images/gallery/2/fig-2.jpg",
+        "/images/gallery/2/fig-3.jpg",
+        "/images/gallery/2/fig-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Fig (Ficus carica) fruit halved.jpg",
+          "pageid": 114987169,
+          "source": "https://commons.wikimedia.org/?curid=114987169"
+        },
+        {
+          "title": "File:Bowl of Figs.jpg",
+          "pageid": 30454698,
+          "source": "https://commons.wikimedia.org/?curid=30454698"
+        },
+        {
+          "title": "File:Fig - white and red (4039923156).jpg",
+          "pageid": 24321569,
+          "source": "https://commons.wikimedia.org/?curid=24321569"
+        },
+        {
+          "title": "File:Fig tree and Fruit.jpg",
+          "pageid": 135316251,
+          "source": "https://commons.wikimedia.org/?curid=135316251"
         }
       ],
       "query": "fig fruit"
     },
     "apricot": {
       "images": [
-        "/images/gallery/2/apricot-1.svg",
-        "/images/gallery/2/apricot-2.svg",
-        "/images/gallery/2/apricot-3.svg",
-        "/images/gallery/2/apricot-4.svg"
+        "/images/gallery/2/apricot-1.jpg",
+        "/images/gallery/2/apricot-2.jpg",
+        "/images/gallery/2/apricot-3.jpg",
+        "/images/gallery/2/apricot-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Apricots.jpg",
+          "pageid": 121041,
+          "source": "https://commons.wikimedia.org/?curid=121041"
+        },
+        {
+          "title": "File:Apricot and cross section.jpg",
+          "pageid": 5765345,
+          "source": "https://commons.wikimedia.org/?curid=5765345"
+        },
+        {
+          "title": "File:Apricot whole444.jpg",
+          "pageid": 3173430,
+          "source": "https://commons.wikimedia.org/?curid=3173430"
+        },
+        {
+          "title": "File:Ambigramme Abricot rouge - fruit.png",
+          "pageid": 108976192,
+          "source": "https://commons.wikimedia.org/?curid=108976192"
         }
       ],
       "query": "apricot fruit"
     },
     "raspberry": {
       "images": [
-        "/images/gallery/2/raspberry-1.svg",
-        "/images/gallery/2/raspberry-2.svg",
-        "/images/gallery/2/raspberry-3.svg",
-        "/images/gallery/2/raspberry-4.svg"
+        "/images/gallery/2/raspberry-1.jpg",
+        "/images/gallery/2/raspberry-2.jpg",
+        "/images/gallery/2/raspberry-3.jpg",
+        "/images/gallery/2/raspberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Raspberry - halved (Rubus idaeus).jpg",
+          "pageid": 97402511,
+          "source": "https://commons.wikimedia.org/?curid=97402511"
+        },
+        {
+          "title": "File:Raspberry - whole (Rubus idaeus).jpg",
+          "pageid": 97402512,
+          "source": "https://commons.wikimedia.org/?curid=97402512"
+        },
+        {
+          "title": "File:Raspberries (Rubus Idaeus).jpg",
+          "pageid": 203680,
+          "source": "https://commons.wikimedia.org/?curid=203680"
+        },
+        {
+          "title": "File:Framboise Margy 3.jpg",
+          "pageid": 2698999,
+          "source": "https://commons.wikimedia.org/?curid=2698999"
         }
       ],
       "query": "raspberry fruit"
     },
     "blueberry": {
       "images": [
-        "/images/gallery/2/blueberry-1.svg",
-        "/images/gallery/2/blueberry-2.svg",
-        "/images/gallery/2/blueberry-3.svg",
-        "/images/gallery/2/blueberry-4.svg"
+        "/images/gallery/2/blueberry-1.jpg",
+        "/images/gallery/2/blueberry-2.jpg",
+        "/images/gallery/2/blueberry-3.jpg",
+        "/images/gallery/2/blueberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Dish of blueberries.jpg",
+          "pageid": 64447704,
+          "source": "https://commons.wikimedia.org/?curid=64447704"
+        },
+        {
+          "title": "File:Blueberries-In-Pack.jpg",
+          "pageid": 15928839,
+          "source": "https://commons.wikimedia.org/?curid=15928839"
+        },
+        {
+          "title": "File:SZ 深圳 Shenzhen 福田 Futian 七鮮 SevenFresh 超市 Supermarket 生果 fruit Blueberry May 2024 R12S 02.jpg",
+          "pageid": 148668840,
+          "source": "https://commons.wikimedia.org/?curid=148668840"
+        },
+        {
+          "title": "File:SZ 深圳 Shenzhen 福田 Futian 七鮮 SevenFresh 超市 Supermarket 生果 fruit Blueberry May 2024 R12S 01.jpg",
+          "pageid": 148668839,
+          "source": "https://commons.wikimedia.org/?curid=148668839"
         }
       ],
       "query": "blueberry fruit"
     },
     "blackberry": {
       "images": [
-        "/images/gallery/2/blackberry-1.svg",
-        "/images/gallery/2/blackberry-2.svg",
-        "/images/gallery/2/blackberry-3.svg",
-        "/images/gallery/2/blackberry-4.svg"
+        "/images/gallery/2/blackberry-1.jpg",
+        "/images/gallery/2/blackberry-2.jpg",
+        "/images/gallery/2/blackberry-3.jpg",
+        "/images/gallery/2/blackberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Blackberries (Rubus fruticosus).jpg",
+          "pageid": 100209650,
+          "source": "https://commons.wikimedia.org/?curid=100209650"
+        },
+        {
+          "title": "File:Blackberry (Rubus fruticosus).jpg",
+          "pageid": 100209647,
+          "source": "https://commons.wikimedia.org/?curid=100209647"
+        },
+        {
+          "title": "File:Black Mulberry Female Flowers.jpg",
+          "pageid": 5158660,
+          "source": "https://commons.wikimedia.org/?curid=5158660"
+        },
+        {
+          "title": "File:Blackberry (fruit) from Capioví, Misiones, Argentina.jpg",
+          "pageid": 176125113,
+          "source": "https://commons.wikimedia.org/?curid=176125113"
         }
       ],
       "query": "blackberry fruit"
     },
     "cranberry": {
       "images": [
-        "/images/gallery/2/cranberry-1.svg",
-        "/images/gallery/2/cranberry-2.svg",
-        "/images/gallery/2/cranberry-3.svg",
-        "/images/gallery/2/cranberry-4.svg"
+        "/images/gallery/2/cranberry-1.jpg",
+        "/images/gallery/2/cranberry-2.jpg",
+        "/images/gallery/2/cranberry-3.png",
+        "/images/gallery/2/cranberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Cranberrys beim Ernten.jpeg",
+          "pageid": 26979,
+          "source": "https://commons.wikimedia.org/?curid=26979"
+        },
+        {
+          "title": "File:Dries cranberries auf der Messe Bremen 01.JPG",
+          "pageid": 11600707,
+          "source": "https://commons.wikimedia.org/?curid=11600707"
+        },
+        {
+          "title": "File:Cranberry bread on gold plate.png",
+          "pageid": 157433392,
+          "source": "https://commons.wikimedia.org/?curid=157433392"
+        },
+        {
+          "title": "File:EXP 0079--Bala-Cranberry-Festival (10577174993).jpg",
+          "pageid": 99541003,
+          "source": "https://commons.wikimedia.org/?curid=99541003"
         }
       ],
       "query": "cranberry fruit"
@@ -499,381 +715,840 @@
     },
     "passionfruit": {
       "images": [
-        "/images/gallery/2/passionfruit-1.svg",
-        "/images/gallery/2/passionfruit-2.svg",
-        "/images/gallery/2/passionfruit-3.svg",
-        "/images/gallery/2/passionfruit-4.svg"
+        "/images/gallery/2/passionfruit-1.jpg",
+        "/images/gallery/2/passionfruit-2.jpg",
+        "/images/gallery/2/passionfruit-3.jpg",
+        "/images/gallery/2/passionfruit-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Passionfruit flower07.jpg",
+          "pageid": 475654,
+          "source": "https://commons.wikimedia.org/?curid=475654"
+        },
+        {
+          "title": "File:Purple passionfruit.jpg",
+          "pageid": 577951,
+          "source": "https://commons.wikimedia.org/?curid=577951"
+        },
+        {
+          "title": "File:Passionfruit (whole and half).jpg",
+          "pageid": 117017266,
+          "source": "https://commons.wikimedia.org/?curid=117017266"
+        },
+        {
+          "title": "File:Passionfruit with ruler and color reference.jpg",
+          "pageid": 4166229,
+          "source": "https://commons.wikimedia.org/?curid=4166229"
         }
       ],
       "query": "passionfruit fruit"
     },
     "dragonfruit": {
       "images": [
-        "/images/gallery/2/dragonfruit-1.svg",
-        "/images/gallery/2/dragonfruit-2.svg",
-        "/images/gallery/2/dragonfruit-3.svg",
-        "/images/gallery/2/dragonfruit-4.svg"
+        "/images/gallery/2/dragonfruit-1.jpg",
+        "/images/gallery/2/dragonfruit-2.jpg",
+        "/images/gallery/2/dragonfruit-3.jpg",
+        "/images/gallery/2/dragonfruit-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Butterfly 053.JPG",
+          "pageid": 10102041,
+          "source": "https://commons.wikimedia.org/?curid=10102041"
+        },
+        {
+          "title": "File:Dragonfruit Chiayi market.jpg",
+          "pageid": 323119,
+          "source": "https://commons.wikimedia.org/?curid=323119"
+        },
+        {
+          "title": "File:2008 dragonfruit Nanjing 2508890394.jpg",
+          "pageid": 25145254,
+          "source": "https://commons.wikimedia.org/?curid=25145254"
+        },
+        {
+          "title": "File:Pitaya P1190424.jpg",
+          "pageid": 1850886,
+          "source": "https://commons.wikimedia.org/?curid=1850886"
         }
       ],
       "query": "dragonfruit fruit"
     },
     "jackfruit": {
       "images": [
-        "/images/gallery/2/jackfruit-1.svg",
-        "/images/gallery/2/jackfruit-2.svg",
-        "/images/gallery/2/jackfruit-3.svg",
-        "/images/gallery/2/jackfruit-4.svg"
+        "/images/gallery/2/jackfruit-1.jpg",
+        "/images/gallery/2/jackfruit-2.jpg",
+        "/images/gallery/2/jackfruit-3.jpg",
+        "/images/gallery/2/jackfruit-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Jackfruit Flesh.jpg",
+          "pageid": 19778855,
+          "source": "https://commons.wikimedia.org/?curid=19778855"
+        },
+        {
+          "title": "File:Jackfruit Mix Served.JPG",
+          "pageid": 18909000,
+          "source": "https://commons.wikimedia.org/?curid=18909000"
+        },
+        {
+          "title": "File:Jackfruit tree with fruit.jpg",
+          "pageid": 55312610,
+          "source": "https://commons.wikimedia.org/?curid=55312610"
+        },
+        {
+          "title": "File:Jackfruit masala with shirwal.jpg",
+          "pageid": 102421739,
+          "source": "https://commons.wikimedia.org/?curid=102421739"
         }
       ],
       "query": "jackfruit fruit"
     },
     "durian": {
       "images": [
-        "/images/gallery/2/durian-1.svg",
-        "/images/gallery/2/durian-2.svg",
-        "/images/gallery/2/durian-3.svg",
-        "/images/gallery/2/durian-4.svg"
+        "/images/gallery/2/durian-1.jpg",
+        "/images/gallery/2/durian-2.jpg",
+        "/images/gallery/2/durian-3.jpg",
+        "/images/gallery/2/durian-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Durian Fruit in Yunnan.jpg",
+          "pageid": 81071427,
+          "source": "https://commons.wikimedia.org/?curid=81071427"
+        },
+        {
+          "title": "File:Owoce Durian.jpg",
+          "pageid": 5960026,
+          "source": "https://commons.wikimedia.org/?curid=5960026"
+        },
+        {
+          "title": "File:Durian for sale in Sydney store.jpg",
+          "pageid": 49656522,
+          "source": "https://commons.wikimedia.org/?curid=49656522"
+        },
+        {
+          "title": "File:Durian fruit singapore.jpg",
+          "pageid": 49625560,
+          "source": "https://commons.wikimedia.org/?curid=49625560"
         }
       ],
       "query": "durian fruit"
     },
     "olive": {
       "images": [
-        "/images/gallery/2/olive-1.svg",
-        "/images/gallery/2/olive-2.svg",
-        "/images/gallery/2/olive-3.svg",
-        "/images/gallery/2/olive-4.svg"
+        "/images/gallery/2/olive-1.jpg",
+        "/images/gallery/2/olive-2.jpg",
+        "/images/gallery/2/olive-3.jpg",
+        "/images/gallery/2/olive-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Fly December 2007-11.jpg",
+          "pageid": 3207026,
+          "source": "https://commons.wikimedia.org/?curid=3207026"
+        },
+        {
+          "title": "File:Air Olive 1.JPG",
+          "pageid": 36999849,
+          "source": "https://commons.wikimedia.org/?curid=36999849"
+        },
+        {
+          "title": "File:Bactrocera oleae 60003340.jpg",
+          "pageid": 115787292,
+          "source": "https://commons.wikimedia.org/?curid=115787292"
+        },
+        {
+          "title": "File:Olive tree in a herb garden in Polis, Cyprus.jpg",
+          "pageid": 76567734,
+          "source": "https://commons.wikimedia.org/?curid=76567734"
         }
       ],
       "query": "olive fruit"
     },
     "quince": {
       "images": [
-        "/images/gallery/2/quince-1.svg",
-        "/images/gallery/2/quince-2.svg",
-        "/images/gallery/2/quince-3.svg",
-        "/images/gallery/2/quince-4.svg"
+        "/images/gallery/2/quince-1.jpg",
+        "/images/gallery/2/quince-2.jpg",
+        "/images/gallery/2/quince-3.jpg",
+        "/images/gallery/2/quince-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Quince (10895s).jpg",
+          "pageid": 58868900,
+          "source": "https://commons.wikimedia.org/?curid=58868900"
+        },
+        {
+          "title": "File:Quince (10928s).jpg",
+          "pageid": 58868905,
+          "source": "https://commons.wikimedia.org/?curid=58868905"
+        },
+        {
+          "title": "File:Quince (10889s).jpg",
+          "pageid": 58868904,
+          "source": "https://commons.wikimedia.org/?curid=58868904"
+        },
+        {
+          "title": "File:Japanese quince fruit 2015 G1.jpg",
+          "pageid": 92736215,
+          "source": "https://commons.wikimedia.org/?curid=92736215"
         }
       ],
       "query": "quince fruit"
     },
     "mulberry": {
       "images": [
-        "/images/gallery/2/mulberry-1.svg",
-        "/images/gallery/2/mulberry-2.svg",
-        "/images/gallery/2/mulberry-3.svg",
-        "/images/gallery/2/mulberry-4.svg"
+        "/images/gallery/2/mulberry-1.jpg",
+        "/images/gallery/2/mulberry-2.jpg",
+        "/images/gallery/2/mulberry-3.jpg",
+        "/images/gallery/2/mulberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Black mulberry fruit (Morus nigra).jpg",
+          "pageid": 69481993,
+          "source": "https://commons.wikimedia.org/?curid=69481993"
+        },
+        {
+          "title": "File:Mulberry IMG 0124.jpg",
+          "pageid": 60561239,
+          "source": "https://commons.wikimedia.org/?curid=60561239"
+        },
+        {
+          "title": "File:Malberry.jpg",
+          "pageid": 59379487,
+          "source": "https://commons.wikimedia.org/?curid=59379487"
+        },
+        {
+          "title": "File:Mulberry-china.JPG",
+          "pageid": 886122,
+          "source": "https://commons.wikimedia.org/?curid=886122"
         }
       ],
       "query": "mulberry fruit"
     },
     "nectarine": {
       "images": [
-        "/images/gallery/2/nectarine-1.svg",
-        "/images/gallery/2/nectarine-2.svg",
-        "/images/gallery/2/nectarine-3.svg",
-        "/images/gallery/2/nectarine-4.svg"
+        "/images/gallery/2/nectarine-1.jpg",
+        "/images/gallery/2/nectarine-2.jpg",
+        "/images/gallery/2/nectarine-3.jpg",
+        "/images/gallery/2/nectarine-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Nectarine Fruit Development.jpg",
+          "pageid": 3766525,
+          "source": "https://commons.wikimedia.org/?curid=3766525"
+        },
+        {
+          "title": "File:Nectarine Fruit Development-BIG.jpg",
+          "pageid": 12715000,
+          "source": "https://commons.wikimedia.org/?curid=12715000"
+        },
+        {
+          "title": "File:Nectarine on white.jpg",
+          "pageid": 54851382,
+          "source": "https://commons.wikimedia.org/?curid=54851382"
+        },
+        {
+          "title": "File:Nectarine CDC.jpg",
+          "pageid": 130342,
+          "source": "https://commons.wikimedia.org/?curid=130342"
         }
       ],
       "query": "nectarine fruit"
     },
     "gooseberry": {
       "images": [
-        "/images/gallery/2/gooseberry-1.svg",
-        "/images/gallery/2/gooseberry-2.svg",
-        "/images/gallery/2/gooseberry-3.svg",
-        "/images/gallery/2/gooseberry-4.svg"
+        "/images/gallery/2/gooseberry-1.jpg",
+        "/images/gallery/2/gooseberry-2.jpg",
+        "/images/gallery/2/gooseberry-3.jpg",
+        "/images/gallery/2/gooseberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Gooseberries.jpg",
+          "pageid": 4678490,
+          "source": "https://commons.wikimedia.org/?curid=4678490"
+        },
+        {
+          "title": "File:Gooseberries.JPG",
+          "pageid": 4424742,
+          "source": "https://commons.wikimedia.org/?curid=4424742"
+        },
+        {
+          "title": "File:Otaheite gooseberry.JPG",
+          "pageid": 44823119,
+          "source": "https://commons.wikimedia.org/?curid=44823119"
+        },
+        {
+          "title": "File:'Pamlokhi', 'Pora amlokhi' or Otaheite gooseberry, Scientific Name- Phyllanthus acidus.jpg",
+          "pageid": 147486373,
+          "source": "https://commons.wikimedia.org/?curid=147486373"
         }
       ],
       "query": "gooseberry fruit"
     },
     "pineapple": {
       "images": [
-        "/images/gallery/2/pineapple-1.svg",
-        "/images/gallery/2/pineapple-2.svg",
-        "/images/gallery/2/pineapple-3.svg",
-        "/images/gallery/2/pineapple-4.svg"
+        "/images/gallery/2/pineapple-1.jpg",
+        "/images/gallery/2/pineapple-2.jpg",
+        "/images/gallery/2/pineapple-3.jpg",
+        "/images/gallery/2/pineapple-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:കൈതച്ചക്ക.jpg",
+          "pageid": 13247464,
+          "source": "https://commons.wikimedia.org/?curid=13247464"
+        },
+        {
+          "title": "File:Pineapple fruit 2.jpg",
+          "pageid": 25211393,
+          "source": "https://commons.wikimedia.org/?curid=25211393"
+        },
+        {
+          "title": "File:Pineapple Juice fruits-465832.jpg",
+          "pageid": 79453705,
+          "source": "https://commons.wikimedia.org/?curid=79453705"
+        },
+        {
+          "title": "File:Pineapple Chunks.jpg",
+          "pageid": 127038445,
+          "source": "https://commons.wikimedia.org/?curid=127038445"
         }
       ],
-      "query": "pineapple"
+      "query": "pineapple fruit"
     },
     "lemon": {
       "images": [
-        "/images/gallery/2/lemon-1.svg",
-        "/images/gallery/2/lemon-2.svg",
-        "/images/gallery/2/lemon-3.svg",
-        "/images/gallery/2/lemon-4.svg"
+        "/images/gallery/2/lemon-1.jpg",
+        "/images/gallery/2/lemon-2.jpg",
+        "/images/gallery/2/lemon-3.jpg",
+        "/images/gallery/2/lemon-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Lemon.jpg",
+          "pageid": 59992,
+          "source": "https://commons.wikimedia.org/?curid=59992"
+        },
+        {
+          "title": "File:Lemon - whole and split.jpg",
+          "pageid": 97148960,
+          "source": "https://commons.wikimedia.org/?curid=97148960"
+        },
+        {
+          "title": "File:Lemon and lime.jpg",
+          "pageid": 53815990,
+          "source": "https://commons.wikimedia.org/?curid=53815990"
+        },
+        {
+          "title": "File:Zitrone -- 2025 -- 7294.jpg",
+          "pageid": 161067633,
+          "source": "https://commons.wikimedia.org/?curid=161067633"
         }
       ],
-      "query": "lemon"
+      "query": "lemon fruit"
     },
     "pomegranate": {
       "images": [
-        "/images/gallery/2/pomegranate-1.svg",
-        "/images/gallery/2/pomegranate-2.svg",
-        "/images/gallery/2/pomegranate-3.svg",
-        "/images/gallery/2/pomegranate-4.svg"
+        "/images/gallery/2/pomegranate-1.jpg",
+        "/images/gallery/2/pomegranate-2.jpg",
+        "/images/gallery/2/pomegranate-3.jpg",
+        "/images/gallery/2/pomegranate-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Pomegranate02 edit.jpg",
+          "pageid": 202664,
+          "source": "https://commons.wikimedia.org/?curid=202664"
+        },
+        {
+          "title": "File:Pomegranate fruit - whole and piece with arils.jpg",
+          "pageid": 99248987,
+          "source": "https://commons.wikimedia.org/?curid=99248987"
+        },
+        {
+          "title": "File:Pomegranate (opened).jpg",
+          "pageid": 98253540,
+          "source": "https://commons.wikimedia.org/?curid=98253540"
+        },
+        {
+          "title": "File:Pomegranate03 edit.jpg",
+          "pageid": 205508,
+          "source": "https://commons.wikimedia.org/?curid=205508"
         }
       ],
-      "query": "pomegranate"
+      "query": "pomegranate fruit"
     },
     "date": {
       "images": [
-        "/images/gallery/2/date-1.svg",
-        "/images/gallery/2/date-2.svg",
-        "/images/gallery/2/date-3.svg",
-        "/images/gallery/2/date-4.svg"
+        "/images/gallery/2/date-1.jpg",
+        "/images/gallery/2/date-2.jpg",
+        "/images/gallery/2/date-3.jpg",
+        "/images/gallery/2/date-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Phoenix dactylifera0.jpg",
+          "pageid": 768163,
+          "source": "https://commons.wikimedia.org/?curid=768163"
+        },
+        {
+          "title": "File:Phoenix dactylifera, date palm 7026.jpg",
+          "pageid": 153483358,
+          "source": "https://commons.wikimedia.org/?curid=153483358"
+        },
+        {
+          "title": "File:Phoenix dactylifera, date palm Half Moon Cay 7027.jpg",
+          "pageid": 153483359,
+          "source": "https://commons.wikimedia.org/?curid=153483359"
+        },
+        {
+          "title": "File:Dates on date palm.jpg",
+          "pageid": 133553,
+          "source": "https://commons.wikimedia.org/?curid=133553"
         }
       ],
-      "query": "date"
+      "query": "date fruit"
     },
     "coconut": {
       "images": [
-        "/images/gallery/2/coconut-1.svg",
-        "/images/gallery/2/coconut-2.svg",
-        "/images/gallery/2/coconut-3.svg",
-        "/images/gallery/2/coconut-4.svg"
+        "/images/gallery/2/coconut-1.jpg",
+        "/images/gallery/2/coconut-2.jpg",
+        "/images/gallery/2/coconut-3.jpg",
+        "/images/gallery/2/coconut-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Coconuts - single and cracked open.jpg",
+          "pageid": 114753360,
+          "source": "https://commons.wikimedia.org/?curid=114753360"
+        },
+        {
+          "title": "File:Sliced coconut in Vivah Mandap, Janakpur-September 22, 2016-IMG 7411.jpg",
+          "pageid": 51836495,
+          "source": "https://commons.wikimedia.org/?curid=51836495"
+        },
+        {
+          "title": "File:2013-01-24 18-09-34-Coconut-10f.jpg",
+          "pageid": 24172880,
+          "source": "https://commons.wikimedia.org/?curid=24172880"
+        },
+        {
+          "title": "File:Green coconut fruit.jpg",
+          "pageid": 144696638,
+          "source": "https://commons.wikimedia.org/?curid=144696638"
         }
       ],
-      "query": "coconut"
+      "query": "coconut fruit"
     },
     "avocado": {
       "images": [
-        "/images/gallery/2/avocado-1.svg",
-        "/images/gallery/2/avocado-2.svg",
-        "/images/gallery/2/avocado-3.svg",
-        "/images/gallery/2/avocado-4.svg"
+        "/images/gallery/2/avocado-1.jpg",
+        "/images/gallery/2/avocado-2.jpg",
+        "/images/gallery/2/avocado-3.jpg",
+        "/images/gallery/2/avocado-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Avocado with cross section edit.jpg",
+          "pageid": 11601447,
+          "source": "https://commons.wikimedia.org/?curid=11601447"
+        },
+        {
+          "title": "File:Avocado Hass - single and halved.jpg",
+          "pageid": 114747058,
+          "source": "https://commons.wikimedia.org/?curid=114747058"
+        },
+        {
+          "title": "File:Persea americana fruit 2.JPG",
+          "pageid": 4877156,
+          "source": "https://commons.wikimedia.org/?curid=4877156"
+        },
+        {
+          "title": "File:Avocado11.jpg",
+          "pageid": 3502107,
+          "source": "https://commons.wikimedia.org/?curid=3502107"
         }
       ],
-      "query": "avocado"
+      "query": "avocado fruit"
     },
     "papaya": {
       "images": [
-        "/images/gallery/2/papaya-1.svg",
-        "/images/gallery/2/papaya-2.svg",
-        "/images/gallery/2/papaya-3.svg",
-        "/images/gallery/2/papaya-4.svg"
+        "/images/gallery/2/papaya-1.jpg",
+        "/images/gallery/2/papaya-2.jpg",
+        "/images/gallery/2/papaya-3.jpg",
+        "/images/gallery/2/papaya-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Papaya - longitudinal section close-up view.jpg",
+          "pageid": 115124823,
+          "source": "https://commons.wikimedia.org/?curid=115124823"
+        },
+        {
+          "title": "File:Papaya - longitudinal section.jpg",
+          "pageid": 115124822,
+          "source": "https://commons.wikimedia.org/?curid=115124822"
+        },
+        {
+          "title": "File:Carica papaya 14 7 2012.jpg",
+          "pageid": 20258225,
+          "source": "https://commons.wikimedia.org/?curid=20258225"
+        },
+        {
+          "title": "File:Carica papaya (Papayer) - 105.jpg",
+          "pageid": 42780249,
+          "source": "https://commons.wikimedia.org/?curid=42780249"
         }
       ],
-      "query": "papaya"
+      "query": "papaya fruit"
     },
     "guava": {
       "images": [
-        "/images/gallery/2/guava-1.svg",
-        "/images/gallery/2/guava-2.svg",
-        "/images/gallery/2/guava-3.svg",
-        "/images/gallery/2/guava-4.svg"
+        "/images/gallery/2/guava-1.jpg",
+        "/images/gallery/2/guava-2.jpg",
+        "/images/gallery/2/guava-3.jpg",
+        "/images/gallery/2/guava-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Goiaba vermelha.jpg",
+          "pageid": 35236574,
+          "source": "https://commons.wikimedia.org/?curid=35236574"
+        },
+        {
+          "title": "File:Guava Fruit.jpg",
+          "pageid": 108060157,
+          "source": "https://commons.wikimedia.org/?curid=108060157"
+        },
+        {
+          "title": "File:GUAVA FRUIT.jpg",
+          "pageid": 153977089,
+          "source": "https://commons.wikimedia.org/?curid=153977089"
+        },
+        {
+          "title": "File:Unripe guava fruit.jpg",
+          "pageid": 102321687,
+          "source": "https://commons.wikimedia.org/?curid=102321687"
         }
       ],
-      "query": "guava"
+      "query": "guava fruit"
     },
     "mandarin": {
       "images": [
-        "/images/gallery/2/mandarin-1.svg",
-        "/images/gallery/2/mandarin-2.svg",
-        "/images/gallery/2/mandarin-3.svg",
-        "/images/gallery/2/mandarin-4.svg"
+        "/images/gallery/2/mandarin-1.jpg",
+        "/images/gallery/2/mandarin-2.jpg",
+        "/images/gallery/2/mandarin-3.jpg",
+        "/images/gallery/2/mandarin-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Mandarin Oranges (Citrus Reticulata).jpg",
+          "pageid": 18365873,
+          "source": "https://commons.wikimedia.org/?curid=18365873"
+        },
+        {
+          "title": "File:2023 Mandarynki.jpg",
+          "pageid": 130405995,
+          "source": "https://commons.wikimedia.org/?curid=130405995"
+        },
+        {
+          "title": "File:Peeled Mandarin Orange.jpg",
+          "pageid": 114091646,
+          "source": "https://commons.wikimedia.org/?curid=114091646"
+        },
+        {
+          "title": "File:Mandarin-fruit-mandarin- language-joke.png",
+          "pageid": 194728009,
+          "source": "https://commons.wikimedia.org/?curid=194728009"
         }
       ],
-      "query": "mandarin"
+      "query": "mandarin fruit"
     },
     "persimmon": {
       "images": [
-        "/images/gallery/2/persimmon-1.svg",
-        "/images/gallery/2/persimmon-2.svg",
-        "/images/gallery/2/persimmon-3.svg",
-        "/images/gallery/2/persimmon-4.svg"
+        "/images/gallery/2/persimmon-1.jpg",
+        "/images/gallery/2/persimmon-2.jpg",
+        "/images/gallery/2/persimmon-3.jpg",
+        "/images/gallery/2/persimmon-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Fuyu Persimmon (Diospyros Kaki).jpg",
+          "pageid": 17127053,
+          "source": "https://commons.wikimedia.org/?curid=17127053"
+        },
+        {
+          "title": "File:Fuyu persimmon fruits, one cut open.jpg",
+          "pageid": 64193880,
+          "source": "https://commons.wikimedia.org/?curid=64193880"
+        },
+        {
+          "title": "File:Caqui chocolate em fundo preto 03.jpg",
+          "pageid": 40931057,
+          "source": "https://commons.wikimedia.org/?curid=40931057"
+        },
+        {
+          "title": "File:Persimmon fruit that thaws after the freezer.jpg",
+          "pageid": 85112181,
+          "source": "https://commons.wikimedia.org/?curid=85112181"
         }
       ],
-      "query": "persimmon"
+      "query": "persimmon fruit"
     },
     "lychee": {
       "images": [
-        "/images/gallery/2/lychee-1.svg",
-        "/images/gallery/2/lychee-2.svg",
-        "/images/gallery/2/lychee-3.svg",
-        "/images/gallery/2/lychee-4.svg"
+        "/images/gallery/2/lychee-1.jpg",
+        "/images/gallery/2/lychee-2.jpg",
+        "/images/gallery/2/lychee-3.jpg",
+        "/images/gallery/2/lychee-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Lychee fruits and seed.jpg",
+          "pageid": 98554712,
+          "source": "https://commons.wikimedia.org/?curid=98554712"
+        },
+        {
+          "title": "File:Lychee fruit and seed.jpg",
+          "pageid": 176126966,
+          "source": "https://commons.wikimedia.org/?curid=176126966"
+        },
+        {
+          "title": "File:Lychee fruit peeled.jpg",
+          "pageid": 106372611,
+          "source": "https://commons.wikimedia.org/?curid=106372611"
+        },
+        {
+          "title": "File:Lychee fruit.jpg",
+          "pageid": 112466296,
+          "source": "https://commons.wikimedia.org/?curid=112466296"
         }
       ],
-      "query": "lychee"
+      "query": "lychee fruit"
     },
     "rambutan": {
       "images": [
-        "/images/gallery/2/rambutan-1.svg",
-        "/images/gallery/2/rambutan-2.svg",
-        "/images/gallery/2/rambutan-3.svg",
-        "/images/gallery/2/rambutan-4.svg"
+        "/images/gallery/2/rambutan-1.jpg",
+        "/images/gallery/2/rambutan-2.jpg",
+        "/images/gallery/2/rambutan-3.jpg",
+        "/images/gallery/2/rambutan-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Rambutans with seed.jpg",
+          "pageid": 123061957,
+          "source": "https://commons.wikimedia.org/?curid=123061957"
+        },
+        {
+          "title": "File:Rambutão.jpg",
+          "pageid": 148617983,
+          "source": "https://commons.wikimedia.org/?curid=148617983"
+        },
+        {
+          "title": "File:Rambutan white background alt.jpg",
+          "pageid": 7782271,
+          "source": "https://commons.wikimedia.org/?curid=7782271"
+        },
+        {
+          "title": "File:Rambutan fruit, half peeled.jpg",
+          "pageid": 64036997,
+          "source": "https://commons.wikimedia.org/?curid=64036997"
         }
       ],
-      "query": "rambutan"
+      "query": "rambutan fruit"
     },
     "starfruit": {
       "images": [
-        "/images/gallery/2/starfruit-1.svg",
-        "/images/gallery/2/starfruit-2.svg",
-        "/images/gallery/2/starfruit-3.svg",
-        "/images/gallery/2/starfruit-4.svg"
+        "/images/gallery/2/starfruit-1.jpg",
+        "/images/gallery/2/starfruit-2.jpg",
+        "/images/gallery/2/starfruit-3.jpg",
+        "/images/gallery/2/starfruit-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Carambola Starfruit.jpg",
+          "pageid": 11930345,
+          "source": "https://commons.wikimedia.org/?curid=11930345"
+        },
+        {
+          "title": "File:Star fruit photo.jpg",
+          "pageid": 155137180,
+          "source": "https://commons.wikimedia.org/?curid=155137180"
+        },
+        {
+          "title": "File:Starfruit is the fruit of (Averrhoa carambola).jpg",
+          "pageid": 74764018,
+          "source": "https://commons.wikimedia.org/?curid=74764018"
+        },
+        {
+          "title": "File:Starfruit (Averrhoa carambola) on the tree.jpg",
+          "pageid": 74737356,
+          "source": "https://commons.wikimedia.org/?curid=74737356"
         }
       ],
-      "query": "starfruit"
+      "query": "starfruit fruit"
     },
     "currant": {
       "images": [
-        "/images/gallery/2/currant-1.svg",
-        "/images/gallery/2/currant-2.svg",
-        "/images/gallery/2/currant-3.svg",
-        "/images/gallery/2/currant-4.svg"
+        "/images/gallery/2/currant-1.jpg",
+        "/images/gallery/2/currant-2.jpg",
+        "/images/gallery/2/currant-3.jpg",
+        "/images/gallery/2/currant-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:White currants in basket 2020 G1.jpg",
+          "pageid": 92000416,
+          "source": "https://commons.wikimedia.org/?curid=92000416"
+        },
+        {
+          "title": "File:Currant fruit.jpg",
+          "pageid": 149368775,
+          "source": "https://commons.wikimedia.org/?curid=149368775"
+        },
+        {
+          "title": "File:Red currant berries.JPG",
+          "pageid": 38656027,
+          "source": "https://commons.wikimedia.org/?curid=38656027"
+        },
+        {
+          "title": "File:Red currant closeup.jpg",
+          "pageid": 7053560,
+          "source": "https://commons.wikimedia.org/?curid=7053560"
         }
       ],
-      "query": "currant"
+      "query": "currant fruit"
     },
     "elderberry": {
       "images": [
-        "/images/gallery/2/elderberry-1.svg",
-        "/images/gallery/2/elderberry-2.svg",
-        "/images/gallery/2/elderberry-3.svg",
-        "/images/gallery/2/elderberry-4.svg"
+        "/images/gallery/2/elderberry-1.jpg",
+        "/images/gallery/2/elderberry-2.jpg",
+        "/images/gallery/2/elderberry-3.jpg",
+        "/images/gallery/2/elderberry-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:American elderberry (Sambucus canadensis) (23663427868).jpg",
+          "pageid": 74203910,
+          "source": "https://commons.wikimedia.org/?curid=74203910"
+        },
+        {
+          "title": "File:Elderberry hanging fruit.jpg",
+          "pageid": 184016611,
+          "source": "https://commons.wikimedia.org/?curid=184016611"
+        },
+        {
+          "title": "File:American elderberry (Sambucus canadensis)1.jpg",
+          "pageid": 67526356,
+          "source": "https://commons.wikimedia.org/?curid=67526356"
+        },
+        {
+          "title": "File:Red elderberry, Bärstadt.jpg",
+          "pageid": 169527755,
+          "source": "https://commons.wikimedia.org/?curid=169527755"
         }
       ],
-      "query": "elderberry"
+      "query": "elderberry fruit"
     },
     "jujube": {
       "images": [
-        "/images/gallery/2/jujube-1.svg",
-        "/images/gallery/2/jujube-2.svg",
-        "/images/gallery/2/jujube-3.svg",
-        "/images/gallery/2/jujube-4.svg"
+        "/images/gallery/2/jujube-1.jpg",
+        "/images/gallery/2/jujube-2.jpg",
+        "/images/gallery/2/jujube-3.jpg",
+        "/images/gallery/2/jujube-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Indian jujube (fruit).jpg",
+          "pageid": 75331209,
+          "source": "https://commons.wikimedia.org/?curid=75331209"
+        },
+        {
+          "title": "File:TaiwanJujube棗子 1557 (front).jpg",
+          "pageid": 128724110,
+          "source": "https://commons.wikimedia.org/?curid=128724110"
+        },
+        {
+          "title": "File:Jujube fruit.jpg",
+          "pageid": 36888127,
+          "source": "https://commons.wikimedia.org/?curid=36888127"
+        },
+        {
+          "title": "File:Wild jujube, wrinkled jujube, zunna berry.jpg",
+          "pageid": 159751110,
+          "source": "https://commons.wikimedia.org/?curid=159751110"
         }
       ],
-      "query": "jujube"
+      "query": "jujube fruit"
     },
     "medlar": {
       "images": [
-        "/images/gallery/2/medlar-1.svg",
-        "/images/gallery/2/medlar-2.svg",
-        "/images/gallery/2/medlar-3.svg",
-        "/images/gallery/2/medlar-4.svg"
+        "/images/gallery/2/medlar-1.jpg",
+        "/images/gallery/2/medlar-2.jpg",
+        "/images/gallery/2/medlar-3.jpg",
+        "/images/gallery/2/medlar-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Common medlar fruit.jpg",
+          "pageid": 106631918,
+          "source": "https://commons.wikimedia.org/?curid=106631918"
+        },
+        {
+          "title": "File:Mespilus germanica - Medlar fruit and leaves in the Vale View. Barrmill Park. North Ayrshire.jpg",
+          "pageid": 95418546,
+          "source": "https://commons.wikimedia.org/?curid=95418546"
+        },
+        {
+          "title": "File:Mespilus germanica - Medlar fruit and leaves. Vale View. Barrmill Park. North Ayrshire.jpg",
+          "pageid": 95418200,
+          "source": "https://commons.wikimedia.org/?curid=95418200"
+        },
+        {
+          "title": "File:Medlar Cheese or jelly.jpg",
+          "pageid": 97722397,
+          "source": "https://commons.wikimedia.org/?curid=97722397"
         }
       ],
-      "query": "medlar"
+      "query": "medlar fruit"
     },
     "loquat": {
       "images": [
-        "/images/gallery/2/loquat-1.svg",
-        "/images/gallery/2/loquat-2.svg",
-        "/images/gallery/2/loquat-3.svg",
-        "/images/gallery/2/loquat-4.svg"
+        "/images/gallery/2/loquat-1.jpg",
+        "/images/gallery/2/loquat-2.jpg",
+        "/images/gallery/2/loquat-3.jpg",
+        "/images/gallery/2/loquat-4.jpg"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "title": "File:Loquat fruit tree.jpg",
+          "pageid": 160004657,
+          "source": "https://commons.wikimedia.org/?curid=160004657"
+        },
+        {
+          "title": "File:Loquat fruit and foliage (Eriobotrya japonica).jpg",
+          "pageid": 147263604,
+          "source": "https://commons.wikimedia.org/?curid=147263604"
+        },
+        {
+          "title": "File:Loquat Tree - young tree in back yard bearing fruit.jpg",
+          "pageid": 88528097,
+          "source": "https://commons.wikimedia.org/?curid=88528097"
+        },
+        {
+          "title": "File:Nísperos entero y partido.jpg",
+          "pageid": 3955350,
+          "source": "https://commons.wikimedia.org/?curid=3955350"
         }
       ],
-      "query": "loquat"
+      "query": "loquat fruit"
     }
   },
   "3": {

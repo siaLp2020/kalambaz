@@ -187,7 +187,11 @@ def download_item(item: dict, manifest: dict, refresh: bool = False) -> None:
         time.sleep(0.1)
 
     if len(files) < 4:
-        category_manifest[english] = {"images": [], "sources": [], "query": queries[0]}
+        # Keep a working gallery when a Wikimedia search is temporarily
+        # incomplete or rate-limited.  An empty result must never erase the
+        # existing four-frame set from the manifest.
+        if not existing or len(existing.get("images", [])) != 4:
+            category_manifest[english] = {"images": [], "sources": [], "query": queries[0]}
         print(f"no four images: {item['category']}/{english} ({len(files)})")
         return
 
