@@ -77,6 +77,39 @@ const gallerySceneSets = {
   ],
 }
 const galleryScenesFor = prompt => gallerySceneSets[prompt] || gallerySceneSets['وسیله']
+const namedEmojiVariants = {
+  dog: ['🐶', '🐕', '🦮', '🐕‍🦺'],
+  cat: ['🐱', '🐈', '🐈‍⬛', '😺'],
+  rabbit: ['🐰', '🐇', '🐰🥕', '🐇🌸'],
+  fish: ['🐟', '🐠', '🐡', '🐟🫧'],
+  frog: ['🐸', '🐸🌿', '🐸💧', '🐸🌧️'],
+  rooster: ['🐓', '🐔', '🐓🌅', '🐓🌾'],
+  apple: ['🍎', '🍏', '🍎🍃', '🍎✨'],
+  banana: ['🍌', '🍌✨', '🍌🍃', '🍌🍽️'],
+  car: ['🚗', '🚘', '🚙', '🏎️'],
+  bus: ['🚌', '🚍', '🚌🌆', '🚌🛣️'],
+  airplane: ['✈️', '🛫', '🛬', '✈️☁️'],
+}
+const colorEmojiVariants = {
+  red: ['🔴', '🟥', '❤️', '♦️'],
+  blue: ['🔵', '🟦', '💙', '🔷'],
+  yellow: ['🟡', '🟨', '💛', '⭐'],
+  green: ['🟢', '🟩', '💚', '🍃'],
+  purple: ['🟣', '🟪', '💜', '🔮'],
+  orange: ['🟠', '🟧', '🧡', '🍊'],
+}
+const emojiVariantsFor = (item, prompt) => {
+  if (!item) return ['', '', '', '']
+  if (prompt === 'رنگ' && colorEmojiVariants[item[2]]) return colorEmojiVariants[item[2]]
+  if (namedEmojiVariants[item[2]]) return namedEmojiVariants[item[2]]
+  const scenes = galleryScenesFor(prompt)
+  return [
+    item[0],
+    `${scenes[0].props[0]}${item[0]}`,
+    `${item[0]}${scenes[1].props[1]}`,
+    `${scenes[2].props[0]}${item[0]}${scenes[3].props[1]}`,
+  ]
+}
 let categoryAudioIndex = 0
 const makeCategory = (name, icon, prompt, source, clues) => {
   const categoryIndex = ++categoryAudioIndex
@@ -111,7 +144,16 @@ const shuffle = values => {
   }
   return result
 }
-const pickItems = (items, count = ITEMS_PER_STAGE) => shuffle(items).slice(0, count)
+const uniqueItems = items => {
+  const seen = new Set()
+  return items.filter(item => {
+    const key = item?.[2] || item?.[1] || ''
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+const pickItems = (items, count = ITEMS_PER_STAGE) => shuffle(uniqueItems(items)).slice(0, count)
 
 const persianDigits = '۰۱۲۳۴۵۶۷۸۹'
 const toPersianDigits = value => String(value).replace(/[0-9]/g, digit => persianDigits[Number(digit)])
@@ -607,6 +649,6 @@ function App() {
   }
   if (!user) return <main className="login"><div className="cloud c1">☁️</div><div className="cloud c2">☁️</div><div className="logo">کلم<span>باز</span><small>بازی با کلمه‌ها</small></div><div className="mascot">🦊</div><form onSubmit={login}><h1>سلام دوست کوچولو!</h1><p>اسمت چیه؟ با هم بازی کنیم.</p><input value={name} onChange={e=>setName(e.target.value)} placeholder="نام بازیکن" autoFocus /><button>شروع بازی 🚀</button></form></main>
   if (joining) return <main className="lobby"><div className="spinner">✨</div><h1>داریم دوست‌ها را پیدا می‌کنیم</h1><p>تا شروع بازی <b>{count}</b> ثانیه مانده</p><div className="playerchips"><i>{user} 🧒</i>{robots.map((x,i)=><i className="waiting" key={x}>{count < 3*(i+1) ? x+' 🤖' : 'در انتظار…'}</i>)}</div><small>اگر دوستی نیاید، ربات‌ها با ما بازی می‌کنند!</small></main>
-  return <main className="game"><header><div className="brand">کلم<span>باز</span></div><div className="stage">مرحله {stageNo} از ۱۰ <b>{stage.icon} {stage.name}</b></div><div className={`time ${timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? 'urgent' : ''}`} aria-live="polite">{timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? '⚠️ ' : '⏱ '}{timeLeft}</div><div className="score">⭐ {score}</div></header><section className="race">{players.map((p,i)=><div key={p}><span>{i ? '🤖':'🧒'}</span><em>{p}</em><div className="track"><i style={{width:`${i ? Math.min(100, (robotProgress[i - 1] / 6) * 100) : (passed.length / 6) * 100}%`}} /></div></div>)}</section><div className="instruction">روی یک تصویر بزن، گوش کن و سپس اسمش را با میکروفون بگو! 🎤</div><section className="cards">{stage.items.map((it,i)=><button className={`card ${passed.includes(it[1])?'done':''}`} onClick={()=>openItem(it)} key={it[1]}><span>{it[0]}</span><b>{passed.includes(it[1]) ? `${it[2]} ✓` : `تصویر ${i + 1}`}</b></button>)}</section>{selected && <div className="modal"><div className="popup"><button className="close" onClick={()=>setSelected(null)}>×</button><div className="image-carousel" aria-label="نمایش چهار تصویر متحرک"><div className={`carousel-frame carousel-frame-${carouselIndex}`} data-frame={carouselIndex} data-pose={galleryScenesFor(stage.prompt)[carouselIndex].pose} key={`${selected[1]}-${carouselIndex}`}><span className="carousel-decoration carousel-decoration-left">{galleryScenesFor(stage.prompt)[carouselIndex].props[0]}</span><span className="carousel-emoji">{selected[0]}</span><span className="carousel-decoration carousel-decoration-right">{galleryScenesFor(stage.prompt)[carouselIndex].props[1]}</span><span className="carousel-ground">{galleryScenesFor(stage.prompt)[carouselIndex].ground}</span></div><div className="carousel-dots" aria-hidden="true">{Array.from({length:GALLERY_FRAME_COUNT}, (_, index) => <i className={index === carouselIndex ? 'active' : ''} key={index} />)}</div></div><p>{selected[3]}</p><div className="score-hint">راهنما: انگلیسی بگو <b>۲۰ امتیاز</b>، فارسی بگو <b>۱۰ امتیاز</b> ⭐</div><button className="speak-description" disabled={descriptionPlaying} aria-disabled={descriptionPlaying} onClick={()=>playDescription(selected[3], selected)}>🔊 {descriptionPlaying ? 'در حال پخش…' : 'گوش کن'}</button><button className={`mic ${listening?'pulse':''}`} disabled={descriptionPlaying || micBusy} aria-disabled={descriptionPlaying || micBusy} onClick={()=>useMic(selected)}>🎤<small>{descriptionPlaying?'منتظر بمان…':listening?'گوش می‌دهم…':'بگو!'}</small></button>{showFallback && <div className="answer"><button aria-label="پاسخ فارسی" onClick={()=>checkAnswer(selected[1],selected)}>🇮🇷 <small>+۱۰</small></button><button aria-label="پاسخ انگلیسی" onClick={()=>checkAnswer(selected[2],selected)}>🇬🇧 <small>+۲۰</small></button></div>}{audioNotice && <strong className="audio-notice">{audioNotice}</strong>}{notice && <strong className="notice">{notice}</strong>}</div></div>}{finished && <div className="modal victory"><div className="popup"><div className="confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>آفرین {user}!</h1><p>تو اول شدی و مرحله {stageNo} را تمام کردی!</p><b className="stars">⭐⭐⭐</b><button onClick={nextStage}>{stageNo === 10 ? 'بازی را دوباره شروع کن 🔄' : 'برو به مرحله بعد 🚀'}</button></div></div>}{stageWinner === 'robot' && <div className="modal victory timeout"><div className="popup"><div className="confetti">⏰ 🤖 ✨</div><h1>زمان تمام شد!</h1><p>{robots[robotWinner]} برندهٔ این مرحله شد.</p><p>اشکالی ندارد؛ دوباره تلاش کن یا به مرحلهٔ بعد برو.</p><div className="result-actions"><button onClick={()=>resetStage(true)}>تلاش دوباره 🔁</button><button onClick={nextStage}>مرحلهٔ بعد 🚀</button></div></div></div>}{welcomeOpen && <div className="modal welcome-modal"><div className="popup"><div className="confetti">🎉 ✨ 🚀</div><h1>به بازی خوش آمدی!</h1><p>بزن بریم؟</p><div className="welcome-actions"><button className="welcome-primary" onClick={replayWelcome}>🔊 پخش صدا</button><button className="welcome-secondary" onClick={()=>setWelcomeOpen(false)}>شروع بازی 🚀</button></div>{welcomeNotice && <strong className="audio-notice">{welcomeNotice}</strong>}</div></div>}</main>
+  return <main className="game"><header><div className="brand">کلم<span>باز</span></div><div className="stage">مرحله {stageNo} از ۱۰ <b>{stage.icon} {stage.name}</b></div><div className={`time ${timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? 'urgent' : ''}`} aria-live="polite">{timeLeft > 0 && timeLeft <= TIME_WARNING_THRESHOLD ? '⚠️ ' : '⏱ '}{timeLeft}</div><div className="score">⭐ {score}</div></header><section className="race">{players.map((p,i)=><div key={p}><span>{i ? '🤖':'🧒'}</span><em>{p}</em><div className="track"><i style={{width:`${i ? Math.min(100, (robotProgress[i - 1] / 6) * 100) : (passed.length / 6) * 100}%`}} /></div></div>)}</section><div className="instruction">روی یک تصویر بزن، گوش کن و سپس اسمش را با میکروفون بگو! 🎤</div><section className="cards">{stage.items.map((it,i)=><button className={`card ${passed.includes(it[1])?'done':''}`} onClick={()=>openItem(it)} key={it[1]}><span>{it[0]}</span><b>{passed.includes(it[1]) ? `${it[2]} ✓` : `تصویر ${i + 1}`}</b></button>)}</section>{selected && <div className="modal"><div className="popup item-popup"><button className="close" onClick={()=>setSelected(null)}>×</button><div className="image-carousel" aria-label="نمایش چهار تصویر متحرک"><div className={`carousel-frame carousel-frame-${carouselIndex}`} data-frame={carouselIndex} data-pose={galleryScenesFor(stage.prompt)[carouselIndex].pose} key={`${selected[1]}-${carouselIndex}`}><span className="carousel-decoration carousel-decoration-left">{galleryScenesFor(stage.prompt)[carouselIndex].props[0]}</span><span className="carousel-emoji">{emojiVariantsFor(selected, stage.prompt)[carouselIndex]}</span><span className="carousel-decoration carousel-decoration-right">{galleryScenesFor(stage.prompt)[carouselIndex].props[1]}</span><span className="carousel-ground">{galleryScenesFor(stage.prompt)[carouselIndex].ground}</span></div><div className="carousel-dots" aria-hidden="true">{Array.from({length:GALLERY_FRAME_COUNT}, (_, index) => <i className={index === carouselIndex ? 'active' : ''} key={index} />)}</div></div><p className="description-text">{selected[3]}</p><div className="score-hint">راهنما: انگلیسی بگو <b>۲۰ امتیاز</b>، فارسی بگو <b>۱۰ امتیاز</b> ⭐</div><button className="speak-description" disabled={descriptionPlaying} aria-disabled={descriptionPlaying} onClick={()=>playDescription(selected[3], selected)}>🔊 {descriptionPlaying ? 'در حال پخش…' : 'گوش کن'}</button><button className={`mic ${listening?'pulse':''}`} disabled={descriptionPlaying || micBusy} aria-disabled={descriptionPlaying || micBusy} onClick={()=>useMic(selected)}>🎤<small>{descriptionPlaying?'منتظر بمان…':listening?'گوش می‌دهم…':'بگو!'}</small></button>{showFallback && <div className="answer"><button aria-label="پاسخ فارسی" onClick={()=>checkAnswer(selected[1],selected)}>🇮🇷 <small>+۱۰</small></button><button aria-label="پاسخ انگلیسی" onClick={()=>checkAnswer(selected[2],selected)}>🇬🇧 <small>+۲۰</small></button></div>}{audioNotice && <strong className="audio-notice">{audioNotice}</strong>}{notice && <strong className="notice">{notice}</strong>}</div></div>}{finished && <div className="modal victory"><div className="popup"><div className="confetti">🎉 ✨ 🏆 ✨ 🎉</div><h1>آفرین {user}!</h1><p>تو اول شدی و مرحله {stageNo} را تمام کردی!</p><b className="stars">⭐⭐⭐</b><button onClick={nextStage}>{stageNo === 10 ? 'بازی را دوباره شروع کن 🔄' : 'برو به مرحله بعد 🚀'}</button></div></div>}{stageWinner === 'robot' && <div className="modal victory timeout"><div className="popup"><div className="confetti">⏰ 🤖 ✨</div><h1>زمان تمام شد!</h1><p>{robots[robotWinner]} برندهٔ این مرحله شد.</p><p>اشکالی ندارد؛ دوباره تلاش کن یا به مرحلهٔ بعد برو.</p><div className="result-actions"><button onClick={()=>resetStage(true)}>تلاش دوباره 🔁</button><button onClick={nextStage}>مرحلهٔ بعد 🚀</button></div></div></div>}{welcomeOpen && <div className="modal welcome-modal"><div className="popup"><div className="confetti">🎉 ✨ 🚀</div><h1>به بازی خوش آمدی!</h1><p>بزن بریم؟</p><div className="welcome-actions"><button className="welcome-primary" onClick={replayWelcome}>🔊 پخش صدا</button><button className="welcome-secondary" onClick={()=>setWelcomeOpen(false)}>شروع بازی 🚀</button></div>{welcomeNotice && <strong className="audio-notice">{welcomeNotice}</strong>}</div></div>}</main>
 }
 createRoot(document.getElementById('root')).render(<App />)
