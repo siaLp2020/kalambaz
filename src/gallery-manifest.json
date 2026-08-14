@@ -1,0 +1,1554 @@
+{
+  "1": {
+    "monkey": {
+      "images": [
+        "/images/gallery/1/monkey-1.jpg",
+        "/images/gallery/1/monkey-2.jpg",
+        "/images/gallery/1/monkey-3.jpg",
+        "/images/gallery/1/monkey-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Monkey eating.jpg",
+          "pageid": 7567071,
+          "source": "https://commons.wikimedia.org/?curid=7567071"
+        },
+        {
+          "title": "File:Golden monkey (Cercopithecus kandti) eating.jpg",
+          "pageid": 52772619,
+          "source": "https://commons.wikimedia.org/?curid=52772619"
+        },
+        {
+          "title": "File:Green monkey (Chlorocebus sabaeus) juvenile head.jpg",
+          "pageid": 55354965,
+          "source": "https://commons.wikimedia.org/?curid=55354965"
+        },
+        {
+          "title": "File:Proboscis monkey (Nasalis larvatus) composite.jpg",
+          "pageid": 41630517,
+          "source": "https://commons.wikimedia.org/?curid=41630517"
+        }
+      ],
+      "query": "monkey animal"
+    },
+    "dog": {
+      "images": [
+        "/images/gallery/1/dog-1.jpg",
+        "/images/gallery/1/dog-2.jpg",
+        "/images/gallery/1/dog-3.jpg",
+        "/images/gallery/1/dog-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Human–canine friendship - girl hugging her dog tightly at golden hour in Laos.jpg",
+          "pageid": 143571500,
+          "source": "https://commons.wikimedia.org/?curid=143571500"
+        },
+        {
+          "title": "File:Liver yellow dog in the water looking at viewer at golden hour in Don Det Laos.jpg",
+          "pageid": 100150893,
+          "source": "https://commons.wikimedia.org/?curid=100150893"
+        },
+        {
+          "title": "File:White dog sleeping on the floor with puppies after nursing in Don Det Laos.jpg",
+          "pageid": 100150891,
+          "source": "https://commons.wikimedia.org/?curid=100150891"
+        },
+        {
+          "title": "File:Dog in Wae Rebo village, Flores Island, Indonesia, 20250824 0720 2989.jpg",
+          "pageid": 175183512,
+          "source": "https://commons.wikimedia.org/?curid=175183512"
+        }
+      ],
+      "query": "dog animal"
+    },
+    "cat": {
+      "images": [
+        "/images/gallery/1/cat-1.jpg",
+        "/images/gallery/1/cat-2.jpg",
+        "/images/gallery/1/cat-3.jpg",
+        "/images/gallery/1/cat-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Cat playing with a lizard.jpg",
+          "pageid": 68960758,
+          "source": "https://commons.wikimedia.org/?curid=68960758"
+        },
+        {
+          "title": "File:Tired 20-year-old cat.jpg",
+          "pageid": 9809267,
+          "source": "https://commons.wikimedia.org/?curid=9809267"
+        },
+        {
+          "title": "File:20231125 housecat south meadows PD100306.jpg",
+          "pageid": 141562823,
+          "source": "https://commons.wikimedia.org/?curid=141562823"
+        },
+        {
+          "title": "File:An Afghan elder and his cat sit outside his store at the Anaba bazaar in Panjshir province, Afghanistan.jpg",
+          "pageid": 21376945,
+          "source": "https://commons.wikimedia.org/?curid=21376945"
+        }
+      ],
+      "query": "cat animal"
+    },
+    "rabbit": {
+      "images": [
+        "/images/gallery/1/rabbit-1.jpg",
+        "/images/gallery/1/rabbit-2.jpg",
+        "/images/gallery/1/rabbit-3.jpg",
+        "/images/gallery/1/rabbit-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Lapin blanc.jpg",
+          "pageid": 61316,
+          "source": "https://commons.wikimedia.org/?curid=61316"
+        },
+        {
+          "title": "File:Rabbit den hole in Parco Alto Milanese - Busto Arsizio, Lombardy, Italy - 2021-04-05.jpg",
+          "pageid": 103280824,
+          "source": "https://commons.wikimedia.org/?curid=103280824"
+        },
+        {
+          "title": "File:Bunny in a small zoo.jpg",
+          "pageid": 157588690,
+          "source": "https://commons.wikimedia.org/?curid=157588690"
+        },
+        {
+          "title": "File:Bunny in a small zoo 2.jpg",
+          "pageid": 157588689,
+          "source": "https://commons.wikimedia.org/?curid=157588689"
+        }
+      ],
+      "query": "rabbit animal"
+    },
+    "lion": {
+      "images": [
+        "/images/gallery/1/lion-1.jpg",
+        "/images/gallery/1/lion-2.jpg",
+        "/images/gallery/1/lion-3.jpg",
+        "/images/gallery/1/lion-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Lion (Panthera leo) male 6y.jpg",
+          "pageid": 39505212,
+          "source": "https://commons.wikimedia.org/?curid=39505212"
+        },
+        {
+          "title": "File:011 The lion king Tryggve in the Serengeti National Park Photo by Giles Laurent.jpg",
+          "pageid": 121188762,
+          "source": "https://commons.wikimedia.org/?curid=121188762"
+        },
+        {
+          "title": "File:002 The lion king Snyggve in the Serengeti National Park Photo by Giles Laurent.jpg",
+          "pageid": 121086546,
+          "source": "https://commons.wikimedia.org/?curid=121086546"
+        },
+        {
+          "title": "File:Male Lion and Cub Chitwa South Africa Luca Galuzzi 2004 edit1.jpg",
+          "pageid": 2196131,
+          "source": "https://commons.wikimedia.org/?curid=2196131"
+        }
+      ],
+      "query": "lion animal"
+    },
+    "elephant": {
+      "images": [
+        "/images/gallery/1/elephant-1.jpg",
+        "/images/gallery/1/elephant-2.jpg",
+        "/images/gallery/1/elephant-3.jpg",
+        "/images/gallery/1/elephant-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Indian elephant in Kaziranga National Park March 2025 by Tisha Mukherjee 06.jpg",
+          "pageid": 163664261,
+          "source": "https://commons.wikimedia.org/?curid=163664261"
+        },
+        {
+          "title": "File:Indian elephant in Kaziranga National Park March 2025 by Tisha Mukherjee 04.jpg",
+          "pageid": 163664240,
+          "source": "https://commons.wikimedia.org/?curid=163664240"
+        },
+        {
+          "title": "File:Sitting Asian elephant (Elephas maximus) bathing in Tad Lo river, Laos.jpg",
+          "pageid": 81754720,
+          "source": "https://commons.wikimedia.org/?curid=81754720"
+        },
+        {
+          "title": "File:Asian elephant walking in Tad Lo river at golden hour, Bolaven Plateau, Laos.jpg",
+          "pageid": 83997417,
+          "source": "https://commons.wikimedia.org/?curid=83997417"
+        }
+      ],
+      "query": "elephant animal"
+    },
+    "fish": {
+      "images": [
+        "/images/gallery/1/fish-1.jpg",
+        "/images/gallery/1/fish-2.jpg",
+        "/images/gallery/1/fish-3.jpg",
+        "/images/gallery/1/fish-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Ensenada fish market 2.jpg",
+          "pageid": 19279002,
+          "source": "https://commons.wikimedia.org/?curid=19279002"
+        },
+        {
+          "title": "File:Oriental Darter with fish, Nepal.jpg",
+          "pageid": 134234250,
+          "source": "https://commons.wikimedia.org/?curid=134234250"
+        },
+        {
+          "title": "File:Oweston sting fish for sale at Tsukiji Fishmarket, Tokyo-30.jpg",
+          "pageid": 30743307,
+          "source": "https://commons.wikimedia.org/?curid=30743307"
+        },
+        {
+          "title": "File:White tailed eagle raftsund square crop.jpg",
+          "pageid": 68003968,
+          "source": "https://commons.wikimedia.org/?curid=68003968"
+        }
+      ],
+      "query": "fish animal"
+    },
+    "bear": {
+      "images": [
+        "/images/gallery/1/bear-1.jpg",
+        "/images/gallery/1/bear-2.jpg",
+        "/images/gallery/1/bear-3.jpg",
+        "/images/gallery/1/bear-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Polar Bear AdF.jpg",
+          "pageid": 34567165,
+          "source": "https://commons.wikimedia.org/?curid=34567165"
+        },
+        {
+          "title": "File:European Brown Bear.jpg",
+          "pageid": 35495250,
+          "source": "https://commons.wikimedia.org/?curid=35495250"
+        },
+        {
+          "title": "File:Polar bear (Ursus maritimus) in the drift ice region north of Svalbard.jpg",
+          "pageid": 52452680,
+          "source": "https://commons.wikimedia.org/?curid=52452680"
+        },
+        {
+          "title": "File:Polar bear after unlucky hunt for a seal.jpg",
+          "pageid": 52474662,
+          "source": "https://commons.wikimedia.org/?curid=52474662"
+        }
+      ],
+      "query": "bear animal"
+    },
+    "horse": {
+      "images": [
+        "/images/gallery/1/horse-1.jpg",
+        "/images/gallery/1/horse-2.jpg",
+        "/images/gallery/1/horse-3.jpg",
+        "/images/gallery/1/horse-4.gif"
+      ],
+      "sources": [
+        {
+          "title": "File:Biandintz eta zaldiak - modified2.jpg",
+          "pageid": 3511801,
+          "source": "https://commons.wikimedia.org/?curid=3511801"
+        },
+        {
+          "title": "File:Domestic horse at Suryachaur and the mountains in the back1.jpg",
+          "pageid": 90636902,
+          "source": "https://commons.wikimedia.org/?curid=90636902"
+        },
+        {
+          "title": "File:IcelandicHorseInWinter.jpg",
+          "pageid": 472074,
+          "source": "https://commons.wikimedia.org/?curid=472074"
+        },
+        {
+          "title": "File:Muybridge race horse animated.gif",
+          "pageid": 1228779,
+          "source": "https://commons.wikimedia.org/?curid=1228779"
+        }
+      ],
+      "query": "horse animal"
+    },
+    "cow": {
+      "images": [
+        "/images/gallery/1/cow-1.jpg",
+        "/images/gallery/1/cow-2.jpg",
+        "/images/gallery/1/cow-3.jpg",
+        "/images/gallery/1/cow-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Cow (Fleckvieh breed) Oeschinensee Slaunger 2009-07-07.jpg",
+          "pageid": 7421277,
+          "source": "https://commons.wikimedia.org/?curid=7421277"
+        },
+        {
+          "title": "File:Water reflection of a boy feeding hay to a cow in a paddy field at golden hour in Laos.jpg",
+          "pageid": 150378335,
+          "source": "https://commons.wikimedia.org/?curid=150378335"
+        },
+        {
+          "title": "File:Cow on Pupers.jpg",
+          "pageid": 7868883,
+          "source": "https://commons.wikimedia.org/?curid=7868883"
+        },
+        {
+          "title": "File:Anjarle Bridge and Cows-fix.jpg",
+          "pageid": 23197255,
+          "source": "https://commons.wikimedia.org/?curid=23197255"
+        }
+      ],
+      "query": "cow animal"
+    },
+    "sheep": {
+      "images": [
+        "/images/gallery/1/sheep-1.jpg",
+        "/images/gallery/1/sheep-2.jpg",
+        "/images/gallery/1/sheep-3.jpg",
+        "/images/gallery/1/sheep-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Sheep skeleton at MAV-USP.jpg",
+          "pageid": 70072304,
+          "source": "https://commons.wikimedia.org/?curid=70072304"
+        },
+        {
+          "title": "File:Swaledale Sheep, Lake District, England - June 2009.jpg",
+          "pageid": 7213563,
+          "source": "https://commons.wikimedia.org/?curid=7213563"
+        },
+        {
+          "title": "File:Flock of sheep.jpg",
+          "pageid": 16818,
+          "source": "https://commons.wikimedia.org/?curid=16818"
+        },
+        {
+          "title": "File:Sheep lounging in the shade of a tree at Röe Castle.jpg",
+          "pageid": 80954075,
+          "source": "https://commons.wikimedia.org/?curid=80954075"
+        }
+      ],
+      "query": "sheep animal"
+    },
+    "rooster": {
+      "images": [
+        "/images/gallery/1/rooster-1.jpg",
+        "/images/gallery/1/rooster-2.jpg",
+        "/images/gallery/1/rooster-3.jpg",
+        "/images/gallery/1/rooster-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Rooster04 adjusted.jpg",
+          "pageid": 170632,
+          "source": "https://commons.wikimedia.org/?curid=170632"
+        },
+        {
+          "title": "File:A 95 year old woman with her pet rooster, Havana, Cuba.jpg",
+          "pageid": 14887005,
+          "source": "https://commons.wikimedia.org/?curid=14887005"
+        },
+        {
+          "title": "File:Rooster portrait2.jpg",
+          "pageid": 5507626,
+          "source": "https://commons.wikimedia.org/?curid=5507626"
+        },
+        {
+          "title": "File:Junglefowl on tree.jpg",
+          "pageid": 39531989,
+          "source": "https://commons.wikimedia.org/?curid=39531989"
+        }
+      ],
+      "query": "rooster animal"
+    },
+    "duck": {
+      "images": [
+        "/images/gallery/1/duck-1.jpg",
+        "/images/gallery/1/duck-2.jpg",
+        "/images/gallery/1/duck-3.jpg",
+        "/images/gallery/1/duck-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Anas platyrhynchos male female.jpg",
+          "pageid": 6449081,
+          "source": "https://commons.wikimedia.org/?curid=6449081"
+        },
+        {
+          "title": "File:Male mallard duck 2.jpg",
+          "pageid": 3115907,
+          "source": "https://commons.wikimedia.org/?curid=3115907"
+        },
+        {
+          "title": "File:Anas platyrhynchos - Weiherwald - Karlsruhe 05.jpg",
+          "pageid": 92086607,
+          "source": "https://commons.wikimedia.org/?curid=92086607"
+        },
+        {
+          "title": "File:Female Mallard Duck Rest 3.jpg",
+          "pageid": 3048174,
+          "source": "https://commons.wikimedia.org/?curid=3048174"
+        }
+      ],
+      "query": "duck animal"
+    },
+    "goose": {
+      "images": [
+        "/images/gallery/1/goose-1.jpg",
+        "/images/gallery/1/goose-2.jpg",
+        "/images/gallery/1/goose-3.jpg",
+        "/images/gallery/1/goose-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Domestic Goose.jpg",
+          "pageid": 5014480,
+          "source": "https://commons.wikimedia.org/?curid=5014480"
+        },
+        {
+          "title": "File:Canada goose flight cropped and NR.jpg",
+          "pageid": 1087156,
+          "source": "https://commons.wikimedia.org/?curid=1087156"
+        },
+        {
+          "title": "File:Branta canadensis MHNT.ZOO.2010.11.13.6.jpg",
+          "pageid": 72182271,
+          "source": "https://commons.wikimedia.org/?curid=72182271"
+        },
+        {
+          "title": "File:Canadagoose.jpg",
+          "pageid": 64199,
+          "source": "https://commons.wikimedia.org/?curid=64199"
+        }
+      ],
+      "query": "goose animal"
+    },
+    "turkey": {
+      "images": [
+        "/images/gallery/1/turkey-1.jpg",
+        "/images/gallery/1/turkey-2.jpg",
+        "/images/gallery/1/turkey-3.png",
+        "/images/gallery/1/turkey-4.png"
+      ],
+      "sources": [
+        {
+          "title": "File:Turkey vulture (Cathartes aura) in flight.JPG",
+          "pageid": 47807279,
+          "source": "https://commons.wikimedia.org/?curid=47807279"
+        },
+        {
+          "title": "File:Turkey at the Wild Animal Park, NY.jpg",
+          "pageid": 167779177,
+          "source": "https://commons.wikimedia.org/?curid=167779177"
+        },
+        {
+          "title": "File:Turkey (NIH BioArt 628 - 660746).png",
+          "pageid": 179002520,
+          "source": "https://commons.wikimedia.org/?curid=179002520"
+        },
+        {
+          "title": "File:Turkey (NIH BioArt 628 - 660736).png",
+          "pageid": 179002509,
+          "source": "https://commons.wikimedia.org/?curid=179002509"
+        }
+      ],
+      "query": "turkey animal"
+    },
+    "pig": {
+      "images": [
+        "/images/gallery/1/pig-1.jpg",
+        "/images/gallery/1/pig-2.jpg",
+        "/images/gallery/1/pig-3.jpg",
+        "/images/gallery/1/pig-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Domesticated farm pig lying in the mud head covered in dry earth under the sun in Don Det Laos.jpg",
+          "pageid": 154922639,
+          "source": "https://commons.wikimedia.org/?curid=154922639"
+        },
+        {
+          "title": "File:Domestic pig skull (Sus domesticus).jpg",
+          "pageid": 50986086,
+          "source": "https://commons.wikimedia.org/?curid=50986086"
+        },
+        {
+          "title": "File:Wild Boar Habbitat 3.jpg",
+          "pageid": 3418057,
+          "source": "https://commons.wikimedia.org/?curid=3418057"
+        },
+        {
+          "title": "File:Cochon domestique (Sus scrofa domesticus) (2).jpg",
+          "pageid": 94028564,
+          "source": "https://commons.wikimedia.org/?curid=94028564"
+        }
+      ],
+      "query": "pig animal"
+    },
+    "mouse": {
+      "images": [
+        "/images/gallery/1/mouse-1.jpg",
+        "/images/gallery/1/mouse-2.jpg",
+        "/images/gallery/1/mouse-3.jpg",
+        "/images/gallery/1/mouse-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Harvest mouse and blossom.jpg",
+          "pageid": 130438659,
+          "source": "https://commons.wikimedia.org/?curid=130438659"
+        },
+        {
+          "title": "File:Мышь 2.jpg",
+          "pageid": 5521043,
+          "source": "https://commons.wikimedia.org/?curid=5521043"
+        },
+        {
+          "title": "File:Домовая мышь (Mus musculus), Москва.jpg",
+          "pageid": 145954740,
+          "source": "https://commons.wikimedia.org/?curid=145954740"
+        },
+        {
+          "title": "File:Maus außer Haus.JPG",
+          "pageid": 11516327,
+          "source": "https://commons.wikimedia.org/?curid=11516327"
+        }
+      ],
+      "query": "mouse animal"
+    },
+    "hamster": {
+      "images": [
+        "/images/gallery/1/hamster-1.jpg",
+        "/images/gallery/1/hamster-2.jpg",
+        "/images/gallery/1/hamster-3.jpg",
+        "/images/gallery/1/hamster-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Baby Hamster - 2 Weeks Old.jpg",
+          "pageid": 92267637,
+          "source": "https://commons.wikimedia.org/?curid=92267637"
+        },
+        {
+          "title": "File:Hamster in hand.jpg",
+          "pageid": 1387274,
+          "source": "https://commons.wikimedia.org/?curid=1387274"
+        },
+        {
+          "title": "File:Peach the pet hamster.jpg",
+          "pageid": 2049245,
+          "source": "https://commons.wikimedia.org/?curid=2049245"
+        },
+        {
+          "title": "File:Pet Hamster eating cucumber.JPG",
+          "pageid": 15690260,
+          "source": "https://commons.wikimedia.org/?curid=15690260"
+        }
+      ],
+      "query": "hamster animal"
+    },
+    "squirrel": {
+      "images": [
+        "/images/gallery/1/squirrel-1.jpg",
+        "/images/gallery/1/squirrel-2.jpg",
+        "/images/gallery/1/squirrel-3.jpg",
+        "/images/gallery/1/squirrel-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Indian giant squirrel in Kuldiha Wildlife Sanctuary March 2025 by Tisha Mukherjee 01.jpg",
+          "pageid": 162100753,
+          "source": "https://commons.wikimedia.org/?curid=162100753"
+        },
+        {
+          "title": "File:Grey squirrel (Sciurus carolinensis) 02.jpg",
+          "pageid": 47900137,
+          "source": "https://commons.wikimedia.org/?curid=47900137"
+        },
+        {
+          "title": "File:Eastern Grey Squirrel in St James's Park, London - Nov 2006 edit.jpg",
+          "pageid": 1468736,
+          "source": "https://commons.wikimedia.org/?curid=1468736"
+        },
+        {
+          "title": "File:Red squirrel (21808).jpg",
+          "pageid": 151854383,
+          "source": "https://commons.wikimedia.org/?curid=151854383"
+        }
+      ],
+      "query": "squirrel animal"
+    },
+    "fox": {
+      "images": [
+        "/images/gallery/1/fox-1.jpg",
+        "/images/gallery/1/fox-2.jpg",
+        "/images/gallery/1/fox-3.jpg",
+        "/images/gallery/1/fox-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Vulpes vulpes laying in snow.jpg",
+          "pageid": 361,
+          "source": "https://commons.wikimedia.org/?curid=361"
+        },
+        {
+          "title": "File:Alaska Red Fox (Vulpes vulpes).jpg",
+          "pageid": 40573988,
+          "source": "https://commons.wikimedia.org/?curid=40573988"
+        },
+        {
+          "title": "File:Vulpes vulpes Mallnitz 01.jpg",
+          "pageid": 80926738,
+          "source": "https://commons.wikimedia.org/?curid=80926738"
+        },
+        {
+          "title": "File:Red fox (Vulpes vulpes crucigera) Skalnate Pleso 2.jpg",
+          "pageid": 157262842,
+          "source": "https://commons.wikimedia.org/?curid=157262842"
+        }
+      ],
+      "query": "fox animal"
+    },
+    "goat": {
+      "images": [
+        "/images/gallery/1/goat-1.jpg",
+        "/images/gallery/1/goat-2.jpg",
+        "/images/gallery/1/goat-3.jpg",
+        "/images/gallery/1/goat-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Capra aegagrus hircus in isla Margarita.jpg",
+          "pageid": 31222936,
+          "source": "https://commons.wikimedia.org/?curid=31222936"
+        },
+        {
+          "title": "File:Wild goat lying on a tree stump under colorful clouds at sunrise in Don Kek Si Phan Don Laos.jpg",
+          "pageid": 136259184,
+          "source": "https://commons.wikimedia.org/?curid=136259184"
+        },
+        {
+          "title": "File:Domestic goat kid in capeweed.jpg",
+          "pageid": 4273296,
+          "source": "https://commons.wikimedia.org/?curid=4273296"
+        },
+        {
+          "title": "File:Boer goat444.jpg",
+          "pageid": 2259787,
+          "source": "https://commons.wikimedia.org/?curid=2259787"
+        }
+      ],
+      "query": "goat animal"
+    },
+    "chicken": {
+      "images": [
+        "/images/gallery/1/chicken-1.jpg",
+        "/images/gallery/1/chicken-2.jpg",
+        "/images/gallery/1/chicken-3.jpg",
+        "/images/gallery/1/chicken-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Gallus gallus domesticus - Vogelpark Steinen 03.jpg",
+          "pageid": 134924337,
+          "source": "https://commons.wikimedia.org/?curid=134924337"
+        },
+        {
+          "title": "File:Chicken February 2009-1.jpg",
+          "pageid": 6048866,
+          "source": "https://commons.wikimedia.org/?curid=6048866"
+        },
+        {
+          "title": "File:Gallus gallus domesticus (Parque Quevedo).006 - Leon.jpg",
+          "pageid": 77535937,
+          "source": "https://commons.wikimedia.org/?curid=77535937"
+        },
+        {
+          "title": "File:Gallus gallus domesticus LC0262.jpg",
+          "pageid": 19256123,
+          "source": "https://commons.wikimedia.org/?curid=19256123"
+        }
+      ],
+      "query": "chicken animal"
+    },
+    "wolf": {
+      "images": [
+        "/images/gallery/1/wolf-1.jpg",
+        "/images/gallery/1/wolf-2.jpg",
+        "/images/gallery/1/wolf-3.jpg",
+        "/images/gallery/1/wolf-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Front view of a resting Canis lupus ssp.jpg",
+          "pageid": 30605,
+          "source": "https://commons.wikimedia.org/?curid=30605"
+        },
+        {
+          "title": "File:MC Timberwolf.jpg",
+          "pageid": 3300056,
+          "source": "https://commons.wikimedia.org/?curid=3300056"
+        },
+        {
+          "title": "File:Scandinavian grey wolf Canis lupus.jpg",
+          "pageid": 1743310,
+          "source": "https://commons.wikimedia.org/?curid=1743310"
+        },
+        {
+          "title": "File:European grey wolf in Prague zoo.jpg",
+          "pageid": 38480628,
+          "source": "https://commons.wikimedia.org/?curid=38480628"
+        }
+      ],
+      "query": "wolf animal"
+    },
+    "tiger": {
+      "images": [
+        "/images/gallery/1/tiger-1.jpg",
+        "/images/gallery/1/tiger-2.jpg",
+        "/images/gallery/1/tiger-3.jpg",
+        "/images/gallery/1/tiger-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Tiger Zoo Vienna.jpg",
+          "pageid": 61295118,
+          "source": "https://commons.wikimedia.org/?curid=61295118"
+        },
+        {
+          "title": "File:Amur Tiger Panthera tigris altaica Eye 2112px edit.jpg",
+          "pageid": 2106760,
+          "source": "https://commons.wikimedia.org/?curid=2106760"
+        },
+        {
+          "title": "File:Standing white tiger.jpg",
+          "pageid": 76495995,
+          "source": "https://commons.wikimedia.org/?curid=76495995"
+        },
+        {
+          "title": "File:Sibirischer tiger de edit02.jpg",
+          "pageid": 1048562,
+          "source": "https://commons.wikimedia.org/?curid=1048562"
+        }
+      ],
+      "query": "tiger animal"
+    },
+    "leopard": {
+      "images": [
+        "/images/gallery/1/leopard-1.jpg",
+        "/images/gallery/1/leopard-2.jpg",
+        "/images/gallery/1/leopard-3.jpg",
+        "/images/gallery/1/leopard-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Panthera pardus close up.jpg",
+          "pageid": 7175786,
+          "source": "https://commons.wikimedia.org/?curid=7175786"
+        },
+        {
+          "title": "File:Leopard Tree AdF.jpg",
+          "pageid": 36808497,
+          "source": "https://commons.wikimedia.org/?curid=36808497"
+        },
+        {
+          "title": "File:Leopard (Panthera pardus pardus) young female Kruger 2.jpg",
+          "pageid": 148283866,
+          "source": "https://commons.wikimedia.org/?curid=148283866"
+        },
+        {
+          "title": "File:Leopard (Panthera pardus pardus) Kruger.jpg",
+          "pageid": 148283863,
+          "source": "https://commons.wikimedia.org/?curid=148283863"
+        }
+      ],
+      "query": "leopard animal"
+    },
+    "cheetah": {
+      "images": [
+        "/images/gallery/1/cheetah-1.jpg",
+        "/images/gallery/1/cheetah-2.jpg",
+        "/images/gallery/1/cheetah-3.jpg",
+        "/images/gallery/1/cheetah-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Cheetah (Acinonyx jubatus) female 2.jpg",
+          "pageid": 39491046,
+          "source": "https://commons.wikimedia.org/?curid=39491046"
+        },
+        {
+          "title": "File:Cheetah at Sunset.jpg",
+          "pageid": 35332383,
+          "source": "https://commons.wikimedia.org/?curid=35332383"
+        },
+        {
+          "title": "File:003 Cheetah hissing after a meal in Kalahari Desert Photo by Giles Laurent.jpg",
+          "pageid": 178410815,
+          "source": "https://commons.wikimedia.org/?curid=178410815"
+        },
+        {
+          "title": "File:Cheetah portrait Whipsnade Zoo.jpg",
+          "pageid": 17150634,
+          "source": "https://commons.wikimedia.org/?curid=17150634"
+        }
+      ],
+      "query": "cheetah animal"
+    },
+    "giraffe": {
+      "images": [
+        "/images/gallery/1/giraffe-1.jpg",
+        "/images/gallery/1/giraffe-2.jpg",
+        "/images/gallery/1/giraffe-3.jpg",
+        "/images/gallery/1/giraffe-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Three giraffes 01.jpg",
+          "pageid": 91854263,
+          "source": "https://commons.wikimedia.org/?curid=91854263"
+        },
+        {
+          "title": "File:Two male giraffes are necking in San Francisco Zoo.jpg",
+          "pageid": 6502712,
+          "source": "https://commons.wikimedia.org/?curid=6502712"
+        },
+        {
+          "title": "File:Giraffe Ithala KZN South Africa Luca Galuzzi 2004.JPG",
+          "pageid": 1810579,
+          "source": "https://commons.wikimedia.org/?curid=1810579"
+        },
+        {
+          "title": "File:006 Giraffe portrait in the Lake Manyara National Park Photo by Giles Laurent.jpg",
+          "pageid": 121087154,
+          "source": "https://commons.wikimedia.org/?curid=121087154"
+        }
+      ],
+      "query": "giraffe animal"
+    },
+    "zebra": {
+      "images": [
+        "/images/gallery/1/zebra-1.jpg",
+        "/images/gallery/1/zebra-2.jpg",
+        "/images/gallery/1/zebra-3.jpg",
+        "/images/gallery/1/zebra-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Equus zebra hartmannae - Etosha 2015.jpg",
+          "pageid": 44371362,
+          "source": "https://commons.wikimedia.org/?curid=44371362"
+        },
+        {
+          "title": "File:Zebras Ngorongoro Crater.jpg",
+          "pageid": 11717716,
+          "source": "https://commons.wikimedia.org/?curid=11717716"
+        },
+        {
+          "title": "File:Plains Zebra Equus quagga.jpg",
+          "pageid": 10729821,
+          "source": "https://commons.wikimedia.org/?curid=10729821"
+        },
+        {
+          "title": "File:Burchell's zebra (Equus quagga burchellii) females head to tail.jpg",
+          "pageid": 51317116,
+          "source": "https://commons.wikimedia.org/?curid=51317116"
+        }
+      ],
+      "query": "zebra animal"
+    },
+    "gorilla": {
+      "images": [
+        "/images/gallery/1/gorilla-1.jpg",
+        "/images/gallery/1/gorilla-2.jpg",
+        "/images/gallery/1/gorilla-3.jpg",
+        "/images/gallery/1/gorilla-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Mountain gorilla (Gorilla beringei beringei) female eating root.jpg",
+          "pageid": 87883323,
+          "source": "https://commons.wikimedia.org/?curid=87883323"
+        },
+        {
+          "title": "File:Mountain gorilla (Gorilla beringei beringei) yawn.jpg",
+          "pageid": 52847887,
+          "source": "https://commons.wikimedia.org/?curid=52847887"
+        },
+        {
+          "title": "File:Mountain gorilla (Gorilla beringei beringei) female 2.jpg",
+          "pageid": 106065793,
+          "source": "https://commons.wikimedia.org/?curid=106065793"
+        },
+        {
+          "title": "File:Mountain gorilla (Gorilla beringei beringei) female 3.jpg",
+          "pageid": 106065791,
+          "source": "https://commons.wikimedia.org/?curid=106065791"
+        }
+      ],
+      "query": "gorilla animal"
+    },
+    "panda": {
+      "images": [
+        "/images/gallery/1/panda-1.jpg",
+        "/images/gallery/1/panda-2.jpg",
+        "/images/gallery/1/panda-3.jpg",
+        "/images/gallery/1/panda-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Ailuropoda melanoleuca (Panda géant) - 445.jpg",
+          "pageid": 44051652,
+          "source": "https://commons.wikimedia.org/?curid=44051652"
+        },
+        {
+          "title": "File:Lightmatter panda.jpg",
+          "pageid": 18651,
+          "source": "https://commons.wikimedia.org/?curid=18651"
+        },
+        {
+          "title": "File:Red Panda (24986761703).jpg",
+          "pageid": 53194723,
+          "source": "https://commons.wikimedia.org/?curid=53194723"
+        },
+        {
+          "title": "File:Panda géant (Ailuropoda melanoleuca) (3).jpg",
+          "pageid": 81579505,
+          "source": "https://commons.wikimedia.org/?curid=81579505"
+        }
+      ],
+      "query": "panda animal"
+    },
+    "koala": {
+      "images": [
+        "/images/gallery/1/koala-1.jpg",
+        "/images/gallery/1/koala-2.jpg",
+        "/images/gallery/1/koala-3.jpg",
+        "/images/gallery/1/koala-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Koala in Zoo Duisburg.jpg",
+          "pageid": 81733775,
+          "source": "https://commons.wikimedia.org/?curid=81733775"
+        },
+        {
+          "title": "File:Koala climbing tree.jpg",
+          "pageid": 361837,
+          "source": "https://commons.wikimedia.org/?curid=361837"
+        },
+        {
+          "title": "File:Koala and joey.jpg",
+          "pageid": 8993424,
+          "source": "https://commons.wikimedia.org/?curid=8993424"
+        },
+        {
+          "title": "File:Australia Cairns Koala.jpg",
+          "pageid": 94185,
+          "source": "https://commons.wikimedia.org/?curid=94185"
+        }
+      ],
+      "query": "koala animal"
+    },
+    "kangaroo": {
+      "images": [
+        "/images/gallery/1/kangaroo-1.jpg",
+        "/images/gallery/1/kangaroo-2.jpg",
+        "/images/gallery/1/kangaroo-3.jpg",
+        "/images/gallery/1/kangaroo-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Eastern Grey Kangaroo Feeding edited.jpg",
+          "pageid": 8975472,
+          "source": "https://commons.wikimedia.org/?curid=8975472"
+        },
+        {
+          "title": "File:Macropus giganteus - Brunkerville.jpg",
+          "pageid": 83124979,
+          "source": "https://commons.wikimedia.org/?curid=83124979"
+        },
+        {
+          "title": "File:Forester kangaroo (Macropus giganteus tasmaniensis) juvenile hopping Esk Valley.jpg",
+          "pageid": 143782469,
+          "source": "https://commons.wikimedia.org/?curid=143782469"
+        },
+        {
+          "title": "File:Eastern grey kangaroo (Macropus giganteus) Mount Annan composite of 6.jpg",
+          "pageid": 143593316,
+          "source": "https://commons.wikimedia.org/?curid=143593316"
+        }
+      ],
+      "query": "kangaroo animal"
+    },
+    "donkey": {
+      "images": [
+        "/images/gallery/1/donkey-1.jpg",
+        "/images/gallery/1/donkey-2.jpg",
+        "/images/gallery/1/donkey-3.jpg",
+        "/images/gallery/1/donkey-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Equus asinus Kadzidłowo 001.jpg",
+          "pageid": 2653153,
+          "source": "https://commons.wikimedia.org/?curid=2653153"
+        },
+        {
+          "title": "File:Equus asinus Kadzidłowo 002.jpg",
+          "pageid": 2653192,
+          "source": "https://commons.wikimedia.org/?curid=2653192"
+        },
+        {
+          "title": "File:Jielbeaumadier ane des pyrenees vda 2010.jpeg",
+          "pageid": 34822123,
+          "source": "https://commons.wikimedia.org/?curid=34822123"
+        },
+        {
+          "title": "File:Donkey-drawn cart in Marrakech, Morocco, 20250125 1310 7248.jpg",
+          "pageid": 159808966,
+          "source": "https://commons.wikimedia.org/?curid=159808966"
+        }
+      ],
+      "query": "donkey animal"
+    },
+    "hippo": {
+      "images": [
+        "/images/gallery/1/hippo-1.jpg",
+        "/images/gallery/1/hippo-2.jpg",
+        "/images/gallery/1/hippo-3.jpg",
+        "/images/gallery/1/hippo-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Hippo pod edit.jpg",
+          "pageid": 825233,
+          "source": "https://commons.wikimedia.org/?curid=825233"
+        },
+        {
+          "title": "File:Hipopótamo (Hippopotamus amphibius), parque nacional de Chobe, Botsuana, 2018-07-28, DD 82.jpg",
+          "pageid": 74486424,
+          "source": "https://commons.wikimedia.org/?curid=74486424"
+        },
+        {
+          "title": "File:Elephant seals fighting.jpg",
+          "pageid": 3578991,
+          "source": "https://commons.wikimedia.org/?curid=3578991"
+        },
+        {
+          "title": "File:Hippo (Hippopotamus amphibius) head in water.jpg",
+          "pageid": 73344761,
+          "source": "https://commons.wikimedia.org/?curid=73344761"
+        }
+      ],
+      "query": "hippo animal"
+    },
+    "rhino": {
+      "images": [
+        "/images/gallery/1/rhino-1.jpg",
+        "/images/gallery/1/rhino-2.jpg",
+        "/images/gallery/1/rhino-3.jpg",
+        "/images/gallery/1/rhino-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Diceros bicornis MNHN.jpg",
+          "pageid": 13529574,
+          "source": "https://commons.wikimedia.org/?curid=13529574"
+        },
+        {
+          "title": "File:Diceros bicornis (Etosha).jpg",
+          "pageid": 25471921,
+          "source": "https://commons.wikimedia.org/?curid=25471921"
+        },
+        {
+          "title": "File:South-western black rhinoceros (Diceros bicornis occidentalis) female.jpg",
+          "pageid": 87854048,
+          "source": "https://commons.wikimedia.org/?curid=87854048"
+        },
+        {
+          "title": "File:Rhinoceros in South Africa adjusted.jpg",
+          "pageid": 226670,
+          "source": "https://commons.wikimedia.org/?curid=226670"
+        }
+      ],
+      "query": "rhino animal"
+    },
+    "crocodile": {
+      "images": [
+        "/images/gallery/1/crocodile-1.jpg",
+        "/images/gallery/1/crocodile-2.jpg",
+        "/images/gallery/1/crocodile-3.jpg",
+        "/images/gallery/1/crocodile-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Saltwater crocodile in Sundarbans National Park November 2024 by Tisha Mukherjee 03.jpg",
+          "pageid": 156991554,
+          "source": "https://commons.wikimedia.org/?curid=156991554"
+        },
+        {
+          "title": "File:Crocodylus porosus - Wilhelma.jpg",
+          "pageid": 80277342,
+          "source": "https://commons.wikimedia.org/?curid=80277342"
+        },
+        {
+          "title": "File:Crocodylus porosus (AM LH622-2a).jpg",
+          "pageid": 67503427,
+          "source": "https://commons.wikimedia.org/?curid=67503427"
+        },
+        {
+          "title": "File:Mugger crocodile (Crocodylus palustris) Gal Oya.jpg",
+          "pageid": 116068690,
+          "source": "https://commons.wikimedia.org/?curid=116068690"
+        }
+      ],
+      "query": "crocodile animal"
+    },
+    "snake": {
+      "images": [
+        "/images/gallery/1/snake-1.jpg",
+        "/images/gallery/1/snake-2.jpg",
+        "/images/gallery/1/snake-3.jpg",
+        "/images/gallery/1/snake-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Black-chested snake-eagle (Circaetus pectoralis).jpg",
+          "pageid": 66269269,
+          "source": "https://commons.wikimedia.org/?curid=66269269"
+        },
+        {
+          "title": "File:Ahaetulla prasina, oriental whipsnake - Kaeng Krachan National Park.jpg",
+          "pageid": 40566126,
+          "source": "https://commons.wikimedia.org/?curid=40566126"
+        },
+        {
+          "title": "File:Boiga jaspidea, Jasper cat snake.jpg",
+          "pageid": 51669109,
+          "source": "https://commons.wikimedia.org/?curid=51669109"
+        },
+        {
+          "title": "File:The Grass Snake - Natrix natrix.jpg",
+          "pageid": 7938052,
+          "source": "https://commons.wikimedia.org/?curid=7938052"
+        }
+      ],
+      "query": "snake animal"
+    },
+    "turtle": {
+      "images": [
+        "/images/gallery/1/turtle-1.jpg",
+        "/images/gallery/1/turtle-2.jpg",
+        "/images/gallery/1/turtle-3.jpg",
+        "/images/gallery/1/turtle-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Hawaii turtle 2.JPG",
+          "pageid": 2483099,
+          "source": "https://commons.wikimedia.org/?curid=2483099"
+        },
+        {
+          "title": "File:Total internal reflection of Chelonia mydas.jpg",
+          "pageid": 3908141,
+          "source": "https://commons.wikimedia.org/?curid=3908141"
+        },
+        {
+          "title": "File:Green Sea Turtle grazing seagrass.jpg",
+          "pageid": 27611674,
+          "source": "https://commons.wikimedia.org/?curid=27611674"
+        },
+        {
+          "title": "File:Chelonia mydas albino p1440273.jpg",
+          "pageid": 3920764,
+          "source": "https://commons.wikimedia.org/?curid=3920764"
+        }
+      ],
+      "query": "turtle animal"
+    },
+    "frog": {
+      "images": [
+        "/images/gallery/1/frog-1.jpg",
+        "/images/gallery/1/frog-2.jpg",
+        "/images/gallery/1/frog-3.jpg",
+        "/images/gallery/1/frog-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Golden-eyed tree frog (Agalychnis annae).jpg",
+          "pageid": 80014762,
+          "source": "https://commons.wikimedia.org/?curid=80014762"
+        },
+        {
+          "title": "File:Red-eyed Tree Frog - Litoria chloris edit1.jpg",
+          "pageid": 3578449,
+          "source": "https://commons.wikimedia.org/?curid=3578449"
+        },
+        {
+          "title": "File:Cuban tree frog (Osteopilus septentrionalis) 5.jpg",
+          "pageid": 114472477,
+          "source": "https://commons.wikimedia.org/?curid=114472477"
+        },
+        {
+          "title": "File:Australia green tree frog (Litoria caerulea) crop.jpg",
+          "pageid": 555183,
+          "source": "https://commons.wikimedia.org/?curid=555183"
+        }
+      ],
+      "query": "frog animal"
+    },
+    "penguin": {
+      "images": [
+        "/images/gallery/1/penguin-1.jpg",
+        "/images/gallery/1/penguin-2.jpg",
+        "/images/gallery/1/penguin-3.jpg",
+        "/images/gallery/1/penguin-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Sander-pinguins.jpg",
+          "pageid": 839,
+          "source": "https://commons.wikimedia.org/?curid=839"
+        },
+        {
+          "title": "File:African penguin, Cape Town ( 1050598).jpg",
+          "pageid": 70979533,
+          "source": "https://commons.wikimedia.org/?curid=70979533"
+        },
+        {
+          "title": "File:King Penguins (Youngs).jpg",
+          "pageid": 8778215,
+          "source": "https://commons.wikimedia.org/?curid=8778215"
+        },
+        {
+          "title": "File:Adelie Penguins on iceberg.jpg",
+          "pageid": 9703652,
+          "source": "https://commons.wikimedia.org/?curid=9703652"
+        }
+      ],
+      "query": "penguin animal"
+    },
+    "owl": {
+      "images": [
+        "/images/gallery/1/owl-1.jpg",
+        "/images/gallery/1/owl-2.jpg",
+        "/images/gallery/1/owl-3.jpg",
+        "/images/gallery/1/owl-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Tyto alba (Scopoli, 1769).jpg",
+          "pageid": 20283834,
+          "source": "https://commons.wikimedia.org/?curid=20283834"
+        },
+        {
+          "title": "File:Eastern screech owl rehabilitated after eye injury (44333).jpg",
+          "pageid": 82194229,
+          "source": "https://commons.wikimedia.org/?curid=82194229"
+        },
+        {
+          "title": "File:Tyto alba 1 Luc Viatour.jpg",
+          "pageid": 7375904,
+          "source": "https://commons.wikimedia.org/?curid=7375904"
+        },
+        {
+          "title": "File:Tyto alba - Cetrería - 01.jpg",
+          "pageid": 36452077,
+          "source": "https://commons.wikimedia.org/?curid=36452077"
+        }
+      ],
+      "query": "owl animal"
+    },
+    "eagle": {
+      "images": [
+        "/images/gallery/1/eagle-1.jpg",
+        "/images/gallery/1/eagle-2.jpg",
+        "/images/gallery/1/eagle-3.jpg",
+        "/images/gallery/1/eagle-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Eagle Nebula from ESO.jpg",
+          "pageid": 7338740,
+          "source": "https://commons.wikimedia.org/?curid=7338740"
+        },
+        {
+          "title": "File:Fairy of Eagle Nebula.jpg",
+          "pageid": 3211862,
+          "source": "https://commons.wikimedia.org/?curid=3211862"
+        },
+        {
+          "title": "File:Eagle nebula pillars.jpg",
+          "pageid": 129538,
+          "source": "https://commons.wikimedia.org/?curid=129538"
+        },
+        {
+          "title": "File:African fish eagle (Haliaeetus vocifer) Ethiopia.jpg",
+          "pageid": 66147760,
+          "source": "https://commons.wikimedia.org/?curid=66147760"
+        }
+      ],
+      "query": "eagle animal"
+    },
+    "parrot": {
+      "images": [
+        "/images/gallery/1/parrot-1.jpg",
+        "/images/gallery/1/parrot-2.jpg",
+        "/images/gallery/1/parrot-3.jpg",
+        "/images/gallery/1/parrot-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Psittacus erithacus qtl1.jpg",
+          "pageid": 11724649,
+          "source": "https://commons.wikimedia.org/?curid=11724649"
+        },
+        {
+          "title": "File:Psittacus erithacus MHNT.ZOO.2010.11.148.1.jpg",
+          "pageid": 98926703,
+          "source": "https://commons.wikimedia.org/?curid=98926703"
+        },
+        {
+          "title": "File:Ara ararauna Luc Viatour.jpg",
+          "pageid": 7427034,
+          "source": "https://commons.wikimedia.org/?curid=7427034"
+        },
+        {
+          "title": "File:African Grey Parrot, peeking out from under its wing - edit.jpg",
+          "pageid": 12055479,
+          "source": "https://commons.wikimedia.org/?curid=12055479"
+        }
+      ],
+      "query": "parrot animal"
+    },
+    "peacock": {
+      "images": [
+        "/images/gallery/1/peacock-1.jpg",
+        "/images/gallery/1/peacock-2.jpg",
+        "/images/gallery/1/peacock-3.jpg",
+        "/images/gallery/1/peacock-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Pavo cristatus head001xx.jpg",
+          "pageid": 10779,
+          "source": "https://commons.wikimedia.org/?curid=10779"
+        },
+        {
+          "title": "File:Pavo cristatus Phasianidae.jpg",
+          "pageid": 10245023,
+          "source": "https://commons.wikimedia.org/?curid=10245023"
+        },
+        {
+          "title": "File:Feather of male Pavo cristatus (Indian peafowl).jpg",
+          "pageid": 2636243,
+          "source": "https://commons.wikimedia.org/?curid=2636243"
+        },
+        {
+          "title": "File:Pavo cristatus - Maroparque 01.jpg",
+          "pageid": 79277204,
+          "source": "https://commons.wikimedia.org/?curid=79277204"
+        }
+      ],
+      "query": "peacock animal"
+    },
+    "flamingo": {
+      "images": [
+        "/images/gallery/1/flamingo-1.jpg",
+        "/images/gallery/1/flamingo-2.jpg",
+        "/images/gallery/1/flamingo-3.jpg",
+        "/images/gallery/1/flamingo-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Phoenicopterus ruber in São Paulo Zoo.jpg",
+          "pageid": 34802921,
+          "source": "https://commons.wikimedia.org/?curid=34802921"
+        },
+        {
+          "title": "File:Phoenicopterus ruber MHNT.ZOO.2010.11.64.1.jpg",
+          "pageid": 79478463,
+          "source": "https://commons.wikimedia.org/?curid=79478463"
+        },
+        {
+          "title": "File:American flamingo (Phoenicopterus ruber).JPG",
+          "pageid": 44938584,
+          "source": "https://commons.wikimedia.org/?curid=44938584"
+        },
+        {
+          "title": "File:American flamingos (Phoenicopterus ruber) Cu.jpg",
+          "pageid": 47757055,
+          "source": "https://commons.wikimedia.org/?curid=47757055"
+        }
+      ],
+      "query": "flamingo animal"
+    },
+    "dolphin": {
+      "images": [
+        "/images/gallery/1/dolphin-1.jpg",
+        "/images/gallery/1/dolphin-2.jpg",
+        "/images/gallery/1/dolphin-3.jpg",
+        "/images/gallery/1/dolphin-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Eilat Dolphin Reef (3).jpg",
+          "pageid": 72784453,
+          "source": "https://commons.wikimedia.org/?curid=72784453"
+        },
+        {
+          "title": "File:010 Atlantic bottlenose dolphin jumping at Pelican point Photo by Giles Laurent.jpg",
+          "pageid": 178480467,
+          "source": "https://commons.wikimedia.org/?curid=178480467"
+        },
+        {
+          "title": "File:Tursiops truncatus 01.jpg",
+          "pageid": 112006,
+          "source": "https://commons.wikimedia.org/?curid=112006"
+        },
+        {
+          "title": "File:NMMP dolphin with locator.jpeg",
+          "pageid": 348618,
+          "source": "https://commons.wikimedia.org/?curid=348618"
+        }
+      ],
+      "query": "dolphin animal"
+    },
+    "octopus": {
+      "images": [
+        "/images/gallery/1/octopus-1.jpg",
+        "/images/gallery/1/octopus-2.jpg",
+        "/images/gallery/1/octopus-3.jpg",
+        "/images/gallery/1/octopus-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Octopus vulgaris Merculiano.jpg",
+          "pageid": 20279594,
+          "source": "https://commons.wikimedia.org/?curid=20279594"
+        },
+        {
+          "title": "File:Pulpo común (Octopus vulgaris), Parque natural de la Arrábida, Portugal, 2020-07-21, DD 33.jpg",
+          "pageid": 108248263,
+          "source": "https://commons.wikimedia.org/?curid=108248263"
+        },
+        {
+          "title": "File:Octopus as food at Noryangjin Fisheries Wholesale Market in Seoul South Korea.jpg",
+          "pageid": 155059403,
+          "source": "https://commons.wikimedia.org/?curid=155059403"
+        },
+        {
+          "title": "File:Pulpo común (Octopus vulgaris), franja marina Teno-Rasca, Tenerife, España, 2022-01-08, DD 53.jpg",
+          "pageid": 118447006,
+          "source": "https://commons.wikimedia.org/?curid=118447006"
+        }
+      ],
+      "query": "octopus animal"
+    },
+    "deer": {
+      "images": [
+        "/images/gallery/1/deer-1.jpg",
+        "/images/gallery/1/deer-2.jpg",
+        "/images/gallery/1/deer-3.jpg",
+        "/images/gallery/1/deer-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Odocoileus virginianus clavium male head.jpg",
+          "pageid": 6906342,
+          "source": "https://commons.wikimedia.org/?curid=6906342"
+        },
+        {
+          "title": "File:White-tailed deer (Odocoileus virginianus goudotii) male head Chingaza.jpg",
+          "pageid": 136769719,
+          "source": "https://commons.wikimedia.org/?curid=136769719"
+        },
+        {
+          "title": "File:Red Deer Poing.JPG",
+          "pageid": 29503596,
+          "source": "https://commons.wikimedia.org/?curid=29503596"
+        },
+        {
+          "title": "File:White-tailed deer (Odocoileus virginianus nelsoni) female with fawns Orange Walk.jpg",
+          "pageid": 129756454,
+          "source": "https://commons.wikimedia.org/?curid=129756454"
+        }
+      ],
+      "query": "deer animal"
+    },
+    "camel": {
+      "images": [
+        "/images/gallery/1/camel-1.jpg",
+        "/images/gallery/1/camel-2.jpg",
+        "/images/gallery/1/camel-3.jpg",
+        "/images/gallery/1/camel-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:07. Camel Profile, near Silverton, NSW, 07.07.2007.jpg",
+          "pageid": 2831408,
+          "source": "https://commons.wikimedia.org/?curid=2831408"
+        },
+        {
+          "title": "File:Camel in Gobi Desert 01.jpg",
+          "pageid": 146258612,
+          "source": "https://commons.wikimedia.org/?curid=146258612"
+        },
+        {
+          "title": "File:Camel in desert.JPG",
+          "pageid": 36449937,
+          "source": "https://commons.wikimedia.org/?curid=36449937"
+        },
+        {
+          "title": "File:Camelus bactrianus in western Mongolia 06.jpg",
+          "pageid": 77562800,
+          "source": "https://commons.wikimedia.org/?curid=77562800"
+        }
+      ],
+      "query": "camel animal"
+    },
+    "whale": {
+      "images": [
+        "/images/gallery/1/whale-1.jpg",
+        "/images/gallery/1/whale-2.jpg",
+        "/images/gallery/1/whale-3.jpg",
+        "/images/gallery/1/whale-4.jpg"
+      ],
+      "sources": [
+        {
+          "title": "File:Delphinapterus leucas beluga MNHN.jpg",
+          "pageid": 13911031,
+          "source": "https://commons.wikimedia.org/?curid=13911031"
+        },
+        {
+          "title": "File:Mother and baby sperm whale.jpg",
+          "pageid": 24212362,
+          "source": "https://commons.wikimedia.org/?curid=24212362"
+        },
+        {
+          "title": "File:Delphinapterus leucas head 3.jpg",
+          "pageid": 506113,
+          "source": "https://commons.wikimedia.org/?curid=506113"
+        },
+        {
+          "title": "File:031 Humpback whale lobtailing Photo by Giles Laurent.jpg",
+          "pageid": 142991561,
+          "source": "https://commons.wikimedia.org/?curid=142991561"
+        }
+      ],
+      "query": "whale animal"
+    }
+  }
+}
