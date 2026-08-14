@@ -12,7 +12,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
 const GALLERY_FRAME_COUNT = 4
-const GALLERY_FRAME_INTERVAL = 2200
+const GALLERY_FRAME_INTERVAL = 3000
 // Each card gets four local scene views. The object stays large and easy to
 // recognize, while its setting, props and pose change so children see four
 // different visual clues instead of the same emoji repeated four times.
@@ -305,6 +305,44 @@ function App() {
     }, GALLERY_FRAME_INTERVAL)
     return () => window.clearInterval(timer)
   }, [selected])
+  useEffect(() => {
+    if (!selected || !selectedGalleryImages) return
+    const frame = document.querySelector('.image-carousel .carousel-frame')
+    if (!frame) return
+
+    frame.classList.add('gallery-cube-host')
+    let cube = frame.querySelector('.carousel-cube')
+    if (!cube) {
+      cube = document.createElement('div')
+      cube.className = 'carousel-cube'
+      selectedGalleryImages.forEach((image, index) => {
+        const face = document.createElement('div')
+        face.className = `carousel-cube-face carousel-cube-face-${index}`
+        const imageElement = document.createElement('img')
+        imageElement.className = 'carousel-image'
+        imageElement.src = image
+        imageElement.alt = ''
+        const sparkle = document.createElement('span')
+        sparkle.className = 'cube-sparkle'
+        sparkle.setAttribute('aria-hidden', 'true')
+        sparkle.textContent = index % 2 ? '✨' : '⭐'
+        face.append(imageElement, sparkle)
+        cube.append(face)
+      })
+      frame.replaceChildren(cube)
+    }
+
+    const currentIndex = String(carouselIndex)
+    if (cube.dataset.index !== currentIndex) {
+      const previousRotation = carouselIndex === 0 ? 90 : (carouselIndex - 1) * -90
+      cube.style.setProperty('--cube-from', `${previousRotation}deg`)
+      cube.style.setProperty('--cube-to', `${carouselIndex * -90}deg`)
+      cube.dataset.index = currentIndex
+      cube.classList.remove('cube-spin')
+      void cube.offsetWidth
+      cube.classList.add('cube-spin')
+    }
+  })
   useEffect(() => {
     let cancelled = false
     const loadStageAudio = async () => {
