@@ -218,11 +218,81 @@ const englishPronunciationAliases = {
   yellow: ['یلو'],
   green: ['گرین'],
   purple: ['پرپل'],
+  bear: ['بر', 'بیر'],
+  horse: ['هورس', 'هارس'],
+  cow: ['کاو', 'کاؤ'],
+  sheep: ['شیپ', 'شیب'],
+  goat: ['گوت', 'گات'],
+  chicken: ['چیکن'],
+  rooster: ['روستر'],
+  duck: ['داک', 'دک'],
+  goose: ['گوس', 'گوز'],
+  turkey: ['ترکی'],
+  pig: ['پیگ', 'پیغ'],
+  mouse: ['ماوس', 'موس'],
+  hamster: ['همستر'],
+  squirrel: ['اسکویرل', 'اسکویریل', 'سکویرل'],
+  fox: ['فاکس', 'فکس'],
+  wolf: ['ولف', 'والف', 'وولف'],
+  tiger: ['تایگر'],
+  leopard: ['لپر', 'لئوپارد', 'لپرد'],
+  cheetah: ['چیتا'],
+  giraffe: ['جراف', 'جیراف'],
+  zebra: ['زیبرا', 'زبرا'],
+  monkey: ['مانکی'],
+  gorilla: ['گوریلا', 'گوریل'],
+  panda: ['پاندا'],
+  koala: ['کوالا'],
+  kangaroo: ['کنگرو', 'کانگرو'],
+  deer: ['دیر'],
+  camel: ['کمل', 'کَمِل'],
+  donkey: ['دانکی'],
+  hippo: ['هیپو'],
+  rhino: ['راینو', 'رینو'],
+  crocodile: ['کراکودایل', 'کروکودایل'],
+  snake: ['اسنیک', 'اسنک', 'سنیک'],
+  turtle: ['ترتل', 'تارتل'],
+  frog: ['فراگ', 'فروگ'],
+  penguin: ['پنگوین', 'پنگوئن'],
+  owl: ['اول', 'آول'],
+  eagle: ['ایگل', 'ایگِل'],
+  parrot: ['پرت', 'پَرَت'],
+  peacock: ['پیکاک', 'پیکوک'],
+  flamingo: ['فلامینگو'],
+  dolphin: ['دالفین', 'دولفین'],
+  whale: ['ویل', 'وِیل'],
+  octopus: ['آکتوپوس', 'اکتوپوس'],
+}
+const editDistance = (left, right) => {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index)
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex]
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      )
+    }
+    for (let index = 0; index < current.length; index += 1) previous[index] = current[index]
+  }
+  return previous[right.length]
+}
+const englishAnswerMatches = (answer, expected) => {
+  const said = normalize(answer)
+  const target = normalize(expected)
+  if (!said || !target) return false
+  if (said === target) return true
+  // Speech recognition can return a short phrase such as "wolf please".
+  if (target.length >= 3 && said.includes(target)) return true
+  // Accept one small recognition typo (for example "wulf" for "wolf"),
+  // while keeping the match strict enough not to award unrelated words.
+  return target.length >= 4 && Math.abs(said.length - target.length) <= 1 && editDistance(said, target) <= 1
 }
 const answerPoints = (answer, item) => {
   const said = normalize(answer)
   const englishAnswers = [item[2], ...(englishPronunciationAliases[item[2]] || [])].map(normalize)
-  if (englishAnswers.includes(said)) return 20
+  if (englishAnswers.some(expected => englishAnswerMatches(said, expected))) return 20
   return said === normalize(item[1]) ? 10 : 0
 }
 
@@ -582,16 +652,35 @@ function App() {
     let heard = false
     let transitionHandled = false
     let resultHandled = false
+    const fallbackToEnglish = () => {
+      if (language !== 'fa-IR' || transitionHandled || Date.now() >= answerDeadline.current) return false
+      transitionHandled = true
+      try {
+        if (typeof r.abort === 'function') r.abort()
+        else r.stop()
+      } catch {}
+      window.setTimeout(() => {
+        if (Date.now() < answerDeadline.current) useMic(item, 'en-US', true)
+        else queueRetry(item)
+      }, 140)
+      return true
+    }
     r.onresult = e => {
       if (resultHandled) return
       resultHandled = true
       heard = true
       const alternatives = Array.from(e.results[0]).map(result => result.transcript)
-      const transcript = alternatives.find(candidate => answerPoints(candidate, item) > 0) || alternatives[0]
+      const matched = alternatives.find(candidate => answerPoints(candidate, item) > 0)
+      if (!matched && fallbackToEnglish()) return
+      const transcript = matched || alternatives[0]
       checkAnswer(transcript, item)
+    }
+    r.onnomatch = () => {
+      if (!fallbackToEnglish()) continueListeningOrRetry()
     }
     const continueListeningOrRetry = () => {
       if (transitionHandled) return
+      if (!heard && fallbackToEnglish()) return
       transitionHandled = true
       if (heard) return
       const remaining = answerDeadline.current - Date.now()
@@ -615,6 +704,7 @@ function App() {
         queueRetry(item)
         return
       }
+      if (['no-speech', 'language-not-supported'].includes(event.error) && fallbackToEnglish()) return
       continueListeningOrRetry()
     }
     r.onend = continueListeningOrRetry
