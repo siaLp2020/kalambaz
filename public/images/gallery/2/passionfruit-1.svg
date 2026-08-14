@@ -3,9 +3,7 @@
 <rect width="640" height="480" rx="42" fill="url(#bg)"/>
 <circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
 <text x="94" y="142" text-anchor="middle" font-size="52">🍃</text><text x="546" y="388" text-anchor="middle" font-size="52">🧺</text>
-<ellipse cx="320" cy="381" rx="174" ry="30" fill="#fff" fill-opacity=".72" stroke="#d4dfff" stroke-width="7"/>
-<path d="M170 378 Q320 428 470 378" fill="none" stroke="#8aa1d8" stroke-width="8" stroke-linecap="round"/>
-<g transform="rotate(-7 320 245)" filter="url(#shadow)"><text x="320" y="245" text-anchor="middle" dominant-baseline="middle" font-size="208">🥭</text></g>
-<text x="560" y="170" text-anchor="middle" dominant-baseline="middle" font-size="62" opacity=".72">🥭</text>
+
+<g filter="url(#shadow)"><ellipse cx="320" cy="390" rx="175" ry="28" fill="#344875" fill-opacity=".18"/><g transform="rotate(-5 320 250) scale(1.0)"><circle cx="320" cy="250" r="105" fill="#9e4fbd" stroke="#632b83" stroke-width="9"/><circle cx="320" cy="250" r="77" fill="#ffd78e" stroke="#f6e3b0" stroke-width="7"/><circle cx="285" cy="218" r="7" fill="#8e4339"/><circle cx="320" cy="207" r="7" fill="#8e4339"/><circle cx="355" cy="222" r="7" fill="#8e4339"/><circle cx="274" cy="255" r="7" fill="#8e4339"/><circle cx="309" cy="249" r="7" fill="#8e4339"/><circle cx="347" cy="255" r="7" fill="#8e4339"/><circle cx="292" cy="286" r="7" fill="#8e4339"/><circle cx="328" cy="283" r="7" fill="#8e4339"/><circle cx="362" cy="284" r="7" fill="#8e4339"/></g></g>
 <path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
 </svg>

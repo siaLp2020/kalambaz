@@ -1,3 +1,7 @@
+param(
+  [string]$CategoryOnly = ''
+)
+
 $ErrorActionPreference = 'Stop'
 
 # Build one looping WebP animation for every four-frame gallery entry.
@@ -25,6 +29,7 @@ $manifest = Get-Content -Raw -Encoding utf8 -LiteralPath $manifestPath | Convert
 $entries = @()
 foreach ($categoryProperty in $manifest.PSObject.Properties) {
   $category = [string]$categoryProperty.Name
+  if ($CategoryOnly -and $category -ne $CategoryOnly) { continue }
   foreach ($itemProperty in $categoryProperty.Value.PSObject.Properties) {
     $images = @($itemProperty.Value.images)
     if ($images.Count -ne 4) { continue }

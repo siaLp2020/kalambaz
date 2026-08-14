@@ -1,12 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d8ff"/><stop offset="1" stop-color="#cbbaff"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="8" flood-color="#344875" flood-opacity=".28"/></filter></defs>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d8ff"/><stop offset="1" stop-color="#cbbaff"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="8" flood-color="#344875" flood-opacity=".28"/></filter><linearGradient id="carambolaSkin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8ef63"/><stop offset=".48" stop-color="#f8d84a"/><stop offset="1" stop-color="#e9a82e"/></linearGradient>
+<linearGradient id="carambolaCut" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6a7"/><stop offset="1" stop-color="#f7c83b"/></linearGradient></defs>
 <rect width="640" height="480" rx="42" fill="url(#bg)"/>
 <circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
 <text x="94" y="142" text-anchor="middle" font-size="52">🌙</text><text x="546" y="388" text-anchor="middle" font-size="52">⭐</text>
-<g filter="url(#shadow)"><rect x="95" y="94" width="450" height="300" rx="44" fill="#ffffff" fill-opacity=".68" stroke="#ffffff" stroke-width="8"/>
-<polygon points="320.0,120.0 348.8,198.4 432.2,201.5 366.6,253.1 389.4,333.5 320.0,287.0 250.6,333.5 273.4,253.1 207.8,201.5 291.2,198.4" fill="#ffd13f" stroke="#df8f22" stroke-width="9"/>
-<polygon points="193.0,276.0 206.5,311.4 244.4,313.3 214.9,337.1 224.7,373.7 193.0,353.0 161.3,373.7 171.1,337.1 141.6,313.3 179.5,311.4" fill="#ffe478" stroke="#df8f22" stroke-width="7"/>
-<polygon points="446.0,277.0 459.5,312.4 497.4,314.3 467.9,338.1 477.7,374.7 446.0,354.0 414.3,374.7 424.1,338.1 394.6,314.3 432.5,312.4" fill="#ffbd37" stroke="#df8f22" stroke-width="7"/>
-<path d="M273 126 Q320 100 367 126" fill="none" stroke="#fff7c8" stroke-width="11" stroke-linecap="round"/></g>
+<g filter="url(#shadow)"><rect x="86" y="305" width="468" height="80" rx="40" fill="#b77a3e" stroke="#8f5b2e" stroke-width="7"/><g transform="translate(218 238) rotate(-10) scale(0.58)">
+<path d="M-150 0 C-143-34-119-54-82-56 L-25-86 L0-62 L25-86 L82-56 C119-54 143-34 150 0 C143 34 119 54 82 56 L25 86 L0 62 L-25 86 L-82 56 C-119 54-143 34-150 0Z" fill="url(#carambolaSkin)" stroke="#b47a22" stroke-width="7"/>
+<path d="M-78-48 C-38-20-35 20-78 48 M-24-78 C-2-38-2 38-24 78 M24-78 C2-38 2 38 24 78 M78-48 C38-20 35 20 78 48" fill="none" stroke="#fff4a0" stroke-width="10" stroke-linecap="round" opacity=".86"/>
+<path d="M-112-16 C-76-42-31-42 5-23" fill="none" stroke="#fffbd0" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+<path d="M-139 0 L-165-23" stroke="#5b8e45" stroke-width="10" stroke-linecap="round"/>
+<path d="M-166-23 C-197-43-214-38-227-18 C-200-17-182-8-168 7" fill="#58a85e" stroke="#397947" stroke-width="6"/>
+</g><g transform="translate(373 236) rotate(8) scale(0.62)">
+<path d="M-150 0 C-143-34-119-54-82-56 L-25-86 L0-62 L25-86 L82-56 C119-54 143-34 150 0 C143 34 119 54 82 56 L25 86 L0 62 L-25 86 L-82 56 C-119 54-143 34-150 0Z" fill="url(#carambolaSkin)" stroke="#b47a22" stroke-width="7"/>
+<path d="M-78-48 C-38-20-35 20-78 48 M-24-78 C-2-38-2 38-24 78 M24-78 C2-38 2 38 24 78 M78-48 C38-20 35 20 78 48" fill="none" stroke="#fff4a0" stroke-width="10" stroke-linecap="round" opacity=".86"/>
+<path d="M-112-16 C-76-42-31-42 5-23" fill="none" stroke="#fffbd0" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+<path d="M-139 0 L-165-23" stroke="#5b8e45" stroke-width="10" stroke-linecap="round"/>
+<path d="M-166-23 C-197-43-214-38-227-18 C-200-17-182-8-168 7" fill="#58a85e" stroke="#397947" stroke-width="6"/>
+</g><g transform="translate(470 258) rotate(-12) scale(0.45)">
+<path d="M-150 0 C-143-34-119-54-82-56 L-25-86 L0-62 L25-86 L82-56 C119-54 143-34 150 0 C143 34 119 54 82 56 L25 86 L0 62 L-25 86 L-82 56 C-119 54-143 34-150 0Z" fill="url(#carambolaSkin)" stroke="#b47a22" stroke-width="7"/>
+<path d="M-78-48 C-38-20-35 20-78 48 M-24-78 C-2-38-2 38-24 78 M24-78 C2-38 2 38 24 78 M78-48 C38-20 35 20 78 48" fill="none" stroke="#fff4a0" stroke-width="10" stroke-linecap="round" opacity=".86"/>
+<path d="M-112-16 C-76-42-31-42 5-23" fill="none" stroke="#fffbd0" stroke-width="8" stroke-linecap="round" opacity=".72"/>
+<path d="M-139 0 L-165-23" stroke="#5b8e45" stroke-width="10" stroke-linecap="round"/>
+<path d="M-166-23 C-197-43-214-38-227-18 C-200-17-182-8-168 7" fill="#58a85e" stroke="#397947" stroke-width="6"/>
+</g><g filter="url(#shadow)"><polygon points="320.2,280.1 333.0,319.8 374.2,325.5 340.5,349.9 347.8,390.9 314.2,366.3 277.4,386.0 290.4,346.4 260.4,317.5 302.0,317.6" fill="url(#carambolaCut)" stroke="#c58a2a" stroke-width="8"/><polygon points="319.0,296.9 327.6,326.2 357.9,329.5 332.7,346.7 338.9,376.6 314.7,358.0 288.2,373.1 298.5,344.4 275.9,323.8 306.5,324.7" fill="#fff6b2" opacity=".84"/><ellipse cx="300" cy="324" rx="5" ry="9" fill="#a87727" transform="rotate(4 300 324)"/><ellipse cx="333" cy="330" rx="5" ry="9" fill="#a87727" transform="rotate(4 333 330)"/><ellipse cx="304" cy="358" rx="5" ry="9" fill="#a87727" transform="rotate(4 304 358)"/><ellipse cx="334" cy="358" rx="5" ry="9" fill="#a87727" transform="rotate(4 334 358)"/><ellipse cx="316" cy="340" rx="5" ry="9" fill="#a87727" transform="rotate(4 316 340)"/></g></g>
 <path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
 </svg>

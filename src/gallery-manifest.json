@@ -249,31 +249,14 @@
     },
     "cantaloupe": {
       "images": [
-        "/images/gallery/2/cantaloupe-1.jpg",
-        "/images/gallery/2/cantaloupe-2.jpg",
-        "/images/gallery/2/cantaloupe-3.jpg",
-        "/images/gallery/2/cantaloupe-4.jpg"
+        "/images/gallery/2/cantaloupe-1.svg",
+        "/images/gallery/2/cantaloupe-2.svg",
+        "/images/gallery/2/cantaloupe-3.svg",
+        "/images/gallery/2/cantaloupe-4.svg"
       ],
       "sources": [
         {
-          "title": "File:Canteloupe and cross section.jpg",
-          "pageid": 5765373,
-          "source": "https://commons.wikimedia.org/?curid=5765373"
-        },
-        {
-          "title": "File:Cantaloupe skin.jpg",
-          "pageid": 2655962,
-          "source": "https://commons.wikimedia.org/?curid=2655962"
-        },
-        {
-          "title": "File:Harvesting Cantaloupes (20106808).jpg",
-          "pageid": 96282363,
-          "source": "https://commons.wikimedia.org/?curid=96282363"
-        },
-        {
-          "title": "File:عامل من السودان.jpg",
-          "pageid": 77257914,
-          "source": "https://commons.wikimedia.org/?curid=77257914"
+          "source": "local illustrated fallback"
         }
       ],
       "query": "cantaloupe fruit"
@@ -311,31 +294,14 @@
     },
     "cherry": {
       "images": [
-        "/images/gallery/2/cherry-1.jpg",
-        "/images/gallery/2/cherry-2.jpg",
-        "/images/gallery/2/cherry-3.jpg",
-        "/images/gallery/2/cherry-4.jpg"
+        "/images/gallery/2/cherry-1.svg",
+        "/images/gallery/2/cherry-2.svg",
+        "/images/gallery/2/cherry-3.svg",
+        "/images/gallery/2/cherry-4.svg"
       ],
       "sources": [
         {
-          "title": "File:Cherry Stella444.jpg",
-          "pageid": 3177559,
-          "source": "https://commons.wikimedia.org/?curid=3177559"
-        },
-        {
-          "title": "File:Rhagoletis cerasi01.jpg",
-          "pageid": 869680,
-          "source": "https://commons.wikimedia.org/?curid=869680"
-        },
-        {
-          "title": "File:Kirschfruchtfliege Rhagoletis cerasi 2.jpg",
-          "pageid": 101912721,
-          "source": "https://commons.wikimedia.org/?curid=101912721"
-        },
-        {
-          "title": "File:Sweet cherries in basket 2018 G1.jpg",
-          "pageid": 69827347,
-          "source": "https://commons.wikimedia.org/?curid=69827347"
+          "source": "local illustrated fallback"
         }
       ],
       "query": "cherry fruit"
@@ -404,62 +370,28 @@
     },
     "kiwi": {
       "images": [
-        "/images/gallery/2/kiwi-1.jpg",
-        "/images/gallery/2/kiwi-2.jpg",
-        "/images/gallery/2/kiwi-3.jpg",
-        "/images/gallery/2/kiwi-4.jpg"
+        "/images/gallery/2/kiwi-1.svg",
+        "/images/gallery/2/kiwi-2.svg",
+        "/images/gallery/2/kiwi-3.svg",
+        "/images/gallery/2/kiwi-4.svg"
       ],
       "sources": [
         {
-          "title": "File:Kiwi (Actinidia chinensis) 1 Luc Viatour.jpg",
-          "pageid": 3563567,
-          "source": "https://commons.wikimedia.org/?curid=3563567"
-        },
-        {
-          "title": "File:Kiwi aka.jpg",
-          "pageid": 65257,
-          "source": "https://commons.wikimedia.org/?curid=65257"
-        },
-        {
-          "title": "File:Apteryx owenii 0.jpg",
-          "pageid": 1368325,
-          "source": "https://commons.wikimedia.org/?curid=1368325"
-        },
-        {
-          "title": "File:1. Tamanian St - Kiwi by Peter Woytuk .jpg",
-          "pageid": 61351207,
-          "source": "https://commons.wikimedia.org/?curid=61351207"
+          "source": "local illustrated fallback"
         }
       ],
       "query": "kiwi fruit"
     },
     "fig": {
       "images": [
-        "/images/gallery/2/fig-1.jpg",
-        "/images/gallery/2/fig-2.jpg",
-        "/images/gallery/2/fig-3.jpg",
-        "/images/gallery/2/fig-4.jpg"
+        "/images/gallery/2/fig-1.svg",
+        "/images/gallery/2/fig-2.svg",
+        "/images/gallery/2/fig-3.svg",
+        "/images/gallery/2/fig-4.svg"
       ],
       "sources": [
         {
-          "title": "File:Fig (Ficus carica) fruit halved.jpg",
-          "pageid": 114987169,
-          "source": "https://commons.wikimedia.org/?curid=114987169"
-        },
-        {
-          "title": "File:Ficus bud.JPG",
-          "pageid": 10009343,
-          "source": "https://commons.wikimedia.org/?curid=10009343"
-        },
-        {
-          "title": "File:Ficus carica MHNT.BOT.2025.31.38.jpg",
-          "pageid": 175911285,
-          "source": "https://commons.wikimedia.org/?curid=175911285"
-        },
-        {
-          "title": "File:Illustration Ficus carica0.jpg",
-          "pageid": 9127,
-          "source": "https://commons.wikimedia.org/?curid=9127"
+          "source": "local illustrated fallback"
         }
       ],
       "query": "fig fruit"
@@ -522,31 +454,14 @@
     },
     "cranberry": {
       "images": [
-        "/images/gallery/2/cranberry-1.jpg",
-        "/images/gallery/2/cranberry-2.jpg",
-        "/images/gallery/2/cranberry-3.jpg",
-        "/images/gallery/2/cranberry-4.jpg"
+        "/images/gallery/2/cranberry-1.svg",
+        "/images/gallery/2/cranberry-2.svg",
+        "/images/gallery/2/cranberry-3.svg",
+        "/images/gallery/2/cranberry-4.svg"
       ],
       "sources": [
         {
-          "title": "File:Cranberrys beim Ernten.jpeg",
-          "pageid": 26979,
-          "source": "https://commons.wikimedia.org/?curid=26979"
-        },
-        {
-          "title": "File:Cranberry and moss.jpg",
-          "pageid": 91053871,
-          "source": "https://commons.wikimedia.org/?curid=91053871"
-        },
-        {
-          "title": "File:Cranberry bog.jpg",
-          "pageid": 146690,
-          "source": "https://commons.wikimedia.org/?curid=146690"
-        },
-        {
-          "title": "File:Cranberry farm in central Wisconsin.jpg",
-          "pageid": 152312672,
-          "source": "https://commons.wikimedia.org/?curid=152312672"
+          "source": "local illustrated fallback"
         }
       ],
       "query": "cranberry fruit"
