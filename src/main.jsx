@@ -354,6 +354,8 @@ function App() {
   const [stageItems, setStageItems] = useState(() => pickItems(categories[0].items))
   const [selected, setSelected] = useState(null)
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [remoteGalleryImages, setRemoteGalleryImages] = useState([])
+  const [galleryLoading, setGalleryLoading] = useState(false)
   const [animationFailed, setAnimationFailed] = useState(false)
   const [passed, setPassed] = useState([])
   const [score, setScore] = useState(0)
@@ -388,7 +390,14 @@ function App() {
   const categoryForStage = categories[stageNo - 1]
   const stage = useMemo(() => ({ ...categoryForStage, items: stageItems }), [categoryForStage, stageItems])
   const players = useMemo(() => [user, ...robots], [user, robots])
-  const selectedGalleryImages = selected?.[5]?.length === GALLERY_FRAME_COUNT ? selected[5] : null
+  const localGalleryImages = Array.isArray(selected?.[5])
+    ? selected[5].filter(path => typeof path === 'string' && !path.toLowerCase().endsWith('.svg'))
+    : []
+  const selectedGalleryImages = remoteGalleryImages.length === GALLERY_FRAME_COUNT
+    ? remoteGalleryImages
+    : localGalleryImages.length === GALLERY_FRAME_COUNT
+      ? localGalleryImages
+      : null
   const selectedGalleryImage = selectedGalleryImages?.[carouselIndex]
   const selectedAnimation = selected?.[6] || ''
 
@@ -418,6 +427,8 @@ function App() {
   useEffect(() => {
     if (!selected) {
       setCarouselIndex(0)
+      setRemoteGalleryImages([])
+      setGalleryLoading(false)
       setAnimationFailed(false)
       return undefined
     }
@@ -429,6 +440,31 @@ function App() {
     }, GALLERY_FRAME_INTERVAL)
     return () => window.clearInterval(timer)
   }, [selected, selectedAnimation, animationFailed])
+  useEffect(() => {
+    let cancelled = false
+    setRemoteGalleryImages([])
+    setGalleryLoading(false)
+    if (!selected || selectedAnimation || stageNo === 1 || localGalleryImages.length === GALLERY_FRAME_COUNT) return undefined
+
+    const item = encodeURIComponent(String(selected[2] || '').toLowerCase())
+    const prompt = encodeURIComponent(String(stage.prompt || ''))
+    setGalleryLoading(true)
+    fetch(`/api/gallery?item=${item}&prompt=${prompt}`, { cache: 'force-cache' })
+      .then(response => {
+        if (!response.ok) throw new Error(`Gallery request failed: ${response.status}`)
+        return response.json()
+      })
+      .then(payload => {
+        if (!cancelled && Array.isArray(payload?.images) && payload.images.length === GALLERY_FRAME_COUNT) {
+          setRemoteGalleryImages(payload.images)
+        }
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!cancelled) setGalleryLoading(false)
+      })
+    return () => { cancelled = true }
+  }, [selected?.[2], selectedAnimation, stageNo, stage.prompt, localGalleryImages.length])
   useEffect(() => {
     if (!selected || !selectedGalleryImages) return
     const frame = document.querySelector('.image-carousel .carousel-frame')
@@ -712,6 +748,8 @@ function App() {
       playEnglishWord(item)
       return
     }
+    setRemoteGalleryImages([])
+    setGalleryLoading(false)
     setSelected(item)
     beginDescription(item)
   }
