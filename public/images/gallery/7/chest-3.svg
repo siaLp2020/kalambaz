@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9ffd9"/><stop offset="1" stop-color="#a8e9d6"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="8" flood-color="#344875" flood-opacity=".28"/></filter></defs>
+<rect width="640" height="480" rx="42" fill="url(#bg)"/>
+<circle cx="92" cy="90" r="54" fill="#fff" fill-opacity=".32"/><circle cx="552" cy="108" r="34" fill="#fff" fill-opacity=".28"/>
+<text x="94" y="142" text-anchor="middle" font-size="52">🩺</text><text x="546" y="388" text-anchor="middle" font-size="52">❤️</text>
+<ellipse cx="320" cy="391" rx="180" ry="28" fill="#344875" fill-opacity=".18"/>
+<g transform="rotate(5 320 246)" filter="url(#shadow)"><text x="320" y="246" text-anchor="middle" dominant-baseline="middle" font-size="210">🫀</text></g>
+<path d="M62 406 Q150 368 230 405 T398 405 T578 406" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="8" stroke-linecap="round"/>
+</svg>

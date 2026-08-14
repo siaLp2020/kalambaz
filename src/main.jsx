@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import descriptionsByCategory from './descriptions.json'
+import galleryManifest from './gallery-manifest.json'
 import './style.css'
 
 const stages = [
@@ -122,7 +123,8 @@ const makeCategory = (name, icon, prompt, source, clues) => {
       const [emoji, faName, enName, customDescription, audioName] = value.split('|')
       const description = descriptionsByCategory[categoryIndex - 1]?.[index] || customDescription || clues[index % clues.length]
       const animation = categoryIndex === 1 ? `${import.meta.env.BASE_URL}images/animals/${enName}.webp` : ''
-      return [emoji, faName, enName, description, `generated/items/${categoryIndex}-${index + 1}.mp3`, [], animation]
+      const galleryImages = galleryManifest[String(categoryIndex)]?.[enName]?.images || []
+      return [emoji, faName, enName, description, `generated/items/${categoryIndex}-${index + 1}.mp3`, galleryImages, animation]
     }),
   }
 }
@@ -430,7 +432,7 @@ function App() {
   useEffect(() => {
     if (!selected || !selectedGalleryImages) return
     const frame = document.querySelector('.image-carousel .carousel-frame')
-    if (!frame || frame.querySelector('.gallery-slide-stage')) return
+    if (!frame) return
 
     frame.classList.add('gallery-slide-host')
     const stage = document.createElement('div')

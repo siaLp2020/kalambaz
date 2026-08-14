@@ -18,6 +18,17 @@ MANIFEST_PATH = ROOT / "src" / "gallery-manifest.json"
 OUTPUT_ROOT = ROOT / "public" / "images" / "gallery"
 API = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "KalamBazGallery/1.0 (educational game asset downloader)"
+QUERY_SUFFIXES = {
+    "میوه": "fruit",
+    "رنگ": "color",
+    "سبزی": "vegetable",
+    "وسیله نقلیه": "vehicle",
+    "لباس": "clothing",
+    "عضو بدن": "human body",
+    "خوراکی": "food",
+    "پدیدهٔ طبیعت": "nature",
+    "وسیله": "object",
+}
 
 
 def extract_items() -> list[dict]:
@@ -52,10 +63,10 @@ def extract_items() -> list[dict]:
 
 
 def request_json(url: str) -> dict:
-    for attempt in range(5):
+    for attempt in range(3):
         try:
             request = Request(url, headers={"User-Agent": USER_AGENT})
-            with urlopen(request, timeout=30) as response:
+            with urlopen(request, timeout=15) as response:
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as error:
             if error.code != 429 or attempt == 4:
@@ -118,10 +129,10 @@ def safe_slug(value: str) -> str:
 def download_bytes(urls: list[str]) -> bytes:
     last_error = None
     for url in urls:
-        for attempt in range(5):
+        for attempt in range(3):
             try:
                 request = Request(url, headers={"User-Agent": USER_AGENT})
-                with urlopen(request, timeout=45) as response:
+                with urlopen(request, timeout=20) as response:
                     return response.read()
             except HTTPError as error:
                 last_error = error
@@ -151,18 +162,20 @@ def save_manifest(manifest: dict) -> None:
     )
 
 
-def download_item(item: dict, manifest: dict) -> None:
+def download_item(item: dict, manifest: dict, refresh: bool = False) -> None:
     category_key = str(item["category"])
     category_manifest = manifest.setdefault(category_key, {})
     english = item["english"]
     existing = category_manifest.get(english)
-    if existing and len(existing.get("images", [])) == 4:
-        if all((ROOT / path.lstrip("/")).exists() for path in existing["images"]):
+    if existing and not refresh and len(existing.get("images", [])) == 4:
+        if all((ROOT / "public" / path.lstrip("/")).exists() for path in existing["images"]):
             return
 
-    queries = [item["english"]]
+    suffix = QUERY_SUFFIXES.get(item["prompt"], "")
+    queries = [f"{item['english']} {suffix}".strip(), item["english"]]
     if item["prompt"] == "حیوان":
         queries.insert(0, f"{item['english']} animal")
+    queries = list(dict.fromkeys(queries))
     files = []
     for query in queries:
         try:
@@ -180,7 +193,10 @@ def download_item(item: dict, manifest: dict) -> None:
 
     folder = OUTPUT_ROOT / category_key
     folder.mkdir(parents=True, exist_ok=True)
-    if not existing or len(existing.get("images", [])) != 4:
+    if refresh and existing:
+        for old_path in existing.get("images", []):
+            (ROOT / "public" / old_path.lstrip("/")).unlink(missing_ok=True)
+    if refresh or not existing or len(existing.get("images", [])) != 4:
         for partial in folder.glob(f"{safe_slug(english)}-*"):
             partial.unlink(missing_ok=True)
     paths = []
@@ -217,6 +233,7 @@ def main() -> None:
     parser.add_argument("--prompt", help="download one category prompt, for example حیوان")
     parser.add_argument("--limit", type=int, help="download only the first N items")
     parser.add_argument("--workers", type=int, default=1, help="controlled concurrent downloads")
+    parser.add_argument("--refresh", action="store_true", help="replace existing four-image galleries")
     args = parser.parse_args()
     items = extract_items()
     if args.only:
@@ -229,12 +246,12 @@ def main() -> None:
     if args.workers <= 1:
         for number, item in enumerate(items, start=1):
             print(f"[{number}/{len(items)}] {item['category']}/{item['english']}")
-            download_item(item, manifest)
+            download_item(item, manifest, args.refresh)
             save_manifest(manifest)
             time.sleep(0.5)
         return
-    with ThreadPoolExecutor(max_workers=max(1, min(args.workers, 6))) as executor:
-        futures = {executor.submit(download_item, item, manifest): item for item in items}
+    with ThreadPoolExecutor(max_workers=max(1, min(args.workers, 12))) as executor:
+        futures = {executor.submit(download_item, item, manifest, args.refresh): item for item in items}
         for number, future in enumerate(as_completed(futures), start=1):
             item = futures[future]
             try:
