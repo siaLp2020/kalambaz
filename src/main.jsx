@@ -12,7 +12,7 @@ const stages = [
 const allStages = Array.from({ length: 10 }, (_, i) => stages[i % stages.length])
 const ITEMS_PER_STAGE = 6
 const GALLERY_FRAME_COUNT = 4
-const GALLERY_FRAME_INTERVAL = 3000
+const GALLERY_FRAME_INTERVAL = 2400
 // Each card gets four local scene views. The object stays large and easy to
 // recognize, while its setting, props and pose change so children see four
 // different visual clues instead of the same emoji repeated four times.
@@ -305,36 +305,6 @@ function App() {
     }, GALLERY_FRAME_INTERVAL)
     return () => window.clearInterval(timer)
   }, [selected])
-  useEffect(() => {
-    if (!selected || !selectedGalleryImages) return
-    const frame = document.querySelector('.image-carousel .carousel-frame')
-    if (!frame) return
-
-    frame.classList.add('gallery-flip-host')
-    if (frame.querySelector('.gallery-flip-stage')) return
-
-    const stage = document.createElement('div')
-    stage.className = 'gallery-flip-stage'
-    const makeCard = (className, image, index) => {
-      const card = document.createElement('div')
-      card.className = `gallery-flip-card ${className}`
-      const imageElement = document.createElement('img')
-      imageElement.className = 'carousel-image'
-      imageElement.src = image
-      imageElement.alt = ''
-      const sparkle = document.createElement('span')
-      sparkle.className = 'cube-sparkle'
-      sparkle.setAttribute('aria-hidden', 'true')
-      sparkle.textContent = index % 2 ? '✨' : '⭐'
-      card.append(imageElement, sparkle)
-      return card
-    }
-    stage.append(
-      makeCard('gallery-flip-card-current', selectedGalleryImages[carouselIndex], carouselIndex),
-      makeCard('gallery-flip-card-next', selectedGalleryImages[(carouselIndex + 1) % GALLERY_FRAME_COUNT], (carouselIndex + 1) % GALLERY_FRAME_COUNT),
-    )
-    frame.replaceChildren(stage)
-  })
   useEffect(() => {
     let cancelled = false
     const loadStageAudio = async () => {
