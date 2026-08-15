@@ -2214,703 +2214,171 @@
   "6": {
     "head": {
       "images": [
-        "/images/gallery/6/head-1.svg",
-        "/images/gallery/6/head-2.svg",
-        "/images/gallery/6/head-3.svg",
-        "/images/gallery/6/head-4.svg"
+        "/images/gallery/6/head-1.png",
+        "/images/gallery/6/head-2.png",
+        "/images/gallery/6/head-3.png",
+        "/images/gallery/6/head-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "head"
+      "query": "head body part"
     },
     "hair": {
       "images": [
-        "/images/gallery/6/hair-1.svg",
-        "/images/gallery/6/hair-2.svg",
-        "/images/gallery/6/hair-3.svg",
-        "/images/gallery/6/hair-4.svg"
+        "/images/gallery/6/hair-1.png",
+        "/images/gallery/6/hair-2.png",
+        "/images/gallery/6/hair-3.png",
+        "/images/gallery/6/hair-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "hair"
+      "query": "hair body part"
     },
     "eye": {
       "images": [
-        "/images/gallery/6/eye-1.svg",
-        "/images/gallery/6/eye-2.svg",
-        "/images/gallery/6/eye-3.svg",
-        "/images/gallery/6/eye-4.svg"
+        "/images/gallery/6/eye-1.png",
+        "/images/gallery/6/eye-2.png",
+        "/images/gallery/6/eye-3.png",
+        "/images/gallery/6/eye-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "eye"
+      "query": "eye body part"
     },
     "ear": {
       "images": [
-        "/images/gallery/6/ear-1.svg",
-        "/images/gallery/6/ear-2.svg",
-        "/images/gallery/6/ear-3.svg",
-        "/images/gallery/6/ear-4.svg"
+        "/images/gallery/6/ear-1.png",
+        "/images/gallery/6/ear-2.png",
+        "/images/gallery/6/ear-3.png",
+        "/images/gallery/6/ear-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "ear"
+      "query": "ear body part"
     },
     "nose": {
       "images": [
-        "/images/gallery/6/nose-1.svg",
-        "/images/gallery/6/nose-2.svg",
-        "/images/gallery/6/nose-3.svg",
-        "/images/gallery/6/nose-4.svg"
+        "/images/gallery/6/nose-1.png",
+        "/images/gallery/6/nose-2.png",
+        "/images/gallery/6/nose-3.png",
+        "/images/gallery/6/nose-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "nose"
+      "query": "nose body part"
     },
     "mouth": {
       "images": [
-        "/images/gallery/6/mouth-1.svg",
-        "/images/gallery/6/mouth-2.svg",
-        "/images/gallery/6/mouth-3.svg",
-        "/images/gallery/6/mouth-4.svg"
+        "/images/gallery/6/mouth-1.png",
+        "/images/gallery/6/mouth-2.png",
+        "/images/gallery/6/mouth-3.png",
+        "/images/gallery/6/mouth-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "mouth"
+      "query": "mouth body part"
     },
     "tooth": {
       "images": [
-        "/images/gallery/6/tooth-1.svg",
-        "/images/gallery/6/tooth-2.svg",
-        "/images/gallery/6/tooth-3.svg",
-        "/images/gallery/6/tooth-4.svg"
+        "/images/gallery/6/tooth-1.png",
+        "/images/gallery/6/tooth-2.png",
+        "/images/gallery/6/tooth-3.png",
+        "/images/gallery/6/tooth-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "tooth"
+      "query": "tooth body part"
     },
     "tongue": {
       "images": [
-        "/images/gallery/6/tongue-1.svg",
-        "/images/gallery/6/tongue-2.svg",
-        "/images/gallery/6/tongue-3.svg",
-        "/images/gallery/6/tongue-4.svg"
+        "/images/gallery/6/tongue-1.png",
+        "/images/gallery/6/tongue-2.png",
+        "/images/gallery/6/tongue-3.png",
+        "/images/gallery/6/tongue-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "tongue"
+      "query": "tongue body part"
     },
     "cheek": {
       "images": [
-        "/images/gallery/6/cheek-1.svg",
-        "/images/gallery/6/cheek-2.svg",
-        "/images/gallery/6/cheek-3.svg",
-        "/images/gallery/6/cheek-4.svg"
+        "/images/gallery/6/cheek-1.png",
+        "/images/gallery/6/cheek-2.png",
+        "/images/gallery/6/cheek-3.png",
+        "/images/gallery/6/cheek-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "cheek"
+      "query": "cheek body part"
     },
     "chin": {
       "images": [
-        "/images/gallery/6/chin-1.svg",
-        "/images/gallery/6/chin-2.svg",
-        "/images/gallery/6/chin-3.svg",
-        "/images/gallery/6/chin-4.svg"
+        "/images/gallery/6/chin-1.png",
+        "/images/gallery/6/chin-2.png",
+        "/images/gallery/6/chin-3.png",
+        "/images/gallery/6/chin-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "chin"
+      "query": "chin body part"
     },
     "neck": {
       "images": [
-        "/images/gallery/6/neck-1.svg",
-        "/images/gallery/6/neck-2.svg",
-        "/images/gallery/6/neck-3.svg",
-        "/images/gallery/6/neck-4.svg"
+        "/images/gallery/6/neck-1.png",
+        "/images/gallery/6/neck-2.png",
+        "/images/gallery/6/neck-3.png",
+        "/images/gallery/6/neck-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "neck"
+      "query": "neck body part"
     },
     "shoulder": {
       "images": [
-        "/images/gallery/6/shoulder-1.svg",
-        "/images/gallery/6/shoulder-2.svg",
-        "/images/gallery/6/shoulder-3.svg",
-        "/images/gallery/6/shoulder-4.svg"
+        "/images/gallery/6/shoulder-1.png",
+        "/images/gallery/6/shoulder-2.png",
+        "/images/gallery/6/shoulder-3.png",
+        "/images/gallery/6/shoulder-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people showing the body part"
         }
       ],
-      "query": "shoulder"
-    },
-    "arm": {
-      "images": [
-        "/images/gallery/6/arm-1.svg",
-        "/images/gallery/6/arm-2.svg",
-        "/images/gallery/6/arm-3.svg",
-        "/images/gallery/6/arm-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "arm"
-    },
-    "elbow": {
-      "images": [
-        "/images/gallery/6/elbow-1.svg",
-        "/images/gallery/6/elbow-2.svg",
-        "/images/gallery/6/elbow-3.svg",
-        "/images/gallery/6/elbow-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "elbow"
-    },
-    "hand": {
-      "images": [
-        "/images/gallery/6/hand-1.svg",
-        "/images/gallery/6/hand-2.svg",
-        "/images/gallery/6/hand-3.svg",
-        "/images/gallery/6/hand-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hand"
-    },
-    "finger": {
-      "images": [
-        "/images/gallery/6/finger-1.svg",
-        "/images/gallery/6/finger-2.svg",
-        "/images/gallery/6/finger-3.svg",
-        "/images/gallery/6/finger-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "finger"
-    },
-    "thumb": {
-      "images": [
-        "/images/gallery/6/thumb-1.svg",
-        "/images/gallery/6/thumb-2.svg",
-        "/images/gallery/6/thumb-3.svg",
-        "/images/gallery/6/thumb-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "thumb"
-    },
-    "chest": {
-      "images": [
-        "/images/gallery/6/chest-1.svg",
-        "/images/gallery/6/chest-2.svg",
-        "/images/gallery/6/chest-3.svg",
-        "/images/gallery/6/chest-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "chest"
-    },
-    "back": {
-      "images": [
-        "/images/gallery/6/back-1.svg",
-        "/images/gallery/6/back-2.svg",
-        "/images/gallery/6/back-3.svg",
-        "/images/gallery/6/back-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "back"
-    },
-    "stomach": {
-      "images": [
-        "/images/gallery/6/stomach-1.svg",
-        "/images/gallery/6/stomach-2.svg",
-        "/images/gallery/6/stomach-3.svg",
-        "/images/gallery/6/stomach-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "stomach"
-    },
-    "leg": {
-      "images": [
-        "/images/gallery/6/leg-1.svg",
-        "/images/gallery/6/leg-2.svg",
-        "/images/gallery/6/leg-3.svg",
-        "/images/gallery/6/leg-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "leg"
-    },
-    "knee": {
-      "images": [
-        "/images/gallery/6/knee-1.svg",
-        "/images/gallery/6/knee-2.svg",
-        "/images/gallery/6/knee-3.svg",
-        "/images/gallery/6/knee-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "knee"
-    },
-    "foot": {
-      "images": [
-        "/images/gallery/6/foot-1.svg",
-        "/images/gallery/6/foot-2.svg",
-        "/images/gallery/6/foot-3.svg",
-        "/images/gallery/6/foot-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "foot"
-    },
-    "toe": {
-      "images": [
-        "/images/gallery/6/toe-1.svg",
-        "/images/gallery/6/toe-2.svg",
-        "/images/gallery/6/toe-3.svg",
-        "/images/gallery/6/toe-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "toe"
-    },
-    "heart": {
-      "images": [
-        "/images/gallery/6/heart-1.svg",
-        "/images/gallery/6/heart-2.svg",
-        "/images/gallery/6/heart-3.svg",
-        "/images/gallery/6/heart-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "heart"
-    },
-    "brain": {
-      "images": [
-        "/images/gallery/6/brain-1.svg",
-        "/images/gallery/6/brain-2.svg",
-        "/images/gallery/6/brain-3.svg",
-        "/images/gallery/6/brain-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "brain"
-    },
-    "skin": {
-      "images": [
-        "/images/gallery/6/skin-1.svg",
-        "/images/gallery/6/skin-2.svg",
-        "/images/gallery/6/skin-3.svg",
-        "/images/gallery/6/skin-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "skin"
-    },
-    "bone": {
-      "images": [
-        "/images/gallery/6/bone-1.svg",
-        "/images/gallery/6/bone-2.svg",
-        "/images/gallery/6/bone-3.svg",
-        "/images/gallery/6/bone-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bone"
-    },
-    "muscle": {
-      "images": [
-        "/images/gallery/6/muscle-1.svg",
-        "/images/gallery/6/muscle-2.svg",
-        "/images/gallery/6/muscle-3.svg",
-        "/images/gallery/6/muscle-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "muscle"
-    },
-    "eyebrow": {
-      "images": [
-        "/images/gallery/6/eyebrow-1.svg",
-        "/images/gallery/6/eyebrow-2.svg",
-        "/images/gallery/6/eyebrow-3.svg",
-        "/images/gallery/6/eyebrow-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "eyebrow"
-    },
-    "eyelash": {
-      "images": [
-        "/images/gallery/6/eyelash-1.svg",
-        "/images/gallery/6/eyelash-2.svg",
-        "/images/gallery/6/eyelash-3.svg",
-        "/images/gallery/6/eyelash-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "eyelash"
-    },
-    "forehead": {
-      "images": [
-        "/images/gallery/6/forehead-1.svg",
-        "/images/gallery/6/forehead-2.svg",
-        "/images/gallery/6/forehead-3.svg",
-        "/images/gallery/6/forehead-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "forehead"
-    },
-    "lip": {
-      "images": [
-        "/images/gallery/6/lip-1.svg",
-        "/images/gallery/6/lip-2.svg",
-        "/images/gallery/6/lip-3.svg",
-        "/images/gallery/6/lip-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lip"
-    },
-    "beard": {
-      "images": [
-        "/images/gallery/6/beard-1.svg",
-        "/images/gallery/6/beard-2.svg",
-        "/images/gallery/6/beard-3.svg",
-        "/images/gallery/6/beard-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "beard"
-    },
-    "mustache": {
-      "images": [
-        "/images/gallery/6/mustache-1.svg",
-        "/images/gallery/6/mustache-2.svg",
-        "/images/gallery/6/mustache-3.svg",
-        "/images/gallery/6/mustache-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "mustache"
-    },
-    "wrist": {
-      "images": [
-        "/images/gallery/6/wrist-1.svg",
-        "/images/gallery/6/wrist-2.svg",
-        "/images/gallery/6/wrist-3.svg",
-        "/images/gallery/6/wrist-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "wrist"
-    },
-    "palm": {
-      "images": [
-        "/images/gallery/6/palm-1.svg",
-        "/images/gallery/6/palm-2.svg",
-        "/images/gallery/6/palm-3.svg",
-        "/images/gallery/6/palm-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "palm"
-    },
-    "nail": {
-      "images": [
-        "/images/gallery/6/nail-1.svg",
-        "/images/gallery/6/nail-2.svg",
-        "/images/gallery/6/nail-3.svg",
-        "/images/gallery/6/nail-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "nail"
-    },
-    "heel": {
-      "images": [
-        "/images/gallery/6/heel-1.svg",
-        "/images/gallery/6/heel-2.svg",
-        "/images/gallery/6/heel-3.svg",
-        "/images/gallery/6/heel-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "heel"
-    },
-    "ankle": {
-      "images": [
-        "/images/gallery/6/ankle-1.svg",
-        "/images/gallery/6/ankle-2.svg",
-        "/images/gallery/6/ankle-3.svg",
-        "/images/gallery/6/ankle-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "ankle"
-    },
-    "hip": {
-      "images": [
-        "/images/gallery/6/hip-1.svg",
-        "/images/gallery/6/hip-2.svg",
-        "/images/gallery/6/hip-3.svg",
-        "/images/gallery/6/hip-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hip"
-    },
-    "lung": {
-      "images": [
-        "/images/gallery/6/lung-1.svg",
-        "/images/gallery/6/lung-2.svg",
-        "/images/gallery/6/lung-3.svg",
-        "/images/gallery/6/lung-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lung"
-    },
-    "liver": {
-      "images": [
-        "/images/gallery/6/liver-1.svg",
-        "/images/gallery/6/liver-2.svg",
-        "/images/gallery/6/liver-3.svg",
-        "/images/gallery/6/liver-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "liver"
-    },
-    "blood": {
-      "images": [
-        "/images/gallery/6/blood-1.svg",
-        "/images/gallery/6/blood-2.svg",
-        "/images/gallery/6/blood-3.svg",
-        "/images/gallery/6/blood-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "blood"
-    },
-    "vein": {
-      "images": [
-        "/images/gallery/6/vein-1.svg",
-        "/images/gallery/6/vein-2.svg",
-        "/images/gallery/6/vein-3.svg",
-        "/images/gallery/6/vein-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "vein"
-    },
-    "spine": {
-      "images": [
-        "/images/gallery/6/spine-1.svg",
-        "/images/gallery/6/spine-2.svg",
-        "/images/gallery/6/spine-3.svg",
-        "/images/gallery/6/spine-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "spine"
-    },
-    "bellybutton": {
-      "images": [
-        "/images/gallery/6/bellybutton-1.svg",
-        "/images/gallery/6/bellybutton-2.svg",
-        "/images/gallery/6/bellybutton-3.svg",
-        "/images/gallery/6/bellybutton-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bellybutton"
-    },
-    "throat": {
-      "images": [
-        "/images/gallery/6/throat-1.svg",
-        "/images/gallery/6/throat-2.svg",
-        "/images/gallery/6/throat-3.svg",
-        "/images/gallery/6/throat-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "throat"
-    },
-    "face": {
-      "images": [
-        "/images/gallery/6/face-1.svg",
-        "/images/gallery/6/face-2.svg",
-        "/images/gallery/6/face-3.svg",
-        "/images/gallery/6/face-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "face"
-    },
-    "body": {
-      "images": [
-        "/images/gallery/6/body-1.svg",
-        "/images/gallery/6/body-2.svg",
-        "/images/gallery/6/body-3.svg",
-        "/images/gallery/6/body-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "body"
+      "query": "shoulder body part"
     }
   },
   "7": {
