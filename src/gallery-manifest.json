@@ -3086,703 +3086,171 @@
   "8": {
     "sun": {
       "images": [
-        "/images/gallery/8/sun-1.svg",
-        "/images/gallery/8/sun-2.svg",
-        "/images/gallery/8/sun-3.svg",
-        "/images/gallery/8/sun-4.svg"
+        "/images/gallery/8/sun-1.png",
+        "/images/gallery/8/sun-2.png",
+        "/images/gallery/8/sun-3.png",
+        "/images/gallery/8/sun-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "sun"
+      "query": "sun nature or weather"
     },
     "moon": {
       "images": [
-        "/images/gallery/8/moon-1.svg",
-        "/images/gallery/8/moon-2.svg",
-        "/images/gallery/8/moon-3.svg",
-        "/images/gallery/8/moon-4.svg"
+        "/images/gallery/8/moon-1.png",
+        "/images/gallery/8/moon-2.png",
+        "/images/gallery/8/moon-3.png",
+        "/images/gallery/8/moon-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "moon"
+      "query": "moon nature or weather"
     },
     "star": {
       "images": [
-        "/images/gallery/8/star-1.svg",
-        "/images/gallery/8/star-2.svg",
-        "/images/gallery/8/star-3.svg",
-        "/images/gallery/8/star-4.svg"
+        "/images/gallery/8/star-1.png",
+        "/images/gallery/8/star-2.png",
+        "/images/gallery/8/star-3.png",
+        "/images/gallery/8/star-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "star"
+      "query": "star nature or weather"
     },
     "cloud": {
       "images": [
-        "/images/gallery/8/cloud-1.svg",
-        "/images/gallery/8/cloud-2.svg",
-        "/images/gallery/8/cloud-3.svg",
-        "/images/gallery/8/cloud-4.svg"
+        "/images/gallery/8/cloud-1.png",
+        "/images/gallery/8/cloud-2.png",
+        "/images/gallery/8/cloud-3.png",
+        "/images/gallery/8/cloud-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "cloud"
+      "query": "cloud nature or weather"
     },
     "rain": {
       "images": [
-        "/images/gallery/8/rain-1.svg",
-        "/images/gallery/8/rain-2.svg",
-        "/images/gallery/8/rain-3.svg",
-        "/images/gallery/8/rain-4.svg"
+        "/images/gallery/8/rain-1.png",
+        "/images/gallery/8/rain-2.png",
+        "/images/gallery/8/rain-3.png",
+        "/images/gallery/8/rain-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "rain"
+      "query": "rain nature or weather"
     },
     "snow": {
       "images": [
-        "/images/gallery/8/snow-1.svg",
-        "/images/gallery/8/snow-2.svg",
-        "/images/gallery/8/snow-3.svg",
-        "/images/gallery/8/snow-4.svg"
+        "/images/gallery/8/snow-1.png",
+        "/images/gallery/8/snow-2.png",
+        "/images/gallery/8/snow-3.png",
+        "/images/gallery/8/snow-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "snow"
+      "query": "snow nature or weather"
     },
     "wind": {
       "images": [
-        "/images/gallery/8/wind-1.svg",
-        "/images/gallery/8/wind-2.svg",
-        "/images/gallery/8/wind-3.svg",
-        "/images/gallery/8/wind-4.svg"
+        "/images/gallery/8/wind-1.png",
+        "/images/gallery/8/wind-2.png",
+        "/images/gallery/8/wind-3.png",
+        "/images/gallery/8/wind-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "wind"
+      "query": "wind nature or weather"
     },
     "rainbow": {
       "images": [
-        "/images/gallery/8/rainbow-1.svg",
-        "/images/gallery/8/rainbow-2.svg",
-        "/images/gallery/8/rainbow-3.svg",
-        "/images/gallery/8/rainbow-4.svg"
+        "/images/gallery/8/rainbow-1.png",
+        "/images/gallery/8/rainbow-2.png",
+        "/images/gallery/8/rainbow-3.png",
+        "/images/gallery/8/rainbow-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "rainbow"
+      "query": "rainbow nature or weather"
     },
     "lightning": {
       "images": [
-        "/images/gallery/8/lightning-1.svg",
-        "/images/gallery/8/lightning-2.svg",
-        "/images/gallery/8/lightning-3.svg",
-        "/images/gallery/8/lightning-4.svg"
+        "/images/gallery/8/lightning-1.png",
+        "/images/gallery/8/lightning-2.png",
+        "/images/gallery/8/lightning-3.png",
+        "/images/gallery/8/lightning-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "lightning"
+      "query": "lightning nature or weather"
     },
     "thunder": {
       "images": [
-        "/images/gallery/8/thunder-1.svg",
-        "/images/gallery/8/thunder-2.svg",
-        "/images/gallery/8/thunder-3.svg",
-        "/images/gallery/8/thunder-4.svg"
+        "/images/gallery/8/thunder-1.png",
+        "/images/gallery/8/thunder-2.png",
+        "/images/gallery/8/thunder-3.png",
+        "/images/gallery/8/thunder-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "thunder"
+      "query": "thunder nature or weather"
     },
     "storm": {
       "images": [
-        "/images/gallery/8/storm-1.svg",
-        "/images/gallery/8/storm-2.svg",
-        "/images/gallery/8/storm-3.svg",
-        "/images/gallery/8/storm-4.svg"
+        "/images/gallery/8/storm-1.png",
+        "/images/gallery/8/storm-2.png",
+        "/images/gallery/8/storm-3.png",
+        "/images/gallery/8/storm-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "storm"
+      "query": "storm nature or weather"
     },
     "fog": {
       "images": [
-        "/images/gallery/8/fog-1.svg",
-        "/images/gallery/8/fog-2.svg",
-        "/images/gallery/8/fog-3.svg",
-        "/images/gallery/8/fog-4.svg"
+        "/images/gallery/8/fog-1.png",
+        "/images/gallery/8/fog-2.png",
+        "/images/gallery/8/fog-3.png",
+        "/images/gallery/8/fog-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic nature and weather photography asset"
         }
       ],
-      "query": "fog"
-    },
-    "sky": {
-      "images": [
-        "/images/gallery/8/sky-1.svg",
-        "/images/gallery/8/sky-2.svg",
-        "/images/gallery/8/sky-3.svg",
-        "/images/gallery/8/sky-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sky"
-    },
-    "mountain": {
-      "images": [
-        "/images/gallery/8/mountain-1.svg",
-        "/images/gallery/8/mountain-2.svg",
-        "/images/gallery/8/mountain-3.svg",
-        "/images/gallery/8/mountain-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "mountain"
-    },
-    "hill": {
-      "images": [
-        "/images/gallery/8/hill-1.svg",
-        "/images/gallery/8/hill-2.svg",
-        "/images/gallery/8/hill-3.svg",
-        "/images/gallery/8/hill-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hill"
-    },
-    "river": {
-      "images": [
-        "/images/gallery/8/river-1.svg",
-        "/images/gallery/8/river-2.svg",
-        "/images/gallery/8/river-3.svg",
-        "/images/gallery/8/river-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "river"
-    },
-    "lake": {
-      "images": [
-        "/images/gallery/8/lake-1.svg",
-        "/images/gallery/8/lake-2.svg",
-        "/images/gallery/8/lake-3.svg",
-        "/images/gallery/8/lake-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lake"
-    },
-    "sea": {
-      "images": [
-        "/images/gallery/8/sea-1.svg",
-        "/images/gallery/8/sea-2.svg",
-        "/images/gallery/8/sea-3.svg",
-        "/images/gallery/8/sea-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sea"
-    },
-    "ocean": {
-      "images": [
-        "/images/gallery/8/ocean-1.svg",
-        "/images/gallery/8/ocean-2.svg",
-        "/images/gallery/8/ocean-3.svg",
-        "/images/gallery/8/ocean-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "ocean"
-    },
-    "waterfall": {
-      "images": [
-        "/images/gallery/8/waterfall-1.svg",
-        "/images/gallery/8/waterfall-2.svg",
-        "/images/gallery/8/waterfall-3.svg",
-        "/images/gallery/8/waterfall-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "waterfall"
-    },
-    "island": {
-      "images": [
-        "/images/gallery/8/island-1.svg",
-        "/images/gallery/8/island-2.svg",
-        "/images/gallery/8/island-3.svg",
-        "/images/gallery/8/island-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "island"
-    },
-    "beach": {
-      "images": [
-        "/images/gallery/8/beach-1.svg",
-        "/images/gallery/8/beach-2.svg",
-        "/images/gallery/8/beach-3.svg",
-        "/images/gallery/8/beach-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "beach"
-    },
-    "desert": {
-      "images": [
-        "/images/gallery/8/desert-1.svg",
-        "/images/gallery/8/desert-2.svg",
-        "/images/gallery/8/desert-3.svg",
-        "/images/gallery/8/desert-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "desert"
-    },
-    "forest": {
-      "images": [
-        "/images/gallery/8/forest-1.svg",
-        "/images/gallery/8/forest-2.svg",
-        "/images/gallery/8/forest-3.svg",
-        "/images/gallery/8/forest-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "forest"
-    },
-    "tree": {
-      "images": [
-        "/images/gallery/8/tree-1.svg",
-        "/images/gallery/8/tree-2.svg",
-        "/images/gallery/8/tree-3.svg",
-        "/images/gallery/8/tree-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "tree"
-    },
-    "flower": {
-      "images": [
-        "/images/gallery/8/flower-1.svg",
-        "/images/gallery/8/flower-2.svg",
-        "/images/gallery/8/flower-3.svg",
-        "/images/gallery/8/flower-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "flower"
-    },
-    "grass": {
-      "images": [
-        "/images/gallery/8/grass-1.svg",
-        "/images/gallery/8/grass-2.svg",
-        "/images/gallery/8/grass-3.svg",
-        "/images/gallery/8/grass-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "grass"
-    },
-    "leaf": {
-      "images": [
-        "/images/gallery/8/leaf-1.svg",
-        "/images/gallery/8/leaf-2.svg",
-        "/images/gallery/8/leaf-3.svg",
-        "/images/gallery/8/leaf-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "leaf"
-    },
-    "seed": {
-      "images": [
-        "/images/gallery/8/seed-1.svg",
-        "/images/gallery/8/seed-2.svg",
-        "/images/gallery/8/seed-3.svg",
-        "/images/gallery/8/seed-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "seed"
-    },
-    "rock": {
-      "images": [
-        "/images/gallery/8/rock-1.svg",
-        "/images/gallery/8/rock-2.svg",
-        "/images/gallery/8/rock-3.svg",
-        "/images/gallery/8/rock-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "rock"
-    },
-    "stone": {
-      "images": [
-        "/images/gallery/8/stone-1.svg",
-        "/images/gallery/8/stone-2.svg",
-        "/images/gallery/8/stone-3.svg",
-        "/images/gallery/8/stone-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "stone"
-    },
-    "volcano": {
-      "images": [
-        "/images/gallery/8/volcano-1.svg",
-        "/images/gallery/8/volcano-2.svg",
-        "/images/gallery/8/volcano-3.svg",
-        "/images/gallery/8/volcano-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "volcano"
-    },
-    "cave": {
-      "images": [
-        "/images/gallery/8/cave-1.svg",
-        "/images/gallery/8/cave-2.svg",
-        "/images/gallery/8/cave-3.svg",
-        "/images/gallery/8/cave-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cave"
-    },
-    "soil": {
-      "images": [
-        "/images/gallery/8/soil-1.svg",
-        "/images/gallery/8/soil-2.svg",
-        "/images/gallery/8/soil-3.svg",
-        "/images/gallery/8/soil-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "soil"
-    },
-    "sand": {
-      "images": [
-        "/images/gallery/8/sand-1.svg",
-        "/images/gallery/8/sand-2.svg",
-        "/images/gallery/8/sand-3.svg",
-        "/images/gallery/8/sand-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sand"
-    },
-    "snowflake": {
-      "images": [
-        "/images/gallery/8/snowflake-1.svg",
-        "/images/gallery/8/snowflake-2.svg",
-        "/images/gallery/8/snowflake-3.svg",
-        "/images/gallery/8/snowflake-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "snowflake"
-    },
-    "raindrop": {
-      "images": [
-        "/images/gallery/8/raindrop-1.svg",
-        "/images/gallery/8/raindrop-2.svg",
-        "/images/gallery/8/raindrop-3.svg",
-        "/images/gallery/8/raindrop-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "raindrop"
-    },
-    "fire": {
-      "images": [
-        "/images/gallery/8/fire-1.svg",
-        "/images/gallery/8/fire-2.svg",
-        "/images/gallery/8/fire-3.svg",
-        "/images/gallery/8/fire-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "fire"
-    },
-    "wave": {
-      "images": [
-        "/images/gallery/8/wave-1.svg",
-        "/images/gallery/8/wave-2.svg",
-        "/images/gallery/8/wave-3.svg",
-        "/images/gallery/8/wave-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "wave"
-    },
-    "shell": {
-      "images": [
-        "/images/gallery/8/shell-1.svg",
-        "/images/gallery/8/shell-2.svg",
-        "/images/gallery/8/shell-3.svg",
-        "/images/gallery/8/shell-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "shell"
-    },
-    "nest": {
-      "images": [
-        "/images/gallery/8/nest-1.svg",
-        "/images/gallery/8/nest-2.svg",
-        "/images/gallery/8/nest-3.svg",
-        "/images/gallery/8/nest-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "nest"
-    },
-    "garden": {
-      "images": [
-        "/images/gallery/8/garden-1.svg",
-        "/images/gallery/8/garden-2.svg",
-        "/images/gallery/8/garden-3.svg",
-        "/images/gallery/8/garden-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "garden"
-    },
-    "park": {
-      "images": [
-        "/images/gallery/8/park-1.svg",
-        "/images/gallery/8/park-2.svg",
-        "/images/gallery/8/park-3.svg",
-        "/images/gallery/8/park-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "park"
-    },
-    "spring": {
-      "images": [
-        "/images/gallery/8/spring-1.svg",
-        "/images/gallery/8/spring-2.svg",
-        "/images/gallery/8/spring-3.svg",
-        "/images/gallery/8/spring-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "spring"
-    },
-    "summer": {
-      "images": [
-        "/images/gallery/8/summer-1.svg",
-        "/images/gallery/8/summer-2.svg",
-        "/images/gallery/8/summer-3.svg",
-        "/images/gallery/8/summer-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "summer"
-    },
-    "autumn": {
-      "images": [
-        "/images/gallery/8/autumn-1.svg",
-        "/images/gallery/8/autumn-2.svg",
-        "/images/gallery/8/autumn-3.svg",
-        "/images/gallery/8/autumn-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "autumn"
-    },
-    "winter": {
-      "images": [
-        "/images/gallery/8/winter-1.svg",
-        "/images/gallery/8/winter-2.svg",
-        "/images/gallery/8/winter-3.svg",
-        "/images/gallery/8/winter-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "winter"
-    },
-    "sunrise": {
-      "images": [
-        "/images/gallery/8/sunrise-1.svg",
-        "/images/gallery/8/sunrise-2.svg",
-        "/images/gallery/8/sunrise-3.svg",
-        "/images/gallery/8/sunrise-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sunrise"
-    },
-    "sunset": {
-      "images": [
-        "/images/gallery/8/sunset-1.svg",
-        "/images/gallery/8/sunset-2.svg",
-        "/images/gallery/8/sunset-3.svg",
-        "/images/gallery/8/sunset-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sunset"
-    },
-    "planet": {
-      "images": [
-        "/images/gallery/8/planet-1.svg",
-        "/images/gallery/8/planet-2.svg",
-        "/images/gallery/8/planet-3.svg",
-        "/images/gallery/8/planet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "planet"
+      "query": "fog nature or weather"
     }
   },
   "9": {
