@@ -2384,703 +2384,703 @@
   "7": {
     "bread": {
       "images": [
-        "/images/gallery/7/bread-1.svg",
-        "/images/gallery/7/bread-2.svg",
-        "/images/gallery/7/bread-3.svg",
-        "/images/gallery/7/bread-4.svg"
+        "/images/gallery/7/bread-1.png",
+        "/images/gallery/7/bread-2.png",
+        "/images/gallery/7/bread-3.png",
+        "/images/gallery/7/bread-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "bread"
+      "query": "bread food or drink"
     },
     "rice": {
       "images": [
-        "/images/gallery/7/rice-1.svg",
-        "/images/gallery/7/rice-2.svg",
-        "/images/gallery/7/rice-3.svg",
-        "/images/gallery/7/rice-4.svg"
+        "/images/gallery/7/rice-1.png",
+        "/images/gallery/7/rice-2.png",
+        "/images/gallery/7/rice-3.png",
+        "/images/gallery/7/rice-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "rice"
+      "query": "rice food or drink"
     },
     "pasta": {
       "images": [
-        "/images/gallery/7/pasta-1.svg",
-        "/images/gallery/7/pasta-2.svg",
-        "/images/gallery/7/pasta-3.svg",
-        "/images/gallery/7/pasta-4.svg"
+        "/images/gallery/7/pasta-1.png",
+        "/images/gallery/7/pasta-2.png",
+        "/images/gallery/7/pasta-3.png",
+        "/images/gallery/7/pasta-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "pasta"
+      "query": "pasta food or drink"
     },
     "pizza": {
       "images": [
-        "/images/gallery/7/pizza-1.svg",
-        "/images/gallery/7/pizza-2.svg",
-        "/images/gallery/7/pizza-3.svg",
-        "/images/gallery/7/pizza-4.svg"
+        "/images/gallery/7/pizza-1.png",
+        "/images/gallery/7/pizza-2.png",
+        "/images/gallery/7/pizza-3.png",
+        "/images/gallery/7/pizza-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "pizza"
+      "query": "pizza food or drink"
     },
     "sandwich": {
       "images": [
-        "/images/gallery/7/sandwich-1.svg",
-        "/images/gallery/7/sandwich-2.svg",
-        "/images/gallery/7/sandwich-3.svg",
-        "/images/gallery/7/sandwich-4.svg"
+        "/images/gallery/7/sandwich-1.png",
+        "/images/gallery/7/sandwich-2.png",
+        "/images/gallery/7/sandwich-3.png",
+        "/images/gallery/7/sandwich-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "sandwich"
+      "query": "sandwich food or drink"
     },
     "burger": {
       "images": [
-        "/images/gallery/7/burger-1.svg",
-        "/images/gallery/7/burger-2.svg",
-        "/images/gallery/7/burger-3.svg",
-        "/images/gallery/7/burger-4.svg"
+        "/images/gallery/7/burger-1.png",
+        "/images/gallery/7/burger-2.png",
+        "/images/gallery/7/burger-3.png",
+        "/images/gallery/7/burger-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "burger"
+      "query": "burger food or drink"
     },
     "soup": {
       "images": [
-        "/images/gallery/7/soup-1.svg",
-        "/images/gallery/7/soup-2.svg",
-        "/images/gallery/7/soup-3.svg",
-        "/images/gallery/7/soup-4.svg"
+        "/images/gallery/7/soup-1.png",
+        "/images/gallery/7/soup-2.png",
+        "/images/gallery/7/soup-3.png",
+        "/images/gallery/7/soup-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "soup"
+      "query": "soup food or drink"
     },
     "salad": {
       "images": [
-        "/images/gallery/7/salad-1.svg",
-        "/images/gallery/7/salad-2.svg",
-        "/images/gallery/7/salad-3.svg",
-        "/images/gallery/7/salad-4.svg"
+        "/images/gallery/7/salad-1.png",
+        "/images/gallery/7/salad-2.png",
+        "/images/gallery/7/salad-3.png",
+        "/images/gallery/7/salad-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "salad"
+      "query": "salad food or drink"
     },
     "cheese": {
       "images": [
-        "/images/gallery/7/cheese-1.svg",
-        "/images/gallery/7/cheese-2.svg",
-        "/images/gallery/7/cheese-3.svg",
-        "/images/gallery/7/cheese-4.svg"
+        "/images/gallery/7/cheese-1.png",
+        "/images/gallery/7/cheese-2.png",
+        "/images/gallery/7/cheese-3.png",
+        "/images/gallery/7/cheese-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cheese"
+      "query": "cheese food or drink"
     },
     "egg": {
       "images": [
-        "/images/gallery/7/egg-1.svg",
-        "/images/gallery/7/egg-2.svg",
-        "/images/gallery/7/egg-3.svg",
-        "/images/gallery/7/egg-4.svg"
+        "/images/gallery/7/egg-1.png",
+        "/images/gallery/7/egg-2.png",
+        "/images/gallery/7/egg-3.png",
+        "/images/gallery/7/egg-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "egg"
+      "query": "egg food or drink"
     },
     "yogurt": {
       "images": [
-        "/images/gallery/7/yogurt-1.svg",
-        "/images/gallery/7/yogurt-2.svg",
-        "/images/gallery/7/yogurt-3.svg",
-        "/images/gallery/7/yogurt-4.svg"
+        "/images/gallery/7/yogurt-1.png",
+        "/images/gallery/7/yogurt-2.png",
+        "/images/gallery/7/yogurt-3.png",
+        "/images/gallery/7/yogurt-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "yogurt"
+      "query": "yogurt food or drink"
     },
     "icecream": {
       "images": [
-        "/images/gallery/7/icecream-1.svg",
-        "/images/gallery/7/icecream-2.svg",
-        "/images/gallery/7/icecream-3.svg",
-        "/images/gallery/7/icecream-4.svg"
+        "/images/gallery/7/icecream-1.png",
+        "/images/gallery/7/icecream-2.png",
+        "/images/gallery/7/icecream-3.png",
+        "/images/gallery/7/icecream-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "icecream"
+      "query": "icecream food or drink"
     },
     "cake": {
       "images": [
-        "/images/gallery/7/cake-1.svg",
-        "/images/gallery/7/cake-2.svg",
-        "/images/gallery/7/cake-3.svg",
-        "/images/gallery/7/cake-4.svg"
+        "/images/gallery/7/cake-1.png",
+        "/images/gallery/7/cake-2.png",
+        "/images/gallery/7/cake-3.png",
+        "/images/gallery/7/cake-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cake"
+      "query": "cake food or drink"
     },
     "cookie": {
       "images": [
-        "/images/gallery/7/cookie-1.svg",
-        "/images/gallery/7/cookie-2.svg",
-        "/images/gallery/7/cookie-3.svg",
-        "/images/gallery/7/cookie-4.svg"
+        "/images/gallery/7/cookie-1.png",
+        "/images/gallery/7/cookie-2.png",
+        "/images/gallery/7/cookie-3.png",
+        "/images/gallery/7/cookie-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cookie"
+      "query": "cookie food or drink"
     },
     "chocolate": {
       "images": [
-        "/images/gallery/7/chocolate-1.svg",
-        "/images/gallery/7/chocolate-2.svg",
-        "/images/gallery/7/chocolate-3.svg",
-        "/images/gallery/7/chocolate-4.svg"
+        "/images/gallery/7/chocolate-1.png",
+        "/images/gallery/7/chocolate-2.png",
+        "/images/gallery/7/chocolate-3.png",
+        "/images/gallery/7/chocolate-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "chocolate"
+      "query": "chocolate food or drink"
     },
     "candy": {
       "images": [
-        "/images/gallery/7/candy-1.svg",
-        "/images/gallery/7/candy-2.svg",
-        "/images/gallery/7/candy-3.svg",
-        "/images/gallery/7/candy-4.svg"
+        "/images/gallery/7/candy-1.png",
+        "/images/gallery/7/candy-2.png",
+        "/images/gallery/7/candy-3.png",
+        "/images/gallery/7/candy-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "candy"
+      "query": "candy food or drink"
     },
     "popcorn": {
       "images": [
-        "/images/gallery/7/popcorn-1.svg",
-        "/images/gallery/7/popcorn-2.svg",
-        "/images/gallery/7/popcorn-3.svg",
-        "/images/gallery/7/popcorn-4.svg"
+        "/images/gallery/7/popcorn-1.png",
+        "/images/gallery/7/popcorn-2.png",
+        "/images/gallery/7/popcorn-3.png",
+        "/images/gallery/7/popcorn-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "popcorn"
+      "query": "popcorn food or drink"
     },
     "fries": {
       "images": [
-        "/images/gallery/7/fries-1.svg",
-        "/images/gallery/7/fries-2.svg",
-        "/images/gallery/7/fries-3.svg",
-        "/images/gallery/7/fries-4.svg"
+        "/images/gallery/7/fries-1.png",
+        "/images/gallery/7/fries-2.png",
+        "/images/gallery/7/fries-3.png",
+        "/images/gallery/7/fries-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "fries"
+      "query": "fries food or drink"
     },
     "sausage": {
       "images": [
-        "/images/gallery/7/sausage-1.svg",
-        "/images/gallery/7/sausage-2.svg",
-        "/images/gallery/7/sausage-3.svg",
-        "/images/gallery/7/sausage-4.svg"
+        "/images/gallery/7/sausage-1.png",
+        "/images/gallery/7/sausage-2.png",
+        "/images/gallery/7/sausage-3.png",
+        "/images/gallery/7/sausage-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "sausage"
+      "query": "sausage food or drink"
     },
     "kebab": {
       "images": [
-        "/images/gallery/7/kebab-1.svg",
-        "/images/gallery/7/kebab-2.svg",
-        "/images/gallery/7/kebab-3.svg",
-        "/images/gallery/7/kebab-4.svg"
+        "/images/gallery/7/kebab-1.png",
+        "/images/gallery/7/kebab-2.png",
+        "/images/gallery/7/kebab-3.png",
+        "/images/gallery/7/kebab-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "kebab"
+      "query": "kebab food or drink"
     },
     "stew": {
       "images": [
-        "/images/gallery/7/stew-1.svg",
-        "/images/gallery/7/stew-2.svg",
-        "/images/gallery/7/stew-3.svg",
-        "/images/gallery/7/stew-4.svg"
+        "/images/gallery/7/stew-1.png",
+        "/images/gallery/7/stew-2.png",
+        "/images/gallery/7/stew-3.png",
+        "/images/gallery/7/stew-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "stew"
+      "query": "stew food or drink"
     },
     "omelet": {
       "images": [
-        "/images/gallery/7/omelet-1.svg",
-        "/images/gallery/7/omelet-2.svg",
-        "/images/gallery/7/omelet-3.svg",
-        "/images/gallery/7/omelet-4.svg"
+        "/images/gallery/7/omelet-1.png",
+        "/images/gallery/7/omelet-2.png",
+        "/images/gallery/7/omelet-3.png",
+        "/images/gallery/7/omelet-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "omelet"
+      "query": "omelet food or drink"
     },
     "pancake": {
       "images": [
-        "/images/gallery/7/pancake-1.svg",
-        "/images/gallery/7/pancake-2.svg",
-        "/images/gallery/7/pancake-3.svg",
-        "/images/gallery/7/pancake-4.svg"
+        "/images/gallery/7/pancake-1.png",
+        "/images/gallery/7/pancake-2.png",
+        "/images/gallery/7/pancake-3.png",
+        "/images/gallery/7/pancake-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "pancake"
+      "query": "pancake food or drink"
     },
     "waffle": {
       "images": [
-        "/images/gallery/7/waffle-1.svg",
-        "/images/gallery/7/waffle-2.svg",
-        "/images/gallery/7/waffle-3.svg",
-        "/images/gallery/7/waffle-4.svg"
+        "/images/gallery/7/waffle-1.png",
+        "/images/gallery/7/waffle-2.png",
+        "/images/gallery/7/waffle-3.png",
+        "/images/gallery/7/waffle-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "waffle"
+      "query": "waffle food or drink"
     },
     "cereal": {
       "images": [
-        "/images/gallery/7/cereal-1.svg",
-        "/images/gallery/7/cereal-2.svg",
-        "/images/gallery/7/cereal-3.svg",
-        "/images/gallery/7/cereal-4.svg"
+        "/images/gallery/7/cereal-1.png",
+        "/images/gallery/7/cereal-2.png",
+        "/images/gallery/7/cereal-3.png",
+        "/images/gallery/7/cereal-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cereal"
+      "query": "cereal food or drink"
     },
     "honey": {
       "images": [
-        "/images/gallery/7/honey-1.svg",
-        "/images/gallery/7/honey-2.svg",
-        "/images/gallery/7/honey-3.svg",
-        "/images/gallery/7/honey-4.svg"
+        "/images/gallery/7/honey-1.png",
+        "/images/gallery/7/honey-2.png",
+        "/images/gallery/7/honey-3.png",
+        "/images/gallery/7/honey-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "honey"
+      "query": "honey food or drink"
     },
     "jam": {
       "images": [
-        "/images/gallery/7/jam-1.svg",
-        "/images/gallery/7/jam-2.svg",
-        "/images/gallery/7/jam-3.svg",
-        "/images/gallery/7/jam-4.svg"
+        "/images/gallery/7/jam-1.png",
+        "/images/gallery/7/jam-2.png",
+        "/images/gallery/7/jam-3.png",
+        "/images/gallery/7/jam-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "jam"
+      "query": "jam food or drink"
     },
     "butter": {
       "images": [
-        "/images/gallery/7/butter-1.svg",
-        "/images/gallery/7/butter-2.svg",
-        "/images/gallery/7/butter-3.svg",
-        "/images/gallery/7/butter-4.svg"
+        "/images/gallery/7/butter-1.png",
+        "/images/gallery/7/butter-2.png",
+        "/images/gallery/7/butter-3.png",
+        "/images/gallery/7/butter-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "butter"
+      "query": "butter food or drink"
     },
     "salt": {
       "images": [
-        "/images/gallery/7/salt-1.svg",
-        "/images/gallery/7/salt-2.svg",
-        "/images/gallery/7/salt-3.svg",
-        "/images/gallery/7/salt-4.svg"
+        "/images/gallery/7/salt-1.png",
+        "/images/gallery/7/salt-2.png",
+        "/images/gallery/7/salt-3.png",
+        "/images/gallery/7/salt-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "salt"
+      "query": "salt food or drink"
     },
     "sugar": {
       "images": [
-        "/images/gallery/7/sugar-1.svg",
-        "/images/gallery/7/sugar-2.svg",
-        "/images/gallery/7/sugar-3.svg",
-        "/images/gallery/7/sugar-4.svg"
+        "/images/gallery/7/sugar-1.png",
+        "/images/gallery/7/sugar-2.png",
+        "/images/gallery/7/sugar-3.png",
+        "/images/gallery/7/sugar-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "sugar"
+      "query": "sugar food or drink"
     },
     "tea": {
       "images": [
-        "/images/gallery/7/tea-1.svg",
-        "/images/gallery/7/tea-2.svg",
-        "/images/gallery/7/tea-3.svg",
-        "/images/gallery/7/tea-4.svg"
+        "/images/gallery/7/tea-1.png",
+        "/images/gallery/7/tea-2.png",
+        "/images/gallery/7/tea-3.png",
+        "/images/gallery/7/tea-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "tea"
+      "query": "tea food or drink"
     },
     "milk": {
       "images": [
-        "/images/gallery/7/milk-1.svg",
-        "/images/gallery/7/milk-2.svg",
-        "/images/gallery/7/milk-3.svg",
-        "/images/gallery/7/milk-4.svg"
+        "/images/gallery/7/milk-1.png",
+        "/images/gallery/7/milk-2.png",
+        "/images/gallery/7/milk-3.png",
+        "/images/gallery/7/milk-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "milk"
+      "query": "milk food or drink"
     },
     "juice": {
       "images": [
-        "/images/gallery/7/juice-1.svg",
-        "/images/gallery/7/juice-2.svg",
-        "/images/gallery/7/juice-3.svg",
-        "/images/gallery/7/juice-4.svg"
+        "/images/gallery/7/juice-1.png",
+        "/images/gallery/7/juice-2.png",
+        "/images/gallery/7/juice-3.png",
+        "/images/gallery/7/juice-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "juice"
+      "query": "juice food or drink"
     },
     "water": {
       "images": [
-        "/images/gallery/7/water-1.svg",
-        "/images/gallery/7/water-2.svg",
-        "/images/gallery/7/water-3.svg",
-        "/images/gallery/7/water-4.svg"
+        "/images/gallery/7/water-1.png",
+        "/images/gallery/7/water-2.png",
+        "/images/gallery/7/water-3.png",
+        "/images/gallery/7/water-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "water"
+      "query": "water food or drink"
     },
     "lemonade": {
       "images": [
-        "/images/gallery/7/lemonade-1.svg",
-        "/images/gallery/7/lemonade-2.svg",
-        "/images/gallery/7/lemonade-3.svg",
-        "/images/gallery/7/lemonade-4.svg"
+        "/images/gallery/7/lemonade-1.png",
+        "/images/gallery/7/lemonade-2.png",
+        "/images/gallery/7/lemonade-3.png",
+        "/images/gallery/7/lemonade-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "lemonade"
+      "query": "lemonade food or drink"
     },
     "smoothie": {
       "images": [
-        "/images/gallery/7/smoothie-1.svg",
-        "/images/gallery/7/smoothie-2.svg",
-        "/images/gallery/7/smoothie-3.svg",
-        "/images/gallery/7/smoothie-4.svg"
+        "/images/gallery/7/smoothie-1.png",
+        "/images/gallery/7/smoothie-2.png",
+        "/images/gallery/7/smoothie-3.png",
+        "/images/gallery/7/smoothie-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "smoothie"
+      "query": "smoothie food or drink"
     },
     "cocoa": {
       "images": [
-        "/images/gallery/7/cocoa-1.svg",
-        "/images/gallery/7/cocoa-2.svg",
-        "/images/gallery/7/cocoa-3.svg",
-        "/images/gallery/7/cocoa-4.svg"
+        "/images/gallery/7/cocoa-1.png",
+        "/images/gallery/7/cocoa-2.png",
+        "/images/gallery/7/cocoa-3.png",
+        "/images/gallery/7/cocoa-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cocoa"
+      "query": "cocoa food or drink"
     },
     "coffee": {
       "images": [
-        "/images/gallery/7/coffee-1.svg",
-        "/images/gallery/7/coffee-2.svg",
-        "/images/gallery/7/coffee-3.svg",
-        "/images/gallery/7/coffee-4.svg"
+        "/images/gallery/7/coffee-1.png",
+        "/images/gallery/7/coffee-2.png",
+        "/images/gallery/7/coffee-3.png",
+        "/images/gallery/7/coffee-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "coffee"
+      "query": "coffee food or drink"
     },
     "hotchocolate": {
       "images": [
-        "/images/gallery/7/hotchocolate-1.svg",
-        "/images/gallery/7/hotchocolate-2.svg",
-        "/images/gallery/7/hotchocolate-3.svg",
-        "/images/gallery/7/hotchocolate-4.svg"
+        "/images/gallery/7/hotchocolate-1.png",
+        "/images/gallery/7/hotchocolate-2.png",
+        "/images/gallery/7/hotchocolate-3.png",
+        "/images/gallery/7/hotchocolate-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "hotchocolate"
+      "query": "hotchocolate food or drink"
     },
     "dumpling": {
       "images": [
-        "/images/gallery/7/dumpling-1.svg",
-        "/images/gallery/7/dumpling-2.svg",
-        "/images/gallery/7/dumpling-3.svg",
-        "/images/gallery/7/dumpling-4.svg"
+        "/images/gallery/7/dumpling-1.png",
+        "/images/gallery/7/dumpling-2.png",
+        "/images/gallery/7/dumpling-3.png",
+        "/images/gallery/7/dumpling-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "dumpling"
+      "query": "dumpling food or drink"
     },
     "sushi": {
       "images": [
-        "/images/gallery/7/sushi-1.svg",
-        "/images/gallery/7/sushi-2.svg",
-        "/images/gallery/7/sushi-3.svg",
-        "/images/gallery/7/sushi-4.svg"
+        "/images/gallery/7/sushi-1.png",
+        "/images/gallery/7/sushi-2.png",
+        "/images/gallery/7/sushi-3.png",
+        "/images/gallery/7/sushi-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "sushi"
+      "query": "sushi food or drink"
     },
     "taco": {
       "images": [
-        "/images/gallery/7/taco-1.svg",
-        "/images/gallery/7/taco-2.svg",
-        "/images/gallery/7/taco-3.svg",
-        "/images/gallery/7/taco-4.svg"
+        "/images/gallery/7/taco-1.png",
+        "/images/gallery/7/taco-2.png",
+        "/images/gallery/7/taco-3.png",
+        "/images/gallery/7/taco-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "taco"
+      "query": "taco food or drink"
     },
     "burrito": {
       "images": [
-        "/images/gallery/7/burrito-1.svg",
-        "/images/gallery/7/burrito-2.svg",
-        "/images/gallery/7/burrito-3.svg",
-        "/images/gallery/7/burrito-4.svg"
+        "/images/gallery/7/burrito-1.png",
+        "/images/gallery/7/burrito-2.png",
+        "/images/gallery/7/burrito-3.png",
+        "/images/gallery/7/burrito-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "burrito"
+      "query": "burrito food or drink"
     },
     "noodles": {
       "images": [
-        "/images/gallery/7/noodles-1.svg",
-        "/images/gallery/7/noodles-2.svg",
-        "/images/gallery/7/noodles-3.svg",
-        "/images/gallery/7/noodles-4.svg"
+        "/images/gallery/7/noodles-1.png",
+        "/images/gallery/7/noodles-2.png",
+        "/images/gallery/7/noodles-3.png",
+        "/images/gallery/7/noodles-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "noodles"
+      "query": "noodles food or drink"
     },
     "toast": {
       "images": [
-        "/images/gallery/7/toast-1.svg",
-        "/images/gallery/7/toast-2.svg",
-        "/images/gallery/7/toast-3.svg",
-        "/images/gallery/7/toast-4.svg"
+        "/images/gallery/7/toast-1.png",
+        "/images/gallery/7/toast-2.png",
+        "/images/gallery/7/toast-3.png",
+        "/images/gallery/7/toast-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "toast"
+      "query": "toast food or drink"
     },
     "donut": {
       "images": [
-        "/images/gallery/7/donut-1.svg",
-        "/images/gallery/7/donut-2.svg",
-        "/images/gallery/7/donut-3.svg",
-        "/images/gallery/7/donut-4.svg"
+        "/images/gallery/7/donut-1.png",
+        "/images/gallery/7/donut-2.png",
+        "/images/gallery/7/donut-3.png",
+        "/images/gallery/7/donut-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "donut"
+      "query": "donut food or drink"
     },
     "cupcake": {
       "images": [
-        "/images/gallery/7/cupcake-1.svg",
-        "/images/gallery/7/cupcake-2.svg",
-        "/images/gallery/7/cupcake-3.svg",
-        "/images/gallery/7/cupcake-4.svg"
+        "/images/gallery/7/cupcake-1.png",
+        "/images/gallery/7/cupcake-2.png",
+        "/images/gallery/7/cupcake-3.png",
+        "/images/gallery/7/cupcake-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "cupcake"
+      "query": "cupcake food or drink"
     },
     "pie": {
       "images": [
-        "/images/gallery/7/pie-1.svg",
-        "/images/gallery/7/pie-2.svg",
-        "/images/gallery/7/pie-3.svg",
-        "/images/gallery/7/pie-4.svg"
+        "/images/gallery/7/pie-1.png",
+        "/images/gallery/7/pie-2.png",
+        "/images/gallery/7/pie-3.png",
+        "/images/gallery/7/pie-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "pie"
+      "query": "pie food or drink"
     },
     "biscuit": {
       "images": [
-        "/images/gallery/7/biscuit-1.svg",
-        "/images/gallery/7/biscuit-2.svg",
-        "/images/gallery/7/biscuit-3.svg",
-        "/images/gallery/7/biscuit-4.svg"
+        "/images/gallery/7/biscuit-1.png",
+        "/images/gallery/7/biscuit-2.png",
+        "/images/gallery/7/biscuit-3.png",
+        "/images/gallery/7/biscuit-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "biscuit"
+      "query": "biscuit food or drink"
     },
     "chips": {
       "images": [
-        "/images/gallery/7/chips-1.svg",
-        "/images/gallery/7/chips-2.svg",
-        "/images/gallery/7/chips-3.svg",
-        "/images/gallery/7/chips-4.svg"
+        "/images/gallery/7/chips-1.png",
+        "/images/gallery/7/chips-2.png",
+        "/images/gallery/7/chips-3.png",
+        "/images/gallery/7/chips-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic food photography asset"
         }
       ],
-      "query": "chips"
+      "query": "chips food or drink"
     }
   },
   "8": {
