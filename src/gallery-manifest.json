@@ -2044,703 +2044,171 @@
   "5": {
     "shirt": {
       "images": [
-        "/images/gallery/5/shirt-1.svg",
-        "/images/gallery/5/shirt-2.svg",
-        "/images/gallery/5/shirt-3.svg",
-        "/images/gallery/5/shirt-4.svg"
+        "/images/gallery/5/shirt-1.png",
+        "/images/gallery/5/shirt-2.png",
+        "/images/gallery/5/shirt-3.png",
+        "/images/gallery/5/shirt-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "shirt"
+      "query": "shirt clothing"
     },
     "pants": {
       "images": [
-        "/images/gallery/5/pants-1.svg",
-        "/images/gallery/5/pants-2.svg",
-        "/images/gallery/5/pants-3.svg",
-        "/images/gallery/5/pants-4.svg"
+        "/images/gallery/5/pants-1.png",
+        "/images/gallery/5/pants-2.png",
+        "/images/gallery/5/pants-3.png",
+        "/images/gallery/5/pants-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "pants"
+      "query": "pants clothing"
     },
     "dress": {
       "images": [
-        "/images/gallery/5/dress-1.svg",
-        "/images/gallery/5/dress-2.svg",
-        "/images/gallery/5/dress-3.svg",
-        "/images/gallery/5/dress-4.svg"
+        "/images/gallery/5/dress-1.png",
+        "/images/gallery/5/dress-2.png",
+        "/images/gallery/5/dress-3.png",
+        "/images/gallery/5/dress-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "dress"
+      "query": "dress clothing"
     },
     "skirt": {
       "images": [
-        "/images/gallery/5/skirt-1.svg",
-        "/images/gallery/5/skirt-2.svg",
-        "/images/gallery/5/skirt-3.svg",
-        "/images/gallery/5/skirt-4.svg"
+        "/images/gallery/5/skirt-1.png",
+        "/images/gallery/5/skirt-2.png",
+        "/images/gallery/5/skirt-3.png",
+        "/images/gallery/5/skirt-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "skirt"
+      "query": "skirt clothing"
     },
     "coat": {
       "images": [
-        "/images/gallery/5/coat-1.svg",
-        "/images/gallery/5/coat-2.svg",
-        "/images/gallery/5/coat-3.svg",
-        "/images/gallery/5/coat-4.svg"
+        "/images/gallery/5/coat-1.png",
+        "/images/gallery/5/coat-2.png",
+        "/images/gallery/5/coat-3.png",
+        "/images/gallery/5/coat-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "coat"
+      "query": "coat clothing"
     },
     "jacket": {
       "images": [
-        "/images/gallery/5/jacket-1.svg",
-        "/images/gallery/5/jacket-2.svg",
-        "/images/gallery/5/jacket-3.svg",
-        "/images/gallery/5/jacket-4.svg"
+        "/images/gallery/5/jacket-1.png",
+        "/images/gallery/5/jacket-2.png",
+        "/images/gallery/5/jacket-3.png",
+        "/images/gallery/5/jacket-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "jacket"
+      "query": "jacket clothing"
     },
     "sweater": {
       "images": [
-        "/images/gallery/5/sweater-1.svg",
-        "/images/gallery/5/sweater-2.svg",
-        "/images/gallery/5/sweater-3.svg",
-        "/images/gallery/5/sweater-4.svg"
+        "/images/gallery/5/sweater-1.png",
+        "/images/gallery/5/sweater-2.png",
+        "/images/gallery/5/sweater-3.png",
+        "/images/gallery/5/sweater-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "sweater"
+      "query": "sweater clothing"
     },
     "hoodie": {
       "images": [
-        "/images/gallery/5/hoodie-1.svg",
-        "/images/gallery/5/hoodie-2.svg",
-        "/images/gallery/5/hoodie-3.svg",
-        "/images/gallery/5/hoodie-4.svg"
+        "/images/gallery/5/hoodie-1.png",
+        "/images/gallery/5/hoodie-2.png",
+        "/images/gallery/5/hoodie-3.png",
+        "/images/gallery/5/hoodie-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "hoodie"
+      "query": "hoodie clothing"
     },
     "tshirt": {
       "images": [
-        "/images/gallery/5/tshirt-1.svg",
-        "/images/gallery/5/tshirt-2.svg",
-        "/images/gallery/5/tshirt-3.svg",
-        "/images/gallery/5/tshirt-4.svg"
+        "/images/gallery/5/tshirt-1.png",
+        "/images/gallery/5/tshirt-2.png",
+        "/images/gallery/5/tshirt-3.png",
+        "/images/gallery/5/tshirt-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "tshirt"
+      "query": "tshirt clothing"
     },
     "shorts": {
       "images": [
-        "/images/gallery/5/shorts-1.svg",
-        "/images/gallery/5/shorts-2.svg",
-        "/images/gallery/5/shorts-3.svg",
-        "/images/gallery/5/shorts-4.svg"
+        "/images/gallery/5/shorts-1.png",
+        "/images/gallery/5/shorts-2.png",
+        "/images/gallery/5/shorts-3.png",
+        "/images/gallery/5/shorts-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "shorts"
+      "query": "shorts clothing"
     },
     "jeans": {
       "images": [
-        "/images/gallery/5/jeans-1.svg",
-        "/images/gallery/5/jeans-2.svg",
-        "/images/gallery/5/jeans-3.svg",
-        "/images/gallery/5/jeans-4.svg"
+        "/images/gallery/5/jeans-1.png",
+        "/images/gallery/5/jeans-2.png",
+        "/images/gallery/5/jeans-3.png",
+        "/images/gallery/5/jeans-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "jeans"
+      "query": "jeans clothing"
     },
     "socks": {
       "images": [
-        "/images/gallery/5/socks-1.svg",
-        "/images/gallery/5/socks-2.svg",
-        "/images/gallery/5/socks-3.svg",
-        "/images/gallery/5/socks-4.svg"
+        "/images/gallery/5/socks-1.png",
+        "/images/gallery/5/socks-2.png",
+        "/images/gallery/5/socks-3.png",
+        "/images/gallery/5/socks-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset with people wearing the garment"
         }
       ],
-      "query": "socks"
-    },
-    "shoes": {
-      "images": [
-        "/images/gallery/5/shoes-1.svg",
-        "/images/gallery/5/shoes-2.svg",
-        "/images/gallery/5/shoes-3.svg",
-        "/images/gallery/5/shoes-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "shoes"
-    },
-    "boots": {
-      "images": [
-        "/images/gallery/5/boots-1.svg",
-        "/images/gallery/5/boots-2.svg",
-        "/images/gallery/5/boots-3.svg",
-        "/images/gallery/5/boots-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "boots"
-    },
-    "sandals": {
-      "images": [
-        "/images/gallery/5/sandals-1.svg",
-        "/images/gallery/5/sandals-2.svg",
-        "/images/gallery/5/sandals-3.svg",
-        "/images/gallery/5/sandals-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sandals"
-    },
-    "slippers": {
-      "images": [
-        "/images/gallery/5/slippers-1.svg",
-        "/images/gallery/5/slippers-2.svg",
-        "/images/gallery/5/slippers-3.svg",
-        "/images/gallery/5/slippers-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "slippers"
-    },
-    "hat": {
-      "images": [
-        "/images/gallery/5/hat-1.svg",
-        "/images/gallery/5/hat-2.svg",
-        "/images/gallery/5/hat-3.svg",
-        "/images/gallery/5/hat-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hat"
-    },
-    "cap": {
-      "images": [
-        "/images/gallery/5/cap-1.svg",
-        "/images/gallery/5/cap-2.svg",
-        "/images/gallery/5/cap-3.svg",
-        "/images/gallery/5/cap-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cap"
-    },
-    "scarf": {
-      "images": [
-        "/images/gallery/5/scarf-1.svg",
-        "/images/gallery/5/scarf-2.svg",
-        "/images/gallery/5/scarf-3.svg",
-        "/images/gallery/5/scarf-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "scarf"
-    },
-    "gloves": {
-      "images": [
-        "/images/gallery/5/gloves-1.svg",
-        "/images/gallery/5/gloves-2.svg",
-        "/images/gallery/5/gloves-3.svg",
-        "/images/gallery/5/gloves-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "gloves"
-    },
-    "belt": {
-      "images": [
-        "/images/gallery/5/belt-1.svg",
-        "/images/gallery/5/belt-2.svg",
-        "/images/gallery/5/belt-3.svg",
-        "/images/gallery/5/belt-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "belt"
-    },
-    "tie": {
-      "images": [
-        "/images/gallery/5/tie-1.svg",
-        "/images/gallery/5/tie-2.svg",
-        "/images/gallery/5/tie-3.svg",
-        "/images/gallery/5/tie-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "tie"
-    },
-    "bowtie": {
-      "images": [
-        "/images/gallery/5/bowtie-1.svg",
-        "/images/gallery/5/bowtie-2.svg",
-        "/images/gallery/5/bowtie-3.svg",
-        "/images/gallery/5/bowtie-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bowtie"
-    },
-    "pajamas": {
-      "images": [
-        "/images/gallery/5/pajamas-1.svg",
-        "/images/gallery/5/pajamas-2.svg",
-        "/images/gallery/5/pajamas-3.svg",
-        "/images/gallery/5/pajamas-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "pajamas"
-    },
-    "swimsuit": {
-      "images": [
-        "/images/gallery/5/swimsuit-1.svg",
-        "/images/gallery/5/swimsuit-2.svg",
-        "/images/gallery/5/swimsuit-3.svg",
-        "/images/gallery/5/swimsuit-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "swimsuit"
-    },
-    "raincoat": {
-      "images": [
-        "/images/gallery/5/raincoat-1.svg",
-        "/images/gallery/5/raincoat-2.svg",
-        "/images/gallery/5/raincoat-3.svg",
-        "/images/gallery/5/raincoat-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "raincoat"
-    },
-    "uniform": {
-      "images": [
-        "/images/gallery/5/uniform-1.svg",
-        "/images/gallery/5/uniform-2.svg",
-        "/images/gallery/5/uniform-3.svg",
-        "/images/gallery/5/uniform-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "uniform"
-    },
-    "backpack": {
-      "images": [
-        "/images/gallery/5/backpack-1.svg",
-        "/images/gallery/5/backpack-2.svg",
-        "/images/gallery/5/backpack-3.svg",
-        "/images/gallery/5/backpack-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "backpack"
-    },
-    "bag": {
-      "images": [
-        "/images/gallery/5/bag-1.svg",
-        "/images/gallery/5/bag-2.svg",
-        "/images/gallery/5/bag-3.svg",
-        "/images/gallery/5/bag-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bag"
-    },
-    "purse": {
-      "images": [
-        "/images/gallery/5/purse-1.svg",
-        "/images/gallery/5/purse-2.svg",
-        "/images/gallery/5/purse-3.svg",
-        "/images/gallery/5/purse-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "purse"
-    },
-    "umbrella": {
-      "images": [
-        "/images/gallery/5/umbrella-1.svg",
-        "/images/gallery/5/umbrella-2.svg",
-        "/images/gallery/5/umbrella-3.svg",
-        "/images/gallery/5/umbrella-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "umbrella"
-    },
-    "sunglasses": {
-      "images": [
-        "/images/gallery/5/sunglasses-1.svg",
-        "/images/gallery/5/sunglasses-2.svg",
-        "/images/gallery/5/sunglasses-3.svg",
-        "/images/gallery/5/sunglasses-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sunglasses"
-    },
-    "glasses": {
-      "images": [
-        "/images/gallery/5/glasses-1.svg",
-        "/images/gallery/5/glasses-2.svg",
-        "/images/gallery/5/glasses-3.svg",
-        "/images/gallery/5/glasses-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "glasses"
-    },
-    "watch": {
-      "images": [
-        "/images/gallery/5/watch-1.svg",
-        "/images/gallery/5/watch-2.svg",
-        "/images/gallery/5/watch-3.svg",
-        "/images/gallery/5/watch-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "watch"
-    },
-    "crown": {
-      "images": [
-        "/images/gallery/5/crown-1.svg",
-        "/images/gallery/5/crown-2.svg",
-        "/images/gallery/5/crown-3.svg",
-        "/images/gallery/5/crown-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "crown"
-    },
-    "helmet": {
-      "images": [
-        "/images/gallery/5/helmet-1.svg",
-        "/images/gallery/5/helmet-2.svg",
-        "/images/gallery/5/helmet-3.svg",
-        "/images/gallery/5/helmet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "helmet"
-    },
-    "apron": {
-      "images": [
-        "/images/gallery/5/apron-1.svg",
-        "/images/gallery/5/apron-2.svg",
-        "/images/gallery/5/apron-3.svg",
-        "/images/gallery/5/apron-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "apron"
-    },
-    "vest": {
-      "images": [
-        "/images/gallery/5/vest-1.svg",
-        "/images/gallery/5/vest-2.svg",
-        "/images/gallery/5/vest-3.svg",
-        "/images/gallery/5/vest-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "vest"
-    },
-    "robe": {
-      "images": [
-        "/images/gallery/5/robe-1.svg",
-        "/images/gallery/5/robe-2.svg",
-        "/images/gallery/5/robe-3.svg",
-        "/images/gallery/5/robe-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "robe"
-    },
-    "turban": {
-      "images": [
-        "/images/gallery/5/turban-1.svg",
-        "/images/gallery/5/turban-2.svg",
-        "/images/gallery/5/turban-3.svg",
-        "/images/gallery/5/turban-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "turban"
-    },
-    "shawl": {
-      "images": [
-        "/images/gallery/5/shawl-1.svg",
-        "/images/gallery/5/shawl-2.svg",
-        "/images/gallery/5/shawl-3.svg",
-        "/images/gallery/5/shawl-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "shawl"
-    },
-    "headband": {
-      "images": [
-        "/images/gallery/5/headband-1.svg",
-        "/images/gallery/5/headband-2.svg",
-        "/images/gallery/5/headband-3.svg",
-        "/images/gallery/5/headband-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "headband"
-    },
-    "hairclip": {
-      "images": [
-        "/images/gallery/5/hairclip-1.svg",
-        "/images/gallery/5/hairclip-2.svg",
-        "/images/gallery/5/hairclip-3.svg",
-        "/images/gallery/5/hairclip-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hairclip"
-    },
-    "bracelet": {
-      "images": [
-        "/images/gallery/5/bracelet-1.svg",
-        "/images/gallery/5/bracelet-2.svg",
-        "/images/gallery/5/bracelet-3.svg",
-        "/images/gallery/5/bracelet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bracelet"
-    },
-    "necklace": {
-      "images": [
-        "/images/gallery/5/necklace-1.svg",
-        "/images/gallery/5/necklace-2.svg",
-        "/images/gallery/5/necklace-3.svg",
-        "/images/gallery/5/necklace-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "necklace"
-    },
-    "ring": {
-      "images": [
-        "/images/gallery/5/ring-1.svg",
-        "/images/gallery/5/ring-2.svg",
-        "/images/gallery/5/ring-3.svg",
-        "/images/gallery/5/ring-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "ring"
-    },
-    "earring": {
-      "images": [
-        "/images/gallery/5/earring-1.svg",
-        "/images/gallery/5/earring-2.svg",
-        "/images/gallery/5/earring-3.svg",
-        "/images/gallery/5/earring-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "earring"
-    },
-    "wallet": {
-      "images": [
-        "/images/gallery/5/wallet-1.svg",
-        "/images/gallery/5/wallet-2.svg",
-        "/images/gallery/5/wallet-3.svg",
-        "/images/gallery/5/wallet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "wallet"
-    },
-    "sneakers": {
-      "images": [
-        "/images/gallery/5/sneakers-1.svg",
-        "/images/gallery/5/sneakers-2.svg",
-        "/images/gallery/5/sneakers-3.svg",
-        "/images/gallery/5/sneakers-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sneakers"
-    },
-    "overalls": {
-      "images": [
-        "/images/gallery/5/overalls-1.svg",
-        "/images/gallery/5/overalls-2.svg",
-        "/images/gallery/5/overalls-3.svg",
-        "/images/gallery/5/overalls-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "overalls"
+      "query": "socks clothing"
     }
   },
   "6": {
