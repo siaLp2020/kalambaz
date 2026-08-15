@@ -1554,703 +1554,279 @@
   "3": {
     "red": {
       "images": [
-        "/images/gallery/3/red-1.svg",
-        "/images/gallery/3/red-2.svg",
-        "/images/gallery/3/red-3.svg",
-        "/images/gallery/3/red-4.svg"
+        "/images/gallery/3/red-1.png",
+        "/images/gallery/3/red-2.png",
+        "/images/gallery/3/red-3.png",
+        "/images/gallery/3/red-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/strawberry-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/strawberry-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/strawberry-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/strawberry-4.jpg"
         }
       ],
-      "query": "red"
+      "query": "red color real photo"
     },
     "blue": {
       "images": [
-        "/images/gallery/3/blue-1.svg",
-        "/images/gallery/3/blue-2.svg",
-        "/images/gallery/3/blue-3.svg",
-        "/images/gallery/3/blue-4.svg"
+        "/images/gallery/3/blue-1.png",
+        "/images/gallery/3/blue-2.png",
+        "/images/gallery/3/blue-3.png",
+        "/images/gallery/3/blue-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/blueberry-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blueberry-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blueberry-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blueberry-4.jpg"
         }
       ],
-      "query": "blue"
+      "query": "blue color real photo"
     },
     "yellow": {
       "images": [
-        "/images/gallery/3/yellow-1.svg",
-        "/images/gallery/3/yellow-2.svg",
-        "/images/gallery/3/yellow-3.svg",
-        "/images/gallery/3/yellow-4.svg"
+        "/images/gallery/3/yellow-1.png",
+        "/images/gallery/3/yellow-2.png",
+        "/images/gallery/3/yellow-3.png",
+        "/images/gallery/3/yellow-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/banana-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/banana-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/banana-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/banana-4.jpg"
         }
       ],
-      "query": "yellow"
+      "query": "yellow color real photo"
     },
     "green": {
       "images": [
-        "/images/gallery/3/green-1.svg",
-        "/images/gallery/3/green-2.svg",
-        "/images/gallery/3/green-3.svg",
-        "/images/gallery/3/green-4.svg"
+        "/images/gallery/3/green-1.png",
+        "/images/gallery/3/green-2.png",
+        "/images/gallery/3/green-3.png",
+        "/images/gallery/3/green-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "green"
-    },
-    "purple": {
-      "images": [
-        "/images/gallery/3/purple-1.svg",
-        "/images/gallery/3/purple-2.svg",
-        "/images/gallery/3/purple-3.svg",
-        "/images/gallery/3/purple-4.svg"
-      ],
-      "sources": [
+          "source": "real local photo reused from /images/gallery/2/lime-1.jpg"
+        },
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/lime-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/lime-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/lime-4.jpg"
         }
       ],
-      "query": "purple"
+      "query": "green color real photo"
     },
     "orange": {
       "images": [
-        "/images/gallery/3/orange-1.svg",
-        "/images/gallery/3/orange-2.svg",
-        "/images/gallery/3/orange-3.svg",
-        "/images/gallery/3/orange-4.svg"
+        "/images/gallery/3/orange-1.png",
+        "/images/gallery/3/orange-2.png",
+        "/images/gallery/3/orange-3.png",
+        "/images/gallery/3/orange-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/orange-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/orange-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/orange-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/orange-4.jpg"
         }
       ],
-      "query": "orange"
+      "query": "orange color real photo"
+    },
+    "purple": {
+      "images": [
+        "/images/gallery/3/purple-1.png",
+        "/images/gallery/3/purple-2.png",
+        "/images/gallery/3/purple-3.png",
+        "/images/gallery/3/purple-4.png"
+      ],
+      "sources": [
+        {
+          "source": "real local photo reused from /images/gallery/2/plum-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/plum-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/plum-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/plum-4.jpg"
+        }
+      ],
+      "query": "purple color real photo"
     },
     "pink": {
       "images": [
-        "/images/gallery/3/pink-1.svg",
-        "/images/gallery/3/pink-2.svg",
-        "/images/gallery/3/pink-3.svg",
-        "/images/gallery/3/pink-4.svg"
+        "/images/gallery/3/pink-1.png",
+        "/images/gallery/3/pink-2.png",
+        "/images/gallery/3/pink-3.png",
+        "/images/gallery/3/pink-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/lychee-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/lychee-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/lychee-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/lychee-4.jpg"
         }
       ],
-      "query": "pink"
+      "query": "pink color real photo"
     },
     "black": {
       "images": [
-        "/images/gallery/3/black-1.svg",
-        "/images/gallery/3/black-2.svg",
-        "/images/gallery/3/black-3.svg",
-        "/images/gallery/3/black-4.svg"
+        "/images/gallery/3/black-1.png",
+        "/images/gallery/3/black-2.png",
+        "/images/gallery/3/black-3.png",
+        "/images/gallery/3/black-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/blackberry-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blackberry-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blackberry-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/blackberry-4.jpg"
         }
       ],
-      "query": "black"
+      "query": "black color real photo"
     },
     "white": {
       "images": [
-        "/images/gallery/3/white-1.svg",
-        "/images/gallery/3/white-2.svg",
-        "/images/gallery/3/white-3.svg",
-        "/images/gallery/3/white-4.svg"
+        "/images/gallery/3/white-1.png",
+        "/images/gallery/3/white-2.png",
+        "/images/gallery/3/white-3.png",
+        "/images/gallery/3/white-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/coconut-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/coconut-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/coconut-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/coconut-4.jpg"
         }
       ],
-      "query": "white"
+      "query": "white color real photo"
     },
     "brown": {
       "images": [
-        "/images/gallery/3/brown-1.svg",
-        "/images/gallery/3/brown-2.svg",
-        "/images/gallery/3/brown-3.svg",
-        "/images/gallery/3/brown-4.svg"
+        "/images/gallery/3/brown-1.png",
+        "/images/gallery/3/brown-2.png",
+        "/images/gallery/3/brown-3.png",
+        "/images/gallery/3/brown-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/durian-1.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/durian-2.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/durian-3.jpg"
+        },
+        {
+          "source": "real local photo reused from /images/gallery/2/durian-4.jpg"
         }
       ],
-      "query": "brown"
+      "query": "brown color real photo"
     },
     "gray": {
       "images": [
-        "/images/gallery/3/gray-1.svg",
-        "/images/gallery/3/gray-2.svg",
-        "/images/gallery/3/gray-3.svg",
-        "/images/gallery/3/gray-4.svg"
+        "/images/gallery/3/gray-1.png",
+        "/images/gallery/3/gray-2.png",
+        "/images/gallery/3/gray-3.png",
+        "/images/gallery/3/gray-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/animals/elephant.webp"
+        },
+        {
+          "source": "real local photo reused from /images/animals/cat.webp"
+        },
+        {
+          "source": "real local photo reused from /images/animals/hippo.webp"
+        },
+        {
+          "source": "real local photo reused from /images/animals/whale.webp"
         }
       ],
-      "query": "gray"
+      "query": "gray color real photo"
     },
     "cyan": {
       "images": [
-        "/images/gallery/3/cyan-1.svg",
-        "/images/gallery/3/cyan-2.svg",
-        "/images/gallery/3/cyan-3.svg",
-        "/images/gallery/3/cyan-4.svg"
+        "/images/gallery/3/cyan-1.png",
+        "/images/gallery/3/cyan-2.png",
+        "/images/gallery/3/cyan-3.png",
+        "/images/gallery/3/cyan-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cyan"
-    },
-    "navy": {
-      "images": [
-        "/images/gallery/3/navy-1.svg",
-        "/images/gallery/3/navy-2.svg",
-        "/images/gallery/3/navy-3.svg",
-        "/images/gallery/3/navy-4.svg"
-      ],
-      "sources": [
+          "source": "real local photo reused from /images/animals/dolphin.webp"
+        },
         {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "navy"
-    },
-    "turquoise": {
-      "images": [
-        "/images/gallery/3/turquoise-1.svg",
-        "/images/gallery/3/turquoise-2.svg",
-        "/images/gallery/3/turquoise-3.svg",
-        "/images/gallery/3/turquoise-4.svg"
-      ],
-      "sources": [
+          "source": "real local photo reused from /images/animals/peacock.webp"
+        },
         {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "turquoise"
-    },
-    "gold": {
-      "images": [
-        "/images/gallery/3/gold-1.svg",
-        "/images/gallery/3/gold-2.svg",
-        "/images/gallery/3/gold-3.svg",
-        "/images/gallery/3/gold-4.svg"
-      ],
-      "sources": [
+          "source": "real local photo reused from /images/gallery/2/grape-2.jpg"
+        },
         {
-          "source": "local illustrated fallback"
+          "source": "real local photo reused from /images/gallery/2/blueberry-2.jpg"
         }
       ],
-      "query": "gold"
-    },
-    "silver": {
-      "images": [
-        "/images/gallery/3/silver-1.svg",
-        "/images/gallery/3/silver-2.svg",
-        "/images/gallery/3/silver-3.svg",
-        "/images/gallery/3/silver-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "silver"
-    },
-    "beige": {
-      "images": [
-        "/images/gallery/3/beige-1.svg",
-        "/images/gallery/3/beige-2.svg",
-        "/images/gallery/3/beige-3.svg",
-        "/images/gallery/3/beige-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "beige"
-    },
-    "cream": {
-      "images": [
-        "/images/gallery/3/cream-1.svg",
-        "/images/gallery/3/cream-2.svg",
-        "/images/gallery/3/cream-3.svg",
-        "/images/gallery/3/cream-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cream"
-    },
-    "maroon": {
-      "images": [
-        "/images/gallery/3/maroon-1.svg",
-        "/images/gallery/3/maroon-2.svg",
-        "/images/gallery/3/maroon-3.svg",
-        "/images/gallery/3/maroon-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "maroon"
-    },
-    "violet": {
-      "images": [
-        "/images/gallery/3/violet-1.svg",
-        "/images/gallery/3/violet-2.svg",
-        "/images/gallery/3/violet-3.svg",
-        "/images/gallery/3/violet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "violet"
-    },
-    "indigo": {
-      "images": [
-        "/images/gallery/3/indigo-1.svg",
-        "/images/gallery/3/indigo-2.svg",
-        "/images/gallery/3/indigo-3.svg",
-        "/images/gallery/3/indigo-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "indigo"
-    },
-    "lavender": {
-      "images": [
-        "/images/gallery/3/lavender-1.svg",
-        "/images/gallery/3/lavender-2.svg",
-        "/images/gallery/3/lavender-3.svg",
-        "/images/gallery/3/lavender-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lavender"
-    },
-    "coral": {
-      "images": [
-        "/images/gallery/3/coral-1.svg",
-        "/images/gallery/3/coral-2.svg",
-        "/images/gallery/3/coral-3.svg",
-        "/images/gallery/3/coral-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "coral"
-    },
-    "teal": {
-      "images": [
-        "/images/gallery/3/teal-1.svg",
-        "/images/gallery/3/teal-2.svg",
-        "/images/gallery/3/teal-3.svg",
-        "/images/gallery/3/teal-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "teal"
-    },
-    "mint": {
-      "images": [
-        "/images/gallery/3/mint-1.svg",
-        "/images/gallery/3/mint-2.svg",
-        "/images/gallery/3/mint-3.svg",
-        "/images/gallery/3/mint-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "mint"
-    },
-    "olive": {
-      "images": [
-        "/images/gallery/3/olive-1.svg",
-        "/images/gallery/3/olive-2.svg",
-        "/images/gallery/3/olive-3.svg",
-        "/images/gallery/3/olive-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "olive"
-    },
-    "lime": {
-      "images": [
-        "/images/gallery/3/lime-1.svg",
-        "/images/gallery/3/lime-2.svg",
-        "/images/gallery/3/lime-3.svg",
-        "/images/gallery/3/lime-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lime"
-    },
-    "peach": {
-      "images": [
-        "/images/gallery/3/peach-1.svg",
-        "/images/gallery/3/peach-2.svg",
-        "/images/gallery/3/peach-3.svg",
-        "/images/gallery/3/peach-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "peach"
-    },
-    "skyblue": {
-      "images": [
-        "/images/gallery/3/skyblue-1.svg",
-        "/images/gallery/3/skyblue-2.svg",
-        "/images/gallery/3/skyblue-3.svg",
-        "/images/gallery/3/skyblue-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "skyblue"
-    },
-    "royalblue": {
-      "images": [
-        "/images/gallery/3/royalblue-1.svg",
-        "/images/gallery/3/royalblue-2.svg",
-        "/images/gallery/3/royalblue-3.svg",
-        "/images/gallery/3/royalblue-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "royalblue"
-    },
-    "darkgreen": {
-      "images": [
-        "/images/gallery/3/darkgreen-1.svg",
-        "/images/gallery/3/darkgreen-2.svg",
-        "/images/gallery/3/darkgreen-3.svg",
-        "/images/gallery/3/darkgreen-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "darkgreen"
-    },
-    "lightgreen": {
-      "images": [
-        "/images/gallery/3/lightgreen-1.svg",
-        "/images/gallery/3/lightgreen-2.svg",
-        "/images/gallery/3/lightgreen-3.svg",
-        "/images/gallery/3/lightgreen-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lightgreen"
-    },
-    "darkred": {
-      "images": [
-        "/images/gallery/3/darkred-1.svg",
-        "/images/gallery/3/darkred-2.svg",
-        "/images/gallery/3/darkred-3.svg",
-        "/images/gallery/3/darkred-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "darkred"
-    },
-    "lightred": {
-      "images": [
-        "/images/gallery/3/lightred-1.svg",
-        "/images/gallery/3/lightred-2.svg",
-        "/images/gallery/3/lightred-3.svg",
-        "/images/gallery/3/lightred-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "lightred"
-    },
-    "magenta": {
-      "images": [
-        "/images/gallery/3/magenta-1.svg",
-        "/images/gallery/3/magenta-2.svg",
-        "/images/gallery/3/magenta-3.svg",
-        "/images/gallery/3/magenta-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "magenta"
-    },
-    "burgundy": {
-      "images": [
-        "/images/gallery/3/burgundy-1.svg",
-        "/images/gallery/3/burgundy-2.svg",
-        "/images/gallery/3/burgundy-3.svg",
-        "/images/gallery/3/burgundy-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "burgundy"
-    },
-    "tan": {
-      "images": [
-        "/images/gallery/3/tan-1.svg",
-        "/images/gallery/3/tan-2.svg",
-        "/images/gallery/3/tan-3.svg",
-        "/images/gallery/3/tan-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "tan"
-    },
-    "khaki": {
-      "images": [
-        "/images/gallery/3/khaki-1.svg",
-        "/images/gallery/3/khaki-2.svg",
-        "/images/gallery/3/khaki-3.svg",
-        "/images/gallery/3/khaki-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "khaki"
-    },
-    "mustard": {
-      "images": [
-        "/images/gallery/3/mustard-1.svg",
-        "/images/gallery/3/mustard-2.svg",
-        "/images/gallery/3/mustard-3.svg",
-        "/images/gallery/3/mustard-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "mustard"
-    },
-    "emerald": {
-      "images": [
-        "/images/gallery/3/emerald-1.svg",
-        "/images/gallery/3/emerald-2.svg",
-        "/images/gallery/3/emerald-3.svg",
-        "/images/gallery/3/emerald-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "emerald"
-    },
-    "ruby": {
-      "images": [
-        "/images/gallery/3/ruby-1.svg",
-        "/images/gallery/3/ruby-2.svg",
-        "/images/gallery/3/ruby-3.svg",
-        "/images/gallery/3/ruby-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "ruby"
-    },
-    "sapphire": {
-      "images": [
-        "/images/gallery/3/sapphire-1.svg",
-        "/images/gallery/3/sapphire-2.svg",
-        "/images/gallery/3/sapphire-3.svg",
-        "/images/gallery/3/sapphire-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sapphire"
-    },
-    "amber": {
-      "images": [
-        "/images/gallery/3/amber-1.svg",
-        "/images/gallery/3/amber-2.svg",
-        "/images/gallery/3/amber-3.svg",
-        "/images/gallery/3/amber-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "amber"
-    },
-    "bronze": {
-      "images": [
-        "/images/gallery/3/bronze-1.svg",
-        "/images/gallery/3/bronze-2.svg",
-        "/images/gallery/3/bronze-3.svg",
-        "/images/gallery/3/bronze-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bronze"
-    },
-    "copper": {
-      "images": [
-        "/images/gallery/3/copper-1.svg",
-        "/images/gallery/3/copper-2.svg",
-        "/images/gallery/3/copper-3.svg",
-        "/images/gallery/3/copper-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "copper"
-    },
-    "charcoal": {
-      "images": [
-        "/images/gallery/3/charcoal-1.svg",
-        "/images/gallery/3/charcoal-2.svg",
-        "/images/gallery/3/charcoal-3.svg",
-        "/images/gallery/3/charcoal-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "charcoal"
-    },
-    "rainbow": {
-      "images": [
-        "/images/gallery/3/rainbow-1.svg",
-        "/images/gallery/3/rainbow-2.svg",
-        "/images/gallery/3/rainbow-3.svg",
-        "/images/gallery/3/rainbow-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "rainbow"
-    },
-    "multicolor": {
-      "images": [
-        "/images/gallery/3/multicolor-1.svg",
-        "/images/gallery/3/multicolor-2.svg",
-        "/images/gallery/3/multicolor-3.svg",
-        "/images/gallery/3/multicolor-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "multicolor"
-    },
-    "transparent": {
-      "images": [
-        "/images/gallery/3/transparent-1.svg",
-        "/images/gallery/3/transparent-2.svg",
-        "/images/gallery/3/transparent-3.svg",
-        "/images/gallery/3/transparent-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "transparent"
-    },
-    "pastel": {
-      "images": [
-        "/images/gallery/3/pastel-1.svg",
-        "/images/gallery/3/pastel-2.svg",
-        "/images/gallery/3/pastel-3.svg",
-        "/images/gallery/3/pastel-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "pastel"
+      "query": "cyan color real photo"
     }
   },
   "4": {
