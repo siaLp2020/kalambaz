@@ -1832,703 +1832,213 @@
   "4": {
     "car": {
       "images": [
-        "/images/gallery/4/car-1.svg",
-        "/images/gallery/4/car-2.svg",
-        "/images/gallery/4/car-3.svg",
-        "/images/gallery/4/car-4.svg"
+        "/images/gallery/4/car-1.png",
+        "/images/gallery/4/car-2.png",
+        "/images/gallery/4/car-3.png",
+        "/images/gallery/4/car-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "car"
+      "query": "car vehicle"
     },
     "bus": {
       "images": [
-        "/images/gallery/4/bus-1.svg",
-        "/images/gallery/4/bus-2.svg",
-        "/images/gallery/4/bus-3.svg",
-        "/images/gallery/4/bus-4.svg"
+        "/images/gallery/4/bus-1.png",
+        "/images/gallery/4/bus-2.png",
+        "/images/gallery/4/bus-3.png",
+        "/images/gallery/4/bus-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "bus"
+      "query": "bus vehicle"
     },
     "train": {
       "images": [
-        "/images/gallery/4/train-1.svg",
-        "/images/gallery/4/train-2.svg",
-        "/images/gallery/4/train-3.svg",
-        "/images/gallery/4/train-4.svg"
+        "/images/gallery/4/train-1.png",
+        "/images/gallery/4/train-2.png",
+        "/images/gallery/4/train-3.png",
+        "/images/gallery/4/train-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "train"
+      "query": "train vehicle"
     },
     "airplane": {
       "images": [
-        "/images/gallery/4/airplane-1.svg",
-        "/images/gallery/4/airplane-2.svg",
-        "/images/gallery/4/airplane-3.svg",
-        "/images/gallery/4/airplane-4.svg"
+        "/images/gallery/4/airplane-1.png",
+        "/images/gallery/4/airplane-2.png",
+        "/images/gallery/4/airplane-3.png",
+        "/images/gallery/4/airplane-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "airplane"
+      "query": "airplane vehicle"
     },
     "helicopter": {
       "images": [
-        "/images/gallery/4/helicopter-1.svg",
-        "/images/gallery/4/helicopter-2.svg",
-        "/images/gallery/4/helicopter-3.svg",
-        "/images/gallery/4/helicopter-4.svg"
+        "/images/gallery/4/helicopter-1.png",
+        "/images/gallery/4/helicopter-2.png",
+        "/images/gallery/4/helicopter-3.png",
+        "/images/gallery/4/helicopter-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "helicopter"
+      "query": "helicopter vehicle"
     },
     "bicycle": {
       "images": [
-        "/images/gallery/4/bicycle-1.svg",
-        "/images/gallery/4/bicycle-2.svg",
-        "/images/gallery/4/bicycle-3.svg",
-        "/images/gallery/4/bicycle-4.svg"
+        "/images/gallery/4/bicycle-1.png",
+        "/images/gallery/4/bicycle-2.png",
+        "/images/gallery/4/bicycle-3.png",
+        "/images/gallery/4/bicycle-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "bicycle"
+      "query": "bicycle vehicle"
     },
     "motorcycle": {
       "images": [
-        "/images/gallery/4/motorcycle-1.svg",
-        "/images/gallery/4/motorcycle-2.svg",
-        "/images/gallery/4/motorcycle-3.svg",
-        "/images/gallery/4/motorcycle-4.svg"
+        "/images/gallery/4/motorcycle-1.png",
+        "/images/gallery/4/motorcycle-2.png",
+        "/images/gallery/4/motorcycle-3.png",
+        "/images/gallery/4/motorcycle-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "motorcycle"
+      "query": "motorcycle vehicle"
     },
     "scooter": {
       "images": [
-        "/images/gallery/4/scooter-1.svg",
-        "/images/gallery/4/scooter-2.svg",
-        "/images/gallery/4/scooter-3.svg",
-        "/images/gallery/4/scooter-4.svg"
+        "/images/gallery/4/scooter-1.png",
+        "/images/gallery/4/scooter-2.png",
+        "/images/gallery/4/scooter-3.png",
+        "/images/gallery/4/scooter-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "scooter"
+      "query": "scooter vehicle"
     },
     "boat": {
       "images": [
-        "/images/gallery/4/boat-1.svg",
-        "/images/gallery/4/boat-2.svg",
-        "/images/gallery/4/boat-3.svg",
-        "/images/gallery/4/boat-4.svg"
+        "/images/gallery/4/boat-1.png",
+        "/images/gallery/4/boat-2.png",
+        "/images/gallery/4/boat-3.png",
+        "/images/gallery/4/boat-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "boat"
+      "query": "boat vehicle"
     },
     "ship": {
       "images": [
-        "/images/gallery/4/ship-1.svg",
-        "/images/gallery/4/ship-2.svg",
-        "/images/gallery/4/ship-3.svg",
-        "/images/gallery/4/ship-4.svg"
+        "/images/gallery/4/ship-1.png",
+        "/images/gallery/4/ship-2.png",
+        "/images/gallery/4/ship-3.png",
+        "/images/gallery/4/ship-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "ship"
+      "query": "ship vehicle"
     },
     "submarine": {
       "images": [
-        "/images/gallery/4/submarine-1.svg",
-        "/images/gallery/4/submarine-2.svg",
-        "/images/gallery/4/submarine-3.svg",
-        "/images/gallery/4/submarine-4.svg"
+        "/images/gallery/4/submarine-1.png",
+        "/images/gallery/4/submarine-2.png",
+        "/images/gallery/4/submarine-3.png",
+        "/images/gallery/4/submarine-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "submarine"
+      "query": "submarine vehicle"
     },
     "rocket": {
       "images": [
-        "/images/gallery/4/rocket-1.svg",
-        "/images/gallery/4/rocket-2.svg",
-        "/images/gallery/4/rocket-3.svg",
-        "/images/gallery/4/rocket-4.svg"
+        "/images/gallery/4/rocket-1.png",
+        "/images/gallery/4/rocket-2.png",
+        "/images/gallery/4/rocket-3.png",
+        "/images/gallery/4/rocket-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "rocket"
+      "query": "rocket vehicle"
     },
     "tractor": {
       "images": [
-        "/images/gallery/4/tractor-1.svg",
-        "/images/gallery/4/tractor-2.svg",
-        "/images/gallery/4/tractor-3.svg",
-        "/images/gallery/4/tractor-4.svg"
+        "/images/gallery/4/tractor-1.png",
+        "/images/gallery/4/tractor-2.png",
+        "/images/gallery/4/tractor-3.png",
+        "/images/gallery/4/tractor-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "tractor"
+      "query": "tractor vehicle"
     },
     "truck": {
       "images": [
-        "/images/gallery/4/truck-1.svg",
-        "/images/gallery/4/truck-2.svg",
-        "/images/gallery/4/truck-3.svg",
-        "/images/gallery/4/truck-4.svg"
+        "/images/gallery/4/truck-1.png",
+        "/images/gallery/4/truck-2.png",
+        "/images/gallery/4/truck-3.png",
+        "/images/gallery/4/truck-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "truck"
+      "query": "truck vehicle"
     },
     "ambulance": {
       "images": [
-        "/images/gallery/4/ambulance-1.svg",
-        "/images/gallery/4/ambulance-2.svg",
-        "/images/gallery/4/ambulance-3.svg",
-        "/images/gallery/4/ambulance-4.svg"
+        "/images/gallery/4/ambulance-1.png",
+        "/images/gallery/4/ambulance-2.png",
+        "/images/gallery/4/ambulance-3.png",
+        "/images/gallery/4/ambulance-4.png"
       ],
       "sources": [
         {
-          "source": "local illustrated fallback"
+          "source": "local photorealistic generated asset"
         }
       ],
-      "query": "ambulance"
-    },
-    "firetruck": {
-      "images": [
-        "/images/gallery/4/firetruck-1.svg",
-        "/images/gallery/4/firetruck-2.svg",
-        "/images/gallery/4/firetruck-3.svg",
-        "/images/gallery/4/firetruck-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "firetruck"
-    },
-    "policecar": {
-      "images": [
-        "/images/gallery/4/policecar-1.svg",
-        "/images/gallery/4/policecar-2.svg",
-        "/images/gallery/4/policecar-3.svg",
-        "/images/gallery/4/policecar-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "policecar"
-    },
-    "taxi": {
-      "images": [
-        "/images/gallery/4/taxi-1.svg",
-        "/images/gallery/4/taxi-2.svg",
-        "/images/gallery/4/taxi-3.svg",
-        "/images/gallery/4/taxi-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "taxi"
-    },
-    "van": {
-      "images": [
-        "/images/gallery/4/van-1.svg",
-        "/images/gallery/4/van-2.svg",
-        "/images/gallery/4/van-3.svg",
-        "/images/gallery/4/van-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "van"
-    },
-    "schoolbus": {
-      "images": [
-        "/images/gallery/4/schoolbus-1.svg",
-        "/images/gallery/4/schoolbus-2.svg",
-        "/images/gallery/4/schoolbus-3.svg",
-        "/images/gallery/4/schoolbus-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "schoolbus"
-    },
-    "tram": {
-      "images": [
-        "/images/gallery/4/tram-1.svg",
-        "/images/gallery/4/tram-2.svg",
-        "/images/gallery/4/tram-3.svg",
-        "/images/gallery/4/tram-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "tram"
-    },
-    "subway": {
-      "images": [
-        "/images/gallery/4/subway-1.svg",
-        "/images/gallery/4/subway-2.svg",
-        "/images/gallery/4/subway-3.svg",
-        "/images/gallery/4/subway-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "subway"
-    },
-    "sailboat": {
-      "images": [
-        "/images/gallery/4/sailboat-1.svg",
-        "/images/gallery/4/sailboat-2.svg",
-        "/images/gallery/4/sailboat-3.svg",
-        "/images/gallery/4/sailboat-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "sailboat"
-    },
-    "canoe": {
-      "images": [
-        "/images/gallery/4/canoe-1.svg",
-        "/images/gallery/4/canoe-2.svg",
-        "/images/gallery/4/canoe-3.svg",
-        "/images/gallery/4/canoe-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "canoe"
-    },
-    "kayak": {
-      "images": [
-        "/images/gallery/4/kayak-1.svg",
-        "/images/gallery/4/kayak-2.svg",
-        "/images/gallery/4/kayak-3.svg",
-        "/images/gallery/4/kayak-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "kayak"
-    },
-    "yacht": {
-      "images": [
-        "/images/gallery/4/yacht-1.svg",
-        "/images/gallery/4/yacht-2.svg",
-        "/images/gallery/4/yacht-3.svg",
-        "/images/gallery/4/yacht-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "yacht"
-    },
-    "ferry": {
-      "images": [
-        "/images/gallery/4/ferry-1.svg",
-        "/images/gallery/4/ferry-2.svg",
-        "/images/gallery/4/ferry-3.svg",
-        "/images/gallery/4/ferry-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "ferry"
-    },
-    "hotairballoon": {
-      "images": [
-        "/images/gallery/4/hotairballoon-1.svg",
-        "/images/gallery/4/hotairballoon-2.svg",
-        "/images/gallery/4/hotairballoon-3.svg",
-        "/images/gallery/4/hotairballoon-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "hotairballoon"
-    },
-    "skateboard": {
-      "images": [
-        "/images/gallery/4/skateboard-1.svg",
-        "/images/gallery/4/skateboard-2.svg",
-        "/images/gallery/4/skateboard-3.svg",
-        "/images/gallery/4/skateboard-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "skateboard"
-    },
-    "rollerskates": {
-      "images": [
-        "/images/gallery/4/rollerskates-1.svg",
-        "/images/gallery/4/rollerskates-2.svg",
-        "/images/gallery/4/rollerskates-3.svg",
-        "/images/gallery/4/rollerskates-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "rollerskates"
-    },
-    "shoppingcart": {
-      "images": [
-        "/images/gallery/4/shoppingcart-1.svg",
-        "/images/gallery/4/shoppingcart-2.svg",
-        "/images/gallery/4/shoppingcart-3.svg",
-        "/images/gallery/4/shoppingcart-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "shoppingcart"
-    },
-    "bulldozer": {
-      "images": [
-        "/images/gallery/4/bulldozer-1.svg",
-        "/images/gallery/4/bulldozer-2.svg",
-        "/images/gallery/4/bulldozer-3.svg",
-        "/images/gallery/4/bulldozer-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "bulldozer"
-    },
-    "excavator": {
-      "images": [
-        "/images/gallery/4/excavator-1.svg",
-        "/images/gallery/4/excavator-2.svg",
-        "/images/gallery/4/excavator-3.svg",
-        "/images/gallery/4/excavator-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "excavator"
-    },
-    "crane": {
-      "images": [
-        "/images/gallery/4/crane-1.svg",
-        "/images/gallery/4/crane-2.svg",
-        "/images/gallery/4/crane-3.svg",
-        "/images/gallery/4/crane-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "crane"
-    },
-    "cementmixer": {
-      "images": [
-        "/images/gallery/4/cementmixer-1.svg",
-        "/images/gallery/4/cementmixer-2.svg",
-        "/images/gallery/4/cementmixer-3.svg",
-        "/images/gallery/4/cementmixer-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cementmixer"
-    },
-    "dumptruck": {
-      "images": [
-        "/images/gallery/4/dumptruck-1.svg",
-        "/images/gallery/4/dumptruck-2.svg",
-        "/images/gallery/4/dumptruck-3.svg",
-        "/images/gallery/4/dumptruck-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "dumptruck"
-    },
-    "racecar": {
-      "images": [
-        "/images/gallery/4/racecar-1.svg",
-        "/images/gallery/4/racecar-2.svg",
-        "/images/gallery/4/racecar-3.svg",
-        "/images/gallery/4/racecar-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "racecar"
-    },
-    "jeep": {
-      "images": [
-        "/images/gallery/4/jeep-1.svg",
-        "/images/gallery/4/jeep-2.svg",
-        "/images/gallery/4/jeep-3.svg",
-        "/images/gallery/4/jeep-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "jeep"
-    },
-    "minibus": {
-      "images": [
-        "/images/gallery/4/minibus-1.svg",
-        "/images/gallery/4/minibus-2.svg",
-        "/images/gallery/4/minibus-3.svg",
-        "/images/gallery/4/minibus-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "minibus"
-    },
-    "cablecar": {
-      "images": [
-        "/images/gallery/4/cablecar-1.svg",
-        "/images/gallery/4/cablecar-2.svg",
-        "/images/gallery/4/cablecar-3.svg",
-        "/images/gallery/4/cablecar-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "cablecar"
-    },
-    "snowmobile": {
-      "images": [
-        "/images/gallery/4/snowmobile-1.svg",
-        "/images/gallery/4/snowmobile-2.svg",
-        "/images/gallery/4/snowmobile-3.svg",
-        "/images/gallery/4/snowmobile-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "snowmobile"
-    },
-    "tank": {
-      "images": [
-        "/images/gallery/4/tank-1.svg",
-        "/images/gallery/4/tank-2.svg",
-        "/images/gallery/4/tank-3.svg",
-        "/images/gallery/4/tank-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "tank"
-    },
-    "spaceship": {
-      "images": [
-        "/images/gallery/4/spaceship-1.svg",
-        "/images/gallery/4/spaceship-2.svg",
-        "/images/gallery/4/spaceship-3.svg",
-        "/images/gallery/4/spaceship-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "spaceship"
-    },
-    "glider": {
-      "images": [
-        "/images/gallery/4/glider-1.svg",
-        "/images/gallery/4/glider-2.svg",
-        "/images/gallery/4/glider-3.svg",
-        "/images/gallery/4/glider-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "glider"
-    },
-    "jet": {
-      "images": [
-        "/images/gallery/4/jet-1.svg",
-        "/images/gallery/4/jet-2.svg",
-        "/images/gallery/4/jet-3.svg",
-        "/images/gallery/4/jet-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "jet"
-    },
-    "pickup": {
-      "images": [
-        "/images/gallery/4/pickup-1.svg",
-        "/images/gallery/4/pickup-2.svg",
-        "/images/gallery/4/pickup-3.svg",
-        "/images/gallery/4/pickup-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "pickup"
-    },
-    "limousine": {
-      "images": [
-        "/images/gallery/4/limousine-1.svg",
-        "/images/gallery/4/limousine-2.svg",
-        "/images/gallery/4/limousine-3.svg",
-        "/images/gallery/4/limousine-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "limousine"
-    },
-    "rickshaw": {
-      "images": [
-        "/images/gallery/4/rickshaw-1.svg",
-        "/images/gallery/4/rickshaw-2.svg",
-        "/images/gallery/4/rickshaw-3.svg",
-        "/images/gallery/4/rickshaw-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "rickshaw"
-    },
-    "horsecart": {
-      "images": [
-        "/images/gallery/4/horsecart-1.svg",
-        "/images/gallery/4/horsecart-2.svg",
-        "/images/gallery/4/horsecart-3.svg",
-        "/images/gallery/4/horsecart-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "horsecart"
-    },
-    "stroller": {
-      "images": [
-        "/images/gallery/4/stroller-1.svg",
-        "/images/gallery/4/stroller-2.svg",
-        "/images/gallery/4/stroller-3.svg",
-        "/images/gallery/4/stroller-4.svg"
-      ],
-      "sources": [
-        {
-          "source": "local illustrated fallback"
-        }
-      ],
-      "query": "stroller"
+      "query": "ambulance vehicle"
     }
   },
   "5": {
